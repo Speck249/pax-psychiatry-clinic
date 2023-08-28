@@ -1,13 +1,33 @@
 import styled from 'styled-components';
-import AboutImg from '../../images/HeaderBg.jpg';
+import AboutImg from '../../images/AboutBg.jpg';
 import '../../fonts/webfont.css';
 
 export const HeaderContainer = styled.div`
   background-image: url(${AboutImg});
   background-size: cover;
   background-position: center;
-  height: 35vh;
-  padding-top: 4rem; 
+  height: 100vh; 
+`;
+
+export const HeaderTitle = styled.h1`
+  font-size: 5rem;
+  text-align: left;
+  padding-top: 10rem;
+  padding-left: 25rem;
+  margin-left: 35rem;
+  width: 50%;
+  color: #09798C;
+`;
+
+export const HeaderText = styled.h2`
+  font-size: 16px;
+  font-family: 'Sora', sans-serif;
+  font-weight: 400;
+  text-align: justify;
+  padding-left: 25rem;
+  margin-left: 35rem;
+  width: 60%;
+  color: #000;
 `;
 
 export const AboutTitle = styled.h2`
@@ -119,14 +139,14 @@ export const VisionText = styled.div`
   margin-right: 2rem;
 `;
 
-export const ImageContainer = styled.div`
-  background-image: url(${AboutImg});
+/*export const ImageContainer = styled.div`
+  background-image: url(${FacilityImg});
   background-size: cover;
   background-position: center;
-  height: 35vh;
+  height: 60vh;
   padding-top: 4rem; 
   background-color: green;
-`;
+`;*/
 
 export const FacilityTitle = styled.h2`
    display: flex;

@@ -21,7 +21,7 @@ const ContactForm = () => {
             <FormWrap>
              <FormContent>
                <Form>
-               <FormTitle>CONTACT US</FormTitle>
+               <FormTitle>GET IN TOUCH</FormTitle>
                 <RequiredIndicator><FormLabel>Full Name</FormLabel> *</RequiredIndicator>
                 <FormInput type='text' required></FormInput>
                 <RequiredIndicator><FormLabel>Email</FormLabel> *</RequiredIndicator>

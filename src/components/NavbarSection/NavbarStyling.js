@@ -11,8 +11,7 @@ export const Nav = styled.nav`
   justify-content: center;
   align-items: center;
   font-size: 17px;
-  /*margin-top: -80px;*/
- 
+  
   @media screen and (max-width: 968px) {
     transition: 0.7s all ease;
     background-color: #09798C;
@@ -30,16 +29,11 @@ export const NavbarContainer = styled.div`
   z-index: 1;
 `;
 
-/*Update properties.*/
 export const NavbarLogo = styled(LinkRouter)`
   display: flex;
   justify-self: flex-start;
   align-items: center;
   margin-left: 20px;
-  color: #000;
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-decoration: none;
   cursor: pointer;
 `;
 
@@ -79,8 +73,8 @@ export const NavbarLink = styled(LinkRouter)`
   padding: 0 1rem;
   color: #09798C;
   align-items: center;
-  text-decoration: none;
   height: 100%;
+  text-decoration: none;
   cursor: pointer;
 
   &:hover {

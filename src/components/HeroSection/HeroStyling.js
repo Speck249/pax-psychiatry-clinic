@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 import HeroImg from '../../images/HeroBg.png';
+import '../../fonts/webfont.css';
 
 export const HeroContainer = styled.div`
    background-image: linear-gradient( to top right, #0b0a0a61, #0b0a0a30), url(${HeroImg});
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
-   height: 75vh;
+   height: 100vh;
 
 @media only screen and (max-width: 1550px) {
-    height: 90vh;
+   height: 90vh;
 }
 `;
 
@@ -35,8 +36,8 @@ export const HeroContentText = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    padding-top: 5rem;
+    width: 60%;
+    padding-top: 10rem;
     
     @media only screen and (max-width: 500px) {
         width: 50%;
@@ -49,31 +50,21 @@ export const HeroContentText = styled.div`
 `;
 
 export const HeroTitle = styled.h1`
-   font-size: clamp(2rem, 4vw, 4rem);
+   font-size: 35px;
+   font-weight: bold;
+   color: #fff;
    letter-spacing: 0.3rem;
    line-height: 1.5;
 `;
 
-export const HeroTitleText = styled.span`
-   display: block;
-`;
-
-export const HeroSubtitle = styled.h2`
-   font-size: clamp(1.2rem, 1vw, 1rem);
-   color: #e6e6e6;
-   letter-spacing: 0.2rem;
-   padding-top: 1rem;
-   font-style: italic;
-`;
-
-export const HeroP = styled.h3`
+export const HeroParagraph = styled.h3`
    font-size: clamp(1rem, 1vw, 1rem);
-   color: #e6e6e6;
-   letter-spacing: 0.2rem;
+   color: #fff;
+   letter-spacing: 0.3rem;
    line-height: 1.8;
    padding: 1.5rem 1.5rem;
    
    @media only screen and (max-width: 375px) {
-     padding: 1.5rem 0;
+    padding: 1.5rem 0;
 }
 `;

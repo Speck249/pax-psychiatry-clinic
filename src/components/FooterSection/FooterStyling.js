@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
+import { Link as LinkRouter } from 'react-router-dom';
+
 
 export const FooterContainer = styled.footer`
   background-color: #000;
@@ -127,7 +128,7 @@ export const FooterLinkName = styled.h1`
   margin-bottom: 12px;
 `;
 
-export const FooterLink = styled(Link)`
+export const FooterLink = styled(LinkRouter)`
   color: #fff;
   font-size: 13px;
   text-decoration: none;

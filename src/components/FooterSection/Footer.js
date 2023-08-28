@@ -44,7 +44,7 @@ const Footer = () => {
                 
                 <FooterLinks>
                     <FooterLinkName>SERVICES</FooterLinkName>
-                     <FooterLink to='/services'>Adolescent Therapy</FooterLink>
+                    <FooterLink to='/services'>Adolescent Therapy</FooterLink>
                     <FooterLink to='/services'>Adult Therapy</FooterLink>
                     <FooterLink to='/services'>Family Therapy</FooterLink>
                     <FooterLink to='/services'>Couples Therapy</FooterLink>

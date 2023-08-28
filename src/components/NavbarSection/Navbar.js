@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FaBars } from 'react-icons/fa';
 import {
@@ -13,13 +12,15 @@ import {
   NavbarButtonLink
 } from './NavbarStyling';
 
-/* Website Navigation Bar(Topbar). */
+/* Topbar/Navigation Bar. */
 const Navbar = ({toggle}) => {
   return (
     <>
       <Nav>
         <NavbarContainer>
-            <NavbarLogo to='/'>PAX</NavbarLogo>
+            <NavbarLogo to='/'>
+              <img src='../../images/Navbar.svg' alt='Logo'/>
+            </NavbarLogo>
             <MobileIcon onClick={toggle}>
             <FaBars />
             </MobileIcon>

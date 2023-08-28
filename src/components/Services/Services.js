@@ -1,55 +1,109 @@
 import React from 'react';
 import {
+    PageContainer,
     HeaderContainer,
-    IntroTitle,
-    IntroText,
-    SectionContainer,
-    SectionContent,
-    SectionContentTitle,
-    SectionTitle,
-    SectionText,
-    Paragraph,
-    UnorderedList,
-    ListItem
+    HeaderTitle,
+    HeaderText,
+    IconContainer,
+    Icon,
+    HeaderSubtext,
+    Button,
+    ButtonContainer,
+    InformationContainer,
+    ServiceTitle,
+    ServiceText,
+    Card,
+    CardHeader,
+    CardContent
 } from './ServicesStyling';
+import renderStars from '../Utility/renderStars';
+import { FaHandHoldingHeart, FaMoneyBill } from 'react-icons/fa';
+import StarIcon from '@material-ui/icons/Star';
 
 const ServicesPage = () => {
+  const averageRating = 4.5;
+
   return (
     <>
-        <HeaderContainer />
-        <IntroTitle>Therapy vs. Psychiatry</IntroTitle>
-        <IntroText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+     <PageContainer>
+      <HeaderContainer>
+      <HeaderText>Customer Rating: {renderStars(averageRating)} {averageRating}</HeaderText>
+      <HeaderTitle>Exceptional Healthcare.</HeaderTitle>
+      <HeaderText>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+       sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+       Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+       nisi ut aliquid ex ea commodi consequatur?</HeaderText>
+       <IconContainer>
+         <Icon>
+           <FaHandHoldingHeart size='25px' color='#09798C' />
+         </Icon>
+         <HeaderSubtext>Quality Services</HeaderSubtext>
+         <Icon>
+           <FaMoneyBill size='25px' color='#09798C' />
+         </Icon>
+         <HeaderSubtext>Affordable Prices </HeaderSubtext>
+         <ButtonContainer><Button>Book Now</Button></ButtonContainer>
+       </IconContainer>
+      </HeaderContainer>
+
+      <ServiceTitle>Our Expertise</ServiceTitle>
+       <ServiceText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </IntroText>
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </ServiceText>
+      <InformationContainer>
+       <Card>
+       <CardHeader>Adolescent Therapy</CardHeader>
+        <CardContent>
+         Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+         sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+        </CardContent>
+        </Card>
+        <Card>
+         <CardHeader>Adult Therapy</CardHeader>
+        <CardContent>
+         Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+         sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+        </CardContent>
+       </Card>
+        <Card>
+         <CardHeader>Family Therapy</CardHeader>
+        <CardContent>
+         Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+         sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+        </CardContent>
+       </Card>
+        <Card>
+         <CardHeader>Couples Therapy</CardHeader>
+        <CardContent>
+         Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+         sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+        </CardContent>
+       </Card>
+        <Card>
+         <CardHeader>Marriage Counselling</CardHeader>
+        <CardContent>
+         Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+         sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+        </CardContent>
+       </Card>
+        <Card>
+         <CardHeader>Corporate Counselling</CardHeader>
+        <CardContent>
+         Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+         sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+        </CardContent>
+       </Card>
+         <Card>
+         <CardHeader>Psychiatry</CardHeader>
+        <CardContent>
+         Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+         sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+        </CardContent>
+       </Card>
+      </InformationContainer>
 
-        <SectionContainer>
-         <SectionContent>
-         <SectionContentTitle>
-            <SectionTitle>Therapy & Psychiatry Service We Offer</SectionTitle>
-            <SectionText><Paragraph>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-                sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-                quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt
-                ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-                laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
-                molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-            </Paragraph>
-
-            <UnorderedList>
-                <ListItem>Adolescent Therapy</ListItem>
-                <ListItem>Adult Therapy</ListItem>
-                <ListItem>Family Therapy</ListItem>
-                <ListItem>Couples Therapy</ListItem>
-                <ListItem>Marriage Counselling</ListItem>
-                <ListItem>Psychiatry</ListItem>
-            </UnorderedList>
-                  </SectionText>
-            </SectionContentTitle>
-            </SectionContent>
-        </SectionContainer>
+        </PageContainer>
     </>
   );
 };
