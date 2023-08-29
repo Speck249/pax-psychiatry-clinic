@@ -11,7 +11,8 @@ import {
     TextArea,
     FormInput,
     FormButton
-} from './ContactStyling'
+} from './ContactStyling';
+
 
 const ContactForm = () => {
   return (

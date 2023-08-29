@@ -12,7 +12,7 @@ import {
   NavbarButtonLink
 } from './NavbarStyling';
 
-/* Topbar/Navigation Bar. */
+
 const Navbar = ({toggle}) => {
   return (
     <>

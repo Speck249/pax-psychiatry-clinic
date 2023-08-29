@@ -18,6 +18,7 @@ import {
 } from './FooterStyling';
 import { FaFacebook, FaLinkedin, FaTwitter, FaInstagram  } from 'react-icons/fa';
 
+
 const Footer = () => {
   return (
     <>
@@ -76,4 +77,4 @@ const Footer = () => {
   );
 };
 
-export default Footer
+export default Footer;

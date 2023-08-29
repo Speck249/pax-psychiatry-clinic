@@ -7,7 +7,7 @@ import {
 } from './HeroStyling';
 import { Button } from '../ButtonStyling';
 
-/* Banner Section. */
+
 const Hero = () => {
     return (
     <>

@@ -10,7 +10,7 @@ import {
     SidebarRoute
 } from './SidebarStyling';
 
-/* Website Navigation Bar in Mobile mode. */
+
 const Sidebar = ( {isOpen, toggle} ) => {
   return (
     <>
