@@ -96,25 +96,27 @@ export const NavbarButton = styled.nav`
 `;
 
 export const NavbarButtonLink = styled(LinkRouter)`
-  background: black;
-  color: #fff;
-  font-size: 16px;
-  border-radius: 50px;
-  border: none;
-  outline: none;
-  white-space: nowrap;
-  padding: 10px 22px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
+   background-color: #000;
+   color: #fff;
+   outline: none;
+   padding: 0.7rem 1.3rem;
+   border-radius: 3px;
+   border: none;
+   text-decoration: none;
+   font-size: 1rem;
+   white-space: nowrap;
+   text-decoration: none;
+   cursor: pointer;
 
-  &.hover {
-    background-color: ${({primary}) => primary ? '#000': '#09798C'}; 
-    transform: translateY(-0.5rem) scale(1.02);
-    color: #fff;
+@media only screen and (max-width: 1000px) {
+    padding: ${({big}) => big ? '16px 30px' : '10px 15px'};
+    font-size: ${({font}) => font ? '16px': '16px'};
+    text-decoration: none;
   }
 
-  &:active{
-    transform: translateY(0.5rem);
+@media only screen and (max-width: 375px) {
+    padding: ${({big}) => big ? '12px 20px' : '10px 12px'};
+    font-size: ${({font}) => font ? '16px': '16px'};
+    text-decoration: none;
 }
 `;

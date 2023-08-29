@@ -36,7 +36,7 @@ export const HeroContentText = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 70%;
     padding-top: 10rem;
     
     @media only screen and (max-width: 500px) {

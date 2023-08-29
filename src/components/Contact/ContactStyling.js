@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import ContactImg from '../../images/ContactBg.jpg';
 
 export const PageContainer = styled.div`
-  background-image: url(${ContactImg});
+  background-image: linear-gradient( to top right, #0b0a0a61, #0b0a0a30), url(${ContactImg});
   background-size: cover;
   background-position: center;
   min-height: 100vh;

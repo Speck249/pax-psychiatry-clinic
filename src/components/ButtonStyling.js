@@ -3,8 +3,11 @@ import { Link as LinkRouter } from 'react-router-dom';
 
 export const Button = styled(LinkRouter)`
   background-color: ${({primary}) => primary ? '#09798C': '#000'};
-  border-radius: ${({big}) => big ? '30px': '20px'};
-  padding: ${({big}) => big ? '18px 30px' : '10px 20px'};
+  padding: 0.7rem 1.3rem;
+  border-radius: 3px;
+  border: none;
+  /*border-radius: ${({big}) => big ? '30px': '20px'};
+  padding: ${({big}) => big ? '18px 30px' : '10px 20px'};*/
   font-size: ${({font}) => font ? '10px': '16px'};
   color: ${({primary}) => primary ? '#000': '#e6e6e6'};
   justify-content: center;
@@ -16,7 +19,7 @@ export const Button = styled(LinkRouter)`
   
 &:hover{
     background-color: ${({primary}) => primary ? '#000': '#09798C'};  
-    transform: translateY(-0.5rem) scale(1.02);
+    transform: translateY(-0.5rem) scale(1.01);
     color: #fff;
     text-decoration: none;
 }

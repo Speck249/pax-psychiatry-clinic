@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import ServicesImg from '../../images/ServicesBg.png';
+import { Link as LinkRouter } from 'react-router-dom';
+import ServicesImg from '../../images/ServicesBg.jpg';
 import '../../fonts/webfont.css';
 
 export const PageContainer = styled.div`
@@ -7,11 +8,15 @@ export const PageContainer = styled.div`
 `;
 
 export const HeaderContainer = styled.div`
-  background-image: url(${ServicesImg});
+  background-image: linear-gradient( to top right, #0b0a0a61, #0b0a0a30), url(${ServicesImg});
   background-size: cover;
   background-position: center;
-  height: 89vh;
+  height: 100vh;
   padding-top: 9rem; 
+
+  @media only screen and (max-width: 1550px) {
+   height: 90vh;
+}
 `;
 
 export const HeaderTitle = styled.h1`
@@ -32,7 +37,7 @@ export const HeaderText = styled.h2`
   padding-left: 2.5rem;
   margin-left: 1rem;
   width: 60%;
-  color: #000;
+  color: #e6e6e6;
   line-height: 1.4rem;
   margin-bottom: 1rem;
 `;
@@ -44,7 +49,7 @@ export const IconContainer = styled.div`
   margin-left: 2.8rem;
 `;
 
-export const Icon = styled.div`
+export const IconWrapper = styled.div`
  margin-right: -30px;
  padding-top: 0.5rem;
  padding-left: 1.7rem;
@@ -60,17 +65,7 @@ export const HeaderSubtext = styled.h3`
   padding-right: -25px;
   margin-left: 0.5rem;
   margin-top: 0.3rem;
-  color: #000;
-`
-export const Button = styled.button`
-   background-color: #000;
-   color: #fff;
-   outline: none;
-   padding: 0.7rem 1.3rem;
-   border-radius: 3px;
-   border: none;
-   font-size: 1rem;
-   cursor: pointer;
+  color: #e6e6e6;
 `;
 
 export const ButtonContainer = styled.div`
@@ -81,12 +76,37 @@ export const ButtonContainer = styled.div`
    margin-top: 5px;
 `;
 
-export const ServiceTitle = styled.h2`
+export const Button = styled(LinkRouter)`
+   background-color: #000;
+   color: #fff;
+   outline: none;
+   padding: 0.7rem 1.3rem;
+   border-radius: 3px;
+   border: none;
+   text-decoration: none;
+   font-size: 1rem;
+   transition: all 0.3s ease;
+   cursor: pointer;
+
+   &:hover{
+    background-color: ${({primary}) => primary ? '#000': '#09798C'};  
+    transform: translateY(-0.5rem) scale(1.01);
+    color: #fff;
+    text-decoration: none;
+   }
+
+   &:active{
+    transform: translateY(0.5rem);
+    text-decoration: none;
+   }
+`;
+
+export const SectionTitle = styled.h2`
    display: flex;
    justify-content: center;
    text-align: center;
    color: #000;
-   font-size: 45px;
+   font-size: 35px;
    margin-top: 2rem;
    margin-bottom: 9px;
 `;
@@ -113,10 +133,10 @@ export const InformationContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  overflow: auto;
+  overflow: hidden;
 `;
 
-export const Card = styled.div`
+export const ServiceCard = styled.div`
   width: 280px; 
   height: auto;
   background-color: #fff;
@@ -133,7 +153,7 @@ export const Card = styled.div`
 }
 `;
 
-export const CardHeader = styled.h3`
+export const ServiceCardHeader = styled.h3`
   margin-bottom: 0.5rem;
   font-size: 14px;
   display: flex;
@@ -142,7 +162,7 @@ export const CardHeader = styled.h3`
   align-items: center;
 `;
 
-export const CardContent = styled.p`
+export const ServiceCardContent = styled.p`
   font-size: 13px;
   text-align: justify;
 `;
