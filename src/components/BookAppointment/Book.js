@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 
 export const Book = () => {
   return (
-    <div>Book</div>
+    <>
+      Book Appointment
+    </>
   )
 }
