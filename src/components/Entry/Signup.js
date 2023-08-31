@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { CreateUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, sendEmailVerification, currentUser } from 'firebase/auth';
 import { auth } from '../../firebase';
+import React, { useState } from 'react';
 import {
   PageContainer,
   SlideContainer,
@@ -16,21 +16,37 @@ import {
   SlidePrompt,
   Prompt
 } from './EntryStyling';
+import { Alert } from 'react-bootstrap';
 
-const SignupPage = ({ toggleSlide }) => {
+const SignupPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [message, setInfomessage] = useState('');
+  const [error, setError] = useState(null);
 
   const handleSignup = (e) => {
     e.preventDefault();
-    CreateUserWithEmailAndPassword(auth, email, password)
-       .then((userCredential) => {
-        console.log(userCredential);
-    })
-     .catch((error) => {
-      console.log(error);
-     });
-};
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        setError(null);
+        const user = userCredential.user;
+
+        sendEmailVerification(user)
+          .then(() => {
+            setInfomessage('Verification Email Sent');
+            console.log(message)
+          })
+          .catch((error) => {
+             setError('Error Sending Verification Email')
+             console.log(error);
+          });
+      }) 
+      .catch((error) => {
+        setError('Error Creating Account')
+        console.log(error);
+      });
+  };
 
     return (
       <PageContainer>
@@ -39,22 +55,25 @@ const SignupPage = ({ toggleSlide }) => {
           <Slide>
             <FormWrap>
             <FormContent>
-              <Form>
-              <FormTitle>Log In</FormTitle>
+              <Form onSubmit={handleSignup}>
+              <FormTitle>Sign Up</FormTitle>
+              {message && <Alert variant='info'>{message}</Alert>}
               <FormLabel>Email</FormLabel>
               <FormInput
                type='email' required
+               placeholder='Enter your email'
                value={email}
                onChange={(e) => setEmail(e.target.value)}/>
 
               <FormLabel>Password</FormLabel>
               <FormInput
                type='password' required
+               placeholder='Enter password (at least 6 characters)'
                value={password}
                onChange={(e) => setPassword(e.target.value)}/>
 
-              <FormButton type='submit' onClick={handleSignup}>Sign Up</FormButton>
-              <SlidePrompt>New to PAX?<Prompt onClick={toggleSlide}>Create an account</Prompt></SlidePrompt>
+              <FormButton type='submit'>Sign Up</FormButton>
+              <SlidePrompt>Already Have an Account?<Prompt to='/login'>Log In</Prompt></SlidePrompt>
               </Form>
             </FormContent>
           </FormWrap>

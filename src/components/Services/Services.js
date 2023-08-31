@@ -16,17 +16,17 @@ import {
     ServiceCardHeader,
     ServiceCardContent
 } from './ServicesStyling';
-import Stars from '../Utility/renderStars';
 import { FaHandHoldingHeart, FaMoneyBill } from 'react-icons/fa';
+import { renderStars } from '../Utility/renderStars';
 
 
 const ServicesPage = () => {
+    const averageRating = 4.5;
   return (
     <>
      <PageContainer>
       <HeaderContainer>
-      <HeaderText>Customer Rating: </HeaderText>
-      <Stars count={4.5} />
+      <HeaderText>Customer Rating: {renderStars(averageRating)} </HeaderText>
       <HeaderTitle>Exceptional Healthcare.</HeaderTitle>
       <HeaderText>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
        sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
@@ -41,7 +41,7 @@ const ServicesPage = () => {
            <FaMoneyBill size='25px' color='#000' />
          </IconWrapper>
          <HeaderSubtext>Affordable Prices </HeaderSubtext>
-         <ButtonContainer><Button to='/appointment'>Book Now</Button></ButtonContainer>
+         <ButtonContainer><Button to='/book'>Book Now</Button></ButtonContainer>
        </IconContainer>
       </HeaderContainer>
 

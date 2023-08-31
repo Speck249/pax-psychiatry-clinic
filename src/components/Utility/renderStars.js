@@ -1,17 +1,23 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar, faStarHalfAlt} from '@fortawesome/free-solid-svg-icons';
 
-const Stars = ({ count }) => {
-  const renderStars = () => {
-    const stars = [];
+export const renderStars = (rating) => {
+  /*const numberOfStars = 5;*/
+  const fullStars = Math.floor(rating);
+  const hasHalfStar = rating % 1 >= 0.5;
 
-    for (let i = 0; i < count; i++) {
-      stars.push(<span key={i} className="star"></span>);
-    }
+  const stars = [];
 
-    return stars;
-  };
+  for (let i = 0; i < fullStars; i++) {
+    stars.push(<FontAwesomeIcon key={i} icon={faStar} className='golden-star'/>);
+  }
 
-  return <div className="stars">{renderStars()}</div>;
+  if (hasHalfStar) {
+    stars.push(<FontAwesomeIcon key={fullStars} icon={faStarHalfAlt} className='golden-star'/>);
+  }
+
+  /*const emptyStars = numberOfStars - fullStars - (hasHalfStar ? 1 : 0);*/
+
+  return stars;
 };
-
-export default Stars;

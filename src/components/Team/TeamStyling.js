@@ -167,7 +167,9 @@ export const TeamCardContent = styled.p`
 
 export const IconWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   padding-top: 0.5rem;
   margin-top: 8px;
+  cursor: pointer;
+  padding-left: 1px;
 `;

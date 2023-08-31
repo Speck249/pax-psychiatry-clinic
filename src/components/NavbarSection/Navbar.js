@@ -18,9 +18,7 @@ const Navbar = ({toggle}) => {
     <>
       <Nav>
         <NavbarContainer>
-            <NavbarLogo to='/'>
-              <img src='../../images/Navbar.svg' alt='Logo'/>
-            </NavbarLogo>
+            <NavbarLogo to='/'>PAX</NavbarLogo>
             <MobileIcon onClick={toggle}>
             <FaBars />
             </MobileIcon>
@@ -45,7 +43,7 @@ const Navbar = ({toggle}) => {
               <NavbarButtonLink to='/login'>Log In</NavbarButtonLink>
             </NavbarButton>
             <NavbarButton>
-              <NavbarButtonLink to='/login'>Sign Up</NavbarButtonLink>
+              <NavbarButtonLink to='/signup'>Sign Up</NavbarButtonLink>
             </NavbarButton>
         </NavbarContainer>
       </Nav>

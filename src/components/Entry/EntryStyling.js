@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import LogInImg from '../../images/LogInBg.jpg'
+import { Link } from 'react-router-dom';
 
 export const PageContainer = styled.div`
  background-image: url(${LogInImg});
@@ -29,7 +30,7 @@ export const SlideContent = styled.div`
 
 export const Slide = styled.div`
   background-color: transparent;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(25px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -105,25 +106,24 @@ export const FormInput = styled.input`
   margin-bottom: 20px;
   border: none;
   border-radius: 5px;
+  font-size: 14px;
 `;
 
 export const FormButton = styled.button`
    background-color: #09798C;
    color: #fff;
-   outline: none;
-   padding: 10px 20px;
+   padding: 10px 10px;
    border-radius: 8px;
    border: none;
-   font-size: 1rem;
-   margin-top: 1px;
-   margin-right: 0.5px;
+   font-size: 15px;
+   margin-top: 8px;
    cursor: pointer;
+   width: 100%;
 `;
 
 export const SlidePrompt = styled.h3`
   font-size: 12px;
-  font-weight: 100;
-  color: #000;;
+  color: #000;
   margin-top: 20px;
   margin-left: 5rem;
   margin-right: 30px;
@@ -131,9 +131,19 @@ export const SlidePrompt = styled.h3`
   align-items: center;
 `;
 
-export const Prompt = styled.h3`
+export const Prompt = styled(Link)`
   font-size: 12px;
-  color: #09798C;
+  color: #fff;
   white-space: nowrap;
   margin-left: 4px;
+  text-decoration: none;
+`;
+
+export const Paragraph = styled.p`
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 13px;
 `;

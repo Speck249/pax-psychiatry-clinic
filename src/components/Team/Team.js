@@ -94,9 +94,9 @@ const TeamPage = () => {
          <TeamCardHeader>Dr. Nia Jelani</TeamCardHeader>
         <TeamCardContent>Family Therapist | Consultant Psychologist</TeamCardContent>
        <IconWrapper>
-           <FaLinkedin  size='20px' color='#000' />
-           <FaFacebook  size='20px' color='#000' />
-           <FaTwitter size='20px' color='#000' />
+           <FaLinkedin size={25} color='#000' />
+           <FaFacebook  size={25} color='#000' />
+           <FaTwitter size={25} color='#000' />
          </IconWrapper>
        </TeamCard>
       

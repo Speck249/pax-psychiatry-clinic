@@ -55,6 +55,7 @@ export const HeroTitle = styled.h1`
    color: #fff;
    letter-spacing: 0.3rem;
    line-height: 1.5;
+   margin-bottom: 0.5rem;
 `;
 
 export const HeroParagraph = styled.h3`

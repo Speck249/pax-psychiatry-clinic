@@ -34,6 +34,10 @@ export const NavbarLogo = styled(LinkRouter)`
   justify-self: flex-start;
   align-items: center;
   margin-left: 20px;
+  text-decoration: none;
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: bold;
   cursor: pointer;
 `;
 
@@ -71,6 +75,7 @@ export const NavbarItems = styled.li`
 export const NavbarLink = styled(LinkRouter)`
   display: flex;
   padding: 0 1rem;
+  margin-top: 0.6rem;
   color: #09798C;
   align-items: center;
   height: 100%;
@@ -87,8 +92,8 @@ export const NavbarButton = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: -45px;
-  margin-left: -30px;
+  margin-right: -20px;
+  margin-left: -8px;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -97,12 +102,11 @@ export const NavbarButton = styled.nav`
 
 export const NavbarButtonLink = styled(LinkRouter)`
    background-color: #000;
-   color: #fff;
    outline: none;
-   padding: 0.7rem 1.3rem;
-   border-radius: 3px;
+   padding: 0.5rem 1.2rem;
+   border-radius: 4px;
    border: none;
-   text-decoration: none;
+   color: #fff;
    font-size: 1rem;
    white-space: nowrap;
    text-decoration: none;
