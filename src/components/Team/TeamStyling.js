@@ -118,8 +118,9 @@ export const SectionTitle = styled.h2`
    text-align: center;
    color: #000;
    font-size: 35px;
+   font-weight: bolder;
    margin-top: 2rem;
-   margin-bottom: 9px;
+   margin-bottom: 14px;
 `;
 
 export const InformationContainer = styled.div`

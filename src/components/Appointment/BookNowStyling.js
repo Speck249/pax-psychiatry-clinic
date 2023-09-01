@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import BookImg from '../../images/AppointmentBg.jpg';
 
 export const PageContainer = styled.div`
-  width: 60%;
+  width: 70%;
   background-image: linear-gradient( to top right, #0b0a0a61, #0b0a0a30), url(${BookImg});
   background-size: cover;
   background-position: center;
@@ -10,11 +10,11 @@ export const PageContainer = styled.div`
 `;
 
 export const FormContainer = styled.div`
-  width: 83%;
+  width: 87%;
   height: 100%;
-  margin-left: 42rem;
-  margin-top: -30px;
-  margin-bottom: -20px;
+  margin-left: 48rem;
+  margin-top: -56px;
+  margin-bottom: -10px;
 
   @media screen and (max-width: 650px) {
     max-width: 90%;

@@ -13,7 +13,7 @@ export const SlideContainer = styled.div`
   background-color: transparent;
   margin: 0 auto;
   width: 450px;
-  height: 600px;
+  height: 700px;
   overflow: hidden;
   cursor: pointer;
 `;
@@ -121,20 +121,20 @@ export const FormButton = styled.button`
 `;
 
 export const SlidePrompt = styled.h3`
-  font-size: 12px;
+  font-size: 14px;
   color: #000;
   margin-top: 20px;
-  margin-left: 5rem;
+  margin-left: 3rem;
   margin-right: 30px;
   display: flex; 
   align-items: center;
 `;
 
 export const Prompt = styled(Link)`
-  font-size: 12px;
-  color: #fff;
+  font-size: 14px;
+  color: #09798C;
   white-space: nowrap;
-  margin-left: 4px;
+  margin-left: 6px;
   text-decoration: none;
 `;
 

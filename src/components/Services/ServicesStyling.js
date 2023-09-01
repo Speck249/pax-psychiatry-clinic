@@ -12,7 +12,7 @@ export const HeaderContainer = styled.div`
   background-size: cover;
   background-position: center;
   height: 100vh;
-  padding-top: 8rem; 
+  padding-top: 11rem; 
 
   @media only screen and (max-width: 1550px) {
    height: 90vh;
@@ -107,8 +107,9 @@ export const SectionTitle = styled.h2`
    text-align: center;
    color: #000;
    font-size: 35px;
+   font-weight: bolder;
    margin-top: 2rem;
-   margin-bottom: 9px;
+   margin-bottom: 14px;
 `;
 
 export const ServiceText = styled.p`

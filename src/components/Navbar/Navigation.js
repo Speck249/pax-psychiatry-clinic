@@ -1,3 +1,4 @@
+import { faHeartBroken } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { Navbar, Container } from 'react-bootstrap';
 
@@ -7,7 +8,7 @@ const NavigationBar = () => {
       <Container>
         <Navbar.Brand href='/'>
           <img
-            src={process.env.PUBLIC_URL + '/images/Logo.png'}
+            src={faHeartBroken}
             alt="Logo"
             height="30"
             className="d-inline-block align-top"
