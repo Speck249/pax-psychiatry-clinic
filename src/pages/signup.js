@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Navbar from '../components/NavbarSection/Navbar';
-import Sidebar from '../components/SidebarSection/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
+import Sidebar from '../components/Sidebar/Sidebar';
 import SignupPage from '../components/Entry/Signup';
 
 const SignUp = () => {
@@ -11,8 +11,6 @@ const SignUp = () => {
 
 return (
   <>
-    <Navbar toggle={toggle}/>
-    <Sidebar isOpen={isOpen} toggle={toggle}/>
     <SignupPage />
   </>
   );

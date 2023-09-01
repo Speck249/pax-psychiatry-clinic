@@ -17,6 +17,7 @@ import {
   Prompt
 } from './EntryStyling';
 import { Alert } from 'react-bootstrap';
+import NavigationBar from '../Navbar/Navigation';
 
 const SignupPage = () => {
   const [email, setEmail] = useState('');
@@ -50,6 +51,7 @@ const SignupPage = () => {
 
     return (
       <PageContainer>
+      <NavigationBar />
        <SlideContainer>
           <SlideContent>
           <Slide>

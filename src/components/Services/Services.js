@@ -28,10 +28,8 @@ const ServicesPage = () => {
       <HeaderContainer>
       <HeaderText>Customer Rating: {renderStars(averageRating)} </HeaderText>
       <HeaderTitle>Exceptional Healthcare.</HeaderTitle>
-      <HeaderText>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-       sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-       Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-       nisi ut aliquid ex ea commodi consequatur?</HeaderText>
+      <HeaderText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</HeaderText>
        <IconContainer>
          <IconWrapper>
            <FaHandHoldingHeart size='25px' color='#000' />

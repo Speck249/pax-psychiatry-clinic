@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import Navbar from '../components/Navbar/Navbar';
+import Sidebar from '../components/Sidebar/Sidebar';
 import ContactForm from '../components/Contact/Contact';
-import Navbar from '../components/NavbarSection/Navbar';
-import Sidebar from '../components/SidebarSection/Sidebar';
+import Footer from '../../src/components/Footer/Footer';
 
 const Contact = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -11,9 +12,10 @@ const Contact = () => {
 
 return (
   <>
-    <Navbar  toggle={toggle}/>
+    <Navbar toggle={toggle}/>
     <Sidebar isOpen={isOpen} toggle={toggle}/>
     <ContactForm />
+    <Footer />
   </>
   );
 };

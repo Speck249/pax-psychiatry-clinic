@@ -12,7 +12,7 @@ export const HeaderContainer = styled.div`
   background-size: cover;
   background-position: center;
   height: 100vh;
-  padding-top: 9rem; 
+  padding-top: 8rem; 
 
   @media only screen and (max-width: 1550px) {
    height: 90vh;
@@ -21,6 +21,7 @@ export const HeaderContainer = styled.div`
 
 export const HeaderTitle = styled.h1`
   font-size: 5rem;
+  font-weight: bolder;
   text-align: left;
   padding-left: 2rem;
   margin-left: 1rem;
@@ -32,7 +33,7 @@ export const HeaderText = styled.h2`
   font-size: 15px;
   font-family: 'Sora', sans-serif;
   font-weight: 400;
-  text-align: left;
+  text-align: justify;
   padding-right: 18rem;
   padding-left: 2.5rem;
   margin-left: 1rem;
@@ -46,18 +47,17 @@ export const IconContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-left: 2.8rem;
+  margin-left: 2rem;
 `;
 
 export const IconWrapper = styled.div`
- margin-right: -30px;
- padding-top: 0.5rem;
- padding-left: 1.7rem;
+ margin-right: -32px;
+ padding-left: 1.5rem;
  padding-right: 1.3rem;
 `;
 
 export const HeaderSubtext = styled.h3`
-  font-size: 15px;
+  font-size: 13px;
   font-family: 'Sora', sans-serif;
   font-weight: 400;
   text-align: left;
@@ -80,11 +80,11 @@ export const Button = styled(LinkRouter)`
    background-color: #000;
    color: #fff;
    outline: none;
-   padding: 0.7rem 1.3rem;
+   padding: 0.7rem 1.2rem;
    border-radius: 3px;
    border: none;
    text-decoration: none;
-   font-size: 1rem;
+   font-size: 14px;
    transition: all 0.3s ease;
    cursor: pointer;
 

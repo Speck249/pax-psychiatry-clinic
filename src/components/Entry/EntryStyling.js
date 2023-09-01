@@ -6,7 +6,6 @@ export const PageContainer = styled.div`
  background-image: url(${LogInImg});
  background-size: cover;
  background-repeat: no-repeat;
- padding-top: 3rem;
  height: 100vh;
 `;
 

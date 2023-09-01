@@ -19,6 +19,7 @@ import {
   SlidePrompt,
   Prompt
 } from './EntryStyling';
+import NavigationBar from '../Navbar/Navigation';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -49,6 +50,7 @@ const LoginPage = () => {
 
   return (
     <PageContainer>
+    <NavigationBar />
       <SlideContainer>
         <SlideContent>
           <Slide>

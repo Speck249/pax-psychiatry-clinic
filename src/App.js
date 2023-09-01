@@ -8,7 +8,6 @@ import Contact from './pages/contact';
 import LogIn from './pages/login';
 import SignUp from './pages/signup';
 import Book from './pages/book';
-import Footer from './components/FooterSection/Footer';
 import ProfilePage from './components/PrivatePages/ProfilePage';
 import PrivateRoute from './components/PrivatePages/PrivateRoute';
 
@@ -30,7 +29,6 @@ function App() {
           <Route path="/login" element={<LogIn />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
-        <Footer />
       </Router>
     </>
   );

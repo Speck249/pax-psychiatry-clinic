@@ -6,13 +6,13 @@ export const PageContainer = styled.div`
   background-size: cover;
   background-position: center;
   min-height: 100vh;
-  padding-top: 2.4rem; 
+  padding-top: 2rem; 
 `;
 
 export const FormContainer = styled.div`
-  margin-top: 30px;
-  padding-bottom: 62px;
-  max-width: 960px;
+  padding-bottom: 50px;
+  max-width: 650px;
+  align-items: center;
   margin: 0 auto;
 
   @media screen and (max-width: 650px) {
@@ -48,16 +48,18 @@ export const FormTitle = styled.h1`
   justify-content: center;
   align-items: center;
   font-size: 30px;
+  font-weight: bolder;
   color: #fff;
-  padding-bottom: 20px;
-  margin-top: -15px;
+  padding-bottom: 28px;
+  margin-top: -5px;
+  margin-bottom: 0.5rem;
 `;
 
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
   margin: auto;
-  padding: 60px 32px;
+  padding: 60px 30px;
   border-radius: 4px;
   background-color: #000;
   max-width: 600px;
@@ -78,35 +80,45 @@ export const RequiredIndicator = styled.span`
 export const FormLabel = styled.label`
   font-size: 14px;
   color: #fff;
-  margin-bottom: 8px;
-`;
-
-export const TextArea = styled.textarea`
-  width: 100%;
-  height: 6rem;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;
 `;
 
 export const FormInput = styled.input`
-  padding: 15px 16px;
-  margin-bottom: 25px;
+  padding: 10px 1rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
+  margin-left: 2rem;
+  margin-bottom: 20px;
+  width: 85%;
+`;
+
+export const StyledTextarea = styled.textarea`
+  padding: 10px 1rem;
+  border: none;
+  border-radius: 4px;
+  margin-left: 2rem;
+  margin-bottom: 25px;
+  width: 85%;
+;`
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const FormButton = styled.button`
+   width: 30%;
    background-color: #09798C;
    color: #fff;
    outline: none;
-   padding: 0.8rem 1rem;
-   border-radius: 5px;
+   padding: 0.7rem 1rem;
+   border-radius: 4px;
    border: none;
    font-size: 1rem;
-   margin-top: 20px;
-   margin-bottom: -5px;
-   margin-right: 3px;
+   margin-top: -5px;
+   margin-bottom: -20px;
    cursor: pointer;
 `;

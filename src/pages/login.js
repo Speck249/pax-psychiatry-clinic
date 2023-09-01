@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Navbar from '../components/NavbarSection/Navbar';
-import Sidebar from '../components/SidebarSection/Sidebar';
 import LoginPage from '../components/Entry/LogIn';
 
 const LogIn = () => {
@@ -11,8 +9,6 @@ const LogIn = () => {
 
 return (
   <>
-    <Navbar toggle={toggle}/>
-    <Sidebar isOpen={isOpen} toggle={toggle}/>
     <LoginPage />
   </>
   );

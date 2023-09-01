@@ -1,15 +1,34 @@
 import React, { useState } from 'react';
-import { Form, Button, Alert } from 'react-bootstrap';
+import { Alert } from 'react-bootstrap';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../../firebase';
+import {
+    PageContainer,
+    FormContainer,
+    FormWrap,
+    FormContent,
+    Form,
+    FormTitle,
+    RequiredIndicator,
+    FormLabel,
+    FormInput,
+    StyledTextarea,
+    ButtonContainer,
+    FormButton
+} from './BookNowStyling';
+import NavigationBar from '../Navbar/Navigation';
 
-const BookAppointmentPage = () => {
+const BookAppointment = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [message, setMessage] = useState('');
   const [bookingStatus, setBookingStatus] = useState(null);
+
+  const handleTextareaChange = (e) => {
+    setMessage(e.target.value);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,78 +42,95 @@ const BookAppointmentPage = () => {
         message,
       };
 
+      // Save appointment data to Firebase
       const docRef = await addDoc(collection(db, 'appointments'), appointmentData);
 
+      // Clear form fields
       setFullName('');
       setEmail('');
       setDate('');
       setTime('');
       setMessage('');
 
+      // Set booking status to true
       setBookingStatus(true);
+      setTimeout(() => {
+        setBookingStatus(null);
+      }, 5000);
     } catch (error) {
+      // Set booking status to false
       setBookingStatus(false);
-    }
-  };
 
-  return (
-    <div className="container">
-      <h1>Book Appointment</h1>
-      {bookingStatus === true && <Alert variant="success">Appointment booked successfully!</Alert>}
-      {bookingStatus === false && <Alert variant="danger">Failed to book appointment. Please try again.</Alert>}
+      setTimeout(() => {
+        setBookingStatus(null);
+    }, 5000);
+  }
+};
 
-        <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3" controlId="name">
-          <Form.Label>Full Name</Form.Label>
-          <Form.Control
+return (
+    <>
+        <PageContainer>
+        <NavigationBar />
+        <FormContainer>
+          <FormWrap>
+            <FormContent>
+              <Form onSubmit={handleSubmit}>
+              {bookingStatus === true && <Alert variant="success">Appointment Booked!</Alert>}
+              {bookingStatus === false && <Alert variant="danger">Appointment Booking Failed. Give it another Try.</Alert>}
+              <FormTitle>BOOK YOUR FIRST FREE APPOINTMENT!</FormTitle>
+
+        <div><RequiredIndicator><FormLabel>Full Name</FormLabel> *</RequiredIndicator></div>
+        <div>
+          <FormInput
             type="text"
-            placeholder="Enter your name"
+            id="fullName"
             value={fullName}
-            onChange={(e) => setFullName(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="email">
-          <Form.Label>Email Address</Form.Label>
-          <Form.Control
+            onChange={(e) => setFullName(e.target.value)} required />
+        </div>
+        
+        <div><RequiredIndicator><FormLabel>Email</FormLabel> *</RequiredIndicator></div>
+        <div>
+          <FormInput
             type="email"
-            placeholder="Enter your email"
+            id="email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="date">
-          <Form.Label>Preferred Date</Form.Label>
-          <Form.Control
-            type="date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="time">
-          <Form.Label>Preferred Time</Form.Label>
-          <Form.Control
-            type="time"
-            value={time}
-            onChange={(e) => setTime(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="message">
-          <Form.Label>Message</Form.Label>
-          <Form.Control
-            as="textarea"
-            rows={3}
-            placeholder="Enter your message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
-        </Form.Group>
-       
-        <Button variant="primary" type="submit">
-          Book Appointment
-        </Button>
-      </Form>
-    </div>
+            onChange={(e) => setEmail(e.target.value)} required />
+        </div>
+
+        <div><RequiredIndicator><FormLabel>Date</FormLabel> *</RequiredIndicator></div>
+          <div>
+            <FormInput
+              type="date"
+              id="date"
+              value={date}
+              onChange={(e) => setDate(e.target.value)} required />
+          </div>
+
+        <div><RequiredIndicator><FormLabel>Time</FormLabel> *</RequiredIndicator></div>
+          <div>
+            <FormInput
+              type="time"
+              id="time"
+              value={time}
+              onChange={(e) => setTime(e.target.value)} required />
+          </div>
+
+        <div><RequiredIndicator><FormLabel>Message</FormLabel> *</RequiredIndicator></div>
+          <div>
+            <StyledTextarea
+              rows={3}
+              value={message}
+              onChange={handleTextareaChange} required />
+            </div>
+
+        <ButtonContainer><FormButton variant="primary" type="submit">Submit</FormButton></ButtonContainer>
+        </Form>
+       </FormContent>
+      </FormWrap>
+     </FormContainer>
+    </PageContainer>
+  </>  
   );
 };
 
-export default BookAppointmentPage;
+export default BookAppointment;

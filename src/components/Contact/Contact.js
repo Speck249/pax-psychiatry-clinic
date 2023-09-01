@@ -1,37 +1,115 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Alert } from 'react-bootstrap';
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from '../../firebase';
 import {
     PageContainer,
     FormContainer,
     FormWrap,
     FormContent,
-    FormTitle,
     Form,
+    FormTitle,
     RequiredIndicator,
     FormLabel,
-    TextArea,
     FormInput,
+    StyledTextarea,
+    ButtonContainer,
     FormButton
 } from './ContactStyling';
 
-
 const ContactForm = () => {
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [contactStatus, setContactStatus] = useState(null);
+
+  const handleTextareaChange = (e) => {
+    setMessage(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const contactData = {
+        fullName,
+        email,
+        subject,
+        message,
+      };
+
+      // Save contact data to Firebase
+      const docRef = await addDoc(collection(db, 'contacts'), contactData);
+
+      // Clear form fields
+      setFullName('');
+      setEmail('');
+      setSubject('');
+      setMessage('');
+
+      // Set contact status to true
+      setContactStatus(true);
+      setTimeout(() => {
+        setContactStatus(null);
+      }, 5000);
+    } catch (error) {
+      // Set contact status to false
+      setContactStatus(false);
+
+      setTimeout(() => {
+        setContactStatus(null);
+    }, 5000);
+  }
+};
+
   return (
     <>
         <PageContainer>
         <FormContainer>
+        {contactStatus === true && <Alert variant="success">Thank you for your message! We will get back to you shortly.</Alert>}
+        {contactStatus === false && <Alert variant="danger">Submission Failed. Please try again.</Alert>}
             <FormWrap>
              <FormContent>
-               <Form>
+               <Form onSubmit={handleSubmit}>
                <FormTitle>GET IN TOUCH</FormTitle>
-                <RequiredIndicator><FormLabel>Full Name</FormLabel> *</RequiredIndicator>
-                <FormInput type='text' required></FormInput>
-                <RequiredIndicator><FormLabel>Email</FormLabel> *</RequiredIndicator>
-                <FormInput type='email' required></FormInput>
-                <FormLabel>Subject</FormLabel>
-                <FormInput type='text'></FormInput>
-                <RequiredIndicator><FormLabel>Message</FormLabel> *</RequiredIndicator>
-                <TextArea placeholder='Place your thoughts here...'/>
-                <FormButton>Submit</FormButton>
+
+               <div><RequiredIndicator><FormLabel>Full Name</FormLabel> *</RequiredIndicator></div>
+               <div>
+                <FormInput
+                   type="text"
+                   id="fullName"
+                   value={fullName}
+                   onChange={(e) => setFullName(e.target.value)} required />
+                </div>
+
+                <div><RequiredIndicator><FormLabel>Email</FormLabel> *</RequiredIndicator></div>
+                <div>
+                <FormInput
+                   type="email"
+                   id="email"
+                   value={email}
+                   onChange={(e) => setEmail(e.target.value)} required />
+                </div>
+
+                <div><FormLabel>Subject</FormLabel></div>
+                <div>
+                <FormInput
+                   type="text"
+                   id="subject"
+                   value={subject}
+                   onChange={(e) => setSubject(e.target.value)} />
+                </div>
+
+                <div><RequiredIndicator><FormLabel>Message</FormLabel> *</RequiredIndicator></div>
+                <div>
+                <StyledTextarea
+                   rows={3}
+                   value={message}
+                   onChange={handleTextareaChange} required />
+                </div>
+
+                <ButtonContainer><FormButton variant="primary" type="submit">Submit</FormButton></ButtonContainer>
             </Form>
             </FormContent>
             </FormWrap>

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import Navbar from '../components/NavbarSection/Navbar';
-import Sidebar from '../components/SidebarSection/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
+import Sidebar from '../components/Sidebar/Sidebar';
 import AboutPage from '../components/About/About';
+import Footer from '../../src/components/Footer/Footer';
 
 const About = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -11,9 +12,10 @@ const About = () => {
 
 return (
   <>
-  <Navbar  toggle={toggle}/>
+  <Navbar toggle={toggle}/>
   <Sidebar isOpen={isOpen} toggle={toggle}/>
   <AboutPage />
+  <Footer />
   </>
   );
 };
