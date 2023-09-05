@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Alert } from 'react-bootstrap';
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from '../../firebase';
+import { FaFacebook, FaLinkedin, FaTwitter, FaInstagram  } from 'react-icons/fa';
 import {
     FooterContainer,
     FooterWrap,
     Newsletter,
     NewsletterTitle,
     NewsletterBody,
-    NewsletterForm,
-    NewsletterInput,
-    Label,
-    Button,
+    Form, 
+    FormLabel,
+    FormInput,
+    FormButton,
     FooterLinkContainer,
     FooterLinkWrapper,
     FooterLinks,
@@ -16,22 +20,58 @@ import {
     FooterLink,
     FooterCopyright
 } from './FooterStyling';
-import { FaFacebook, FaLinkedin, FaTwitter, FaInstagram  } from 'react-icons/fa';
+
 
 const Footer = () => {
-  return (
-    <>
+    const [email, setEmail] = useState('');
+    const [subscriptionStatus, setSubscriptionStatus] = useState('');
+
+    const handleSubmit = async (e) => {
+        try {
+            const newsletterData = {
+                email
+            };
+            
+            const docRef = await addDoc(collection(db, 'newsletters'), newsletterData);
+            
+            setEmail('');
+            
+            setSubscriptionStatus(true);
+            setTimeout(() => {
+                setSubscriptionStatus(null);
+            }, 5000);
+        } catch (error) {
+            setSubscriptionStatus(false);
+            
+            setTimeout(() => {
+                setSubscriptionStatus(null);
+            }, 5000);
+        }
+    }
+        
+        return (
+          <>
             <FooterContainer>
             <FooterWrap>
              <Newsletter>
                 <NewsletterTitle>Subscribe to Our Weekly Newsletter.</NewsletterTitle>
                     <NewsletterBody>Get Exclusive Health Content Curated by Industry Experts.</NewsletterBody>
-                        <NewsletterForm>
-                            <Label htmlFor='email'>Email Address</Label>
-                            <NewsletterInput name='email' id='email' type='email' placeholder='Insert Email' required/>
-                            <Button>Subscribe</Button>
-                        </NewsletterForm>
+                    {subscriptionStatus === true && <Alert variant="success">Welcome to the PAX community!</Alert>}
+                    {subscriptionStatus === false && <Alert variant="danger">Subscription Failed. Please try again.</Alert>}
+                        <Form onSubmit={handleSubmit}>
+                            <div><FormLabel>Email Address</FormLabel></div>
+                            <div><FormInput
+                              type='email'
+                              id='email'
+                              value={email}
+                              placeholder='Insert Email' 
+                              onChange={(e) => setEmail(e.target.value)} required
+                            />
+                            </div>
+                            <FormButton variant='primary' type='submit'>Subscribe</FormButton>
+                        </Form>
              </Newsletter>
+
              <FooterLinkContainer>
                 <FooterLinkWrapper>
                 <FooterLinks>
@@ -50,6 +90,7 @@ const Footer = () => {
                     <FooterLink to='/services'>Couples Therapy</FooterLink>
                     <FooterLink to='/services'>Marriage Counselling</FooterLink>
                     <FooterLink to='/services'>Psychiatry</FooterLink>
+                    <FooterLink to='/services'>Corporate Counselling</FooterLink>
                 </FooterLinks>
                 </FooterLinkWrapper>
 

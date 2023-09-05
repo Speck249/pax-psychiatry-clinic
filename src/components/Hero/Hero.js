@@ -1,3 +1,4 @@
+import { Button } from '../ButtonStyling';
 import {
   HeroContainer,
   HeroContent,
@@ -5,18 +6,17 @@ import {
   HeroTitle,
   HeroParagraph
 } from './HeroStyling';
-import { Button } from '../ButtonStyling';
 
 
 const Hero = () => {
-    return (
+  return (
     <>
      <HeroContainer>
        <HeroContent>
          <HeroContentText>
              <HeroTitle>Your Health Journey Starts Here</HeroTitle>
           <HeroParagraph>
-            Book your first free appointment & prioritize your
+            Book Your First Free Appointment & Prioritize Your
             Mental Health at PAX Private Psychiatry & Therapy Clinic.
           </HeroParagraph>
             <Button to='/services'>Learn More</Button>

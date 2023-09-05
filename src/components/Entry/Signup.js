@@ -1,6 +1,7 @@
-import { createUserWithEmailAndPassword, sendEmailVerification, currentUser } from 'firebase/auth';
-import { auth } from '../../firebase';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useUserAuth } from '../../context/userAuthContext';
+import { Alert } from 'react-bootstrap';
+import NavigationBar from '../Navbar/Navigation';
 import {
   PageContainer,
   SlideContainer,
@@ -16,74 +17,83 @@ import {
   SlidePrompt,
   Prompt
 } from './EntryStyling';
-import { Alert } from 'react-bootstrap';
-import NavigationBar from '../Navbar/Navigation';
+
 
 const SignupPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [message, setInfomessage] = useState('');
   const [error, setError] = useState(null);
+  const [infoMessage, setInfoMessage] = useState('');
+  const { signUp } = useUserAuth();
 
-  const handleSignup = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
+    setError('');
 
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        setError(null);
-        const user = userCredential.user;
-
-        sendEmailVerification(user)
-          .then(() => {
-            setInfomessage('Verification Email Sent');
-            console.log(message)
-          })
-          .catch((error) => {
-             setError('Error Sending Verification Email')
-             console.log(error);
-          });
-      }) 
-      .catch((error) => {
-        setError('Error Creating Account')
-        console.log(error);
-      });
+    try {
+      await signUp(email, password);
+      setInfoMessage('Verification Email Sent');
+      console.log(infoMessage);
+    } catch (error) {
+      return;
+    }
   };
 
-    return (
-      <PageContainer>
+  useEffect(() => {
+    const clearFields = setTimeout(() => {
+      setEmail('');
+      setPassword('');
+      setError(null);
+      setInfoMessage('');
+    }, 4000);
+
+    return () => {
+      clearTimeout(clearFields);
+    };
+  }, [email, password, error, infoMessage]);
+
+  return (
+    <>
+    <PageContainer>
       <NavigationBar />
-       <SlideContainer>
-          <SlideContent>
+      <SlideContainer>
+        <SlideContent>
           <Slide>
             <FormWrap>
-            <FormContent>
-              <Form onSubmit={handleSignup}>
-              <FormTitle>Sign Up</FormTitle>
-              {message && <Alert variant='info'>{message}</Alert>}
-              <FormLabel>Email</FormLabel>
-              <FormInput
-               type='email' required
-               placeholder='Enter your email'
-               value={email}
-               onChange={(e) => setEmail(e.target.value)}/>
+              <FormContent>
+                <Form onSubmit={handleSignup}>
+                  <FormTitle>Sign Up</FormTitle>
+                  {error && <Alert variant='danger'>{error}</Alert>}
+                  {infoMessage && <Alert variant='info'>{infoMessage}</Alert>}
+                  <FormLabel>Email</FormLabel>
+                  <FormInput
+                    type='email'
+                    placeholder='Please use Gmail, Outlook, or Yahoo'
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)} required
+                  />
 
-              <FormLabel>Password</FormLabel>
-              <FormInput
-               type='password' required
-               placeholder='Enter password (at least 6 characters)'
-               value={password}
-               onChange={(e) => setPassword(e.target.value)}/>
+                  <FormLabel>Password</FormLabel>
+                  <FormInput
+                    type='password'
+                    placeholder='Enter password (at least 6 characters)'
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)} required
+                  />
 
-              <FormButton type='submit'>Sign Up</FormButton>
-              <SlidePrompt>Already Have an Account?<Prompt to='/login'>Log In</Prompt></SlidePrompt>
-              </Form>
-            </FormContent>
-          </FormWrap>
-        </Slide>
-      </SlideContent>
-    </SlideContainer>
-  </PageContainer>
- );
+                  <FormButton variant='primary' type='submit'>Sign Up</FormButton>
+                  <SlidePrompt>
+                    Already Have an Account?<Prompt to='/login'>Log In</Prompt>
+                  </SlidePrompt>
+                </Form>
+              </FormContent>
+            </FormWrap>
+          </Slide>
+        </SlideContent>
+      </SlideContainer>
+    </PageContainer>
+    </>
+  );
 };
 
 export default SignupPage;

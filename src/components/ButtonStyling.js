@@ -2,19 +2,17 @@ import styled from 'styled-components';
 import { Link as LinkRouter } from 'react-router-dom';
 
 export const Button = styled(LinkRouter)`
-  background-color: ${({primary}) => primary ? '#09798C': '#000'};
+  justify-content: center;
+  align-items: center;
   padding: 0.7rem 1.3rem;
   border-radius: 3px;
   border: none;
-  /*border-radius: ${({big}) => big ? '30px': '20px'};
-  padding: ${({big}) => big ? '18px 30px' : '10px 20px'};*/
-  font-size: ${({font}) => font ? '10px': '16px'};
-  color: ${({primary}) => primary ? '#000': '#e6e6e6'};
-  justify-content: center;
-  align-items: center;
   outline: none;
-  transition: all 0.3s ease;
+  background-color: ${({primary}) => primary ? '#09798C': '#000'};
+  color: ${({primary}) => primary ? '#000': '#fff'}; 
+  font-size: ${({font}) => font ? '10px': '15px'};
   text-decoration: none;
+  transition: all 0.3s ease;
   cursor: pointer;
   
 &:hover{

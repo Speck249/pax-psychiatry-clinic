@@ -20,10 +20,8 @@ export const HeroContent = styled.section`
    justify-content: center;
    align-items: center;
    text-align: center;
-   position: relative;
    height: 100%;
    width: 100%;
-   color: #fff;
    
    @media only screen and (max-width: 375px) {
     text-align: start;
@@ -36,8 +34,12 @@ export const HeroContentText = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 70%;
-    padding-top: 10rem;
+    width: 55%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 11rem;
+    background-color: transparent;
+    color: #fff;
     
     @media only screen and (max-width: 500px) {
         width: 50%;
@@ -50,20 +52,20 @@ export const HeroContentText = styled.div`
 `;
 
 export const HeroTitle = styled.h1`
-   font-size: 35px;
-   font-weight: bold;
-   color: #fff;
+   font-size: 40px;
+   font-family: 'Sora', sans-serif;
+   font-weight: 400;
    letter-spacing: 0.3rem;
-   line-height: 1.5;
-   margin-bottom: 0.5rem;
+   margin-bottom: 3px;
 `;
 
 export const HeroParagraph = styled.h3`
-   font-size: clamp(1rem, 1vw, 1rem);
-   color: #fff;
-   letter-spacing: 0.3rem;
+   font-size: 17px;
+   font-family: 'Sora', sans-serif;
+   font-weight: 400;
+   letter-spacing: 0.2rem;
    line-height: 1.8;
-   padding: 1.5rem 1.5rem;
+   padding: 1.3rem;
    
    @media only screen and (max-width: 375px) {
     padding: 1.5rem 0;

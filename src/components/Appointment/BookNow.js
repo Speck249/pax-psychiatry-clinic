@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Alert } from 'react-bootstrap';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../../firebase';
+import NavigationBar from '../Navbar/Navigation';
 import {
     PageContainer,
     FormContainer,
@@ -16,7 +17,7 @@ import {
     ButtonContainer,
     FormButton
 } from './BookNowStyling';
-import NavigationBar from '../Navbar/Navigation';
+
 
 const BookAppointment = () => {
   const [fullName, setFullName] = useState('');
@@ -25,10 +26,6 @@ const BookAppointment = () => {
   const [time, setTime] = useState('');
   const [message, setMessage] = useState('');
   const [bookingStatus, setBookingStatus] = useState(null);
-
-  const handleTextareaChange = (e) => {
-    setMessage(e.target.value);
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,23 +39,19 @@ const BookAppointment = () => {
         message,
       };
 
-      // Save appointment data to Firebase
       const docRef = await addDoc(collection(db, 'appointments'), appointmentData);
 
-      // Clear form fields
       setFullName('');
       setEmail('');
       setDate('');
       setTime('');
       setMessage('');
 
-      // Set booking status to true
       setBookingStatus(true);
       setTimeout(() => {
         setBookingStatus(null);
       }, 5000);
     } catch (error) {
-      // Set booking status to false
       setBookingStatus(false);
 
       setTimeout(() => {
@@ -69,7 +62,7 @@ const BookAppointment = () => {
 
 return (
     <>
-        <PageContainer>
+      <PageContainer>
         <NavigationBar />
         <FormContainer>
           <FormWrap>
@@ -120,7 +113,7 @@ return (
             <StyledTextarea
               rows={3}
               value={message}
-              onChange={handleTextareaChange} required />
+              onChange={(e) => setMessage(e.target.value)} required />
             </div>
 
         <ButtonContainer><FormButton variant="primary" type="submit">Submit</FormButton></ButtonContainer>

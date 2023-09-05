@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import ContactImg from '../../images/ContactBg.jpg';
+import '../../fonts/webfont.css';
 
 export const PageContainer = styled.div`
   background-image: linear-gradient( to top right, #0b0a0a61, #0b0a0a30), url(${ContactImg});
@@ -21,10 +22,10 @@ export const FormContainer = styled.div`
 `;
 
 export const FormWrap = styled.div`
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
 
   @media screen and (max-width: 480px) {
      height: 80%;
@@ -32,10 +33,10 @@ export const FormWrap = styled.div`
 `;
 
 export const FormContent = styled.div`
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
 
   @media screen and (max-width: 480px) {
     padding: 10px;
@@ -114,7 +115,7 @@ export const FormButton = styled.button`
    background-color: #09798C;
    color: #fff;
    outline: none;
-   padding: 0.7rem 1rem;
+   padding: 0.7rem;
    border-radius: 4px;
    border: none;
    font-size: 1rem;

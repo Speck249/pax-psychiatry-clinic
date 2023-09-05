@@ -17,16 +17,13 @@ import {
     FormButton
 } from './ContactStyling';
 
+
 const ContactForm = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
   const [contactStatus, setContactStatus] = useState(null);
-
-  const handleTextareaChange = (e) => {
-    setMessage(e.target.value);
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -39,22 +36,18 @@ const ContactForm = () => {
         message,
       };
 
-      // Save contact data to Firebase
       const docRef = await addDoc(collection(db, 'contacts'), contactData);
 
-      // Clear form fields
       setFullName('');
       setEmail('');
       setSubject('');
       setMessage('');
 
-      // Set contact status to true
       setContactStatus(true);
       setTimeout(() => {
         setContactStatus(null);
       }, 5000);
     } catch (error) {
-      // Set contact status to false
       setContactStatus(false);
 
       setTimeout(() => {
@@ -65,7 +58,7 @@ const ContactForm = () => {
 
   return (
     <>
-        <PageContainer>
+      <PageContainer>
         <FormContainer>
         {contactStatus === true && <Alert variant="success">Thank you for your message! We will get back to you shortly.</Alert>}
         {contactStatus === false && <Alert variant="danger">Submission Failed. Please try again.</Alert>}
@@ -106,7 +99,7 @@ const ContactForm = () => {
                 <StyledTextarea
                    rows={3}
                    value={message}
-                   onChange={handleTextareaChange} required />
+                   onChange={(e) => setMessage(e.target.value)} required />
                 </div>
 
                 <ButtonContainer><FormButton variant="primary" type="submit">Submit</FormButton></ButtonContainer>
@@ -120,3 +113,4 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+

@@ -3,17 +3,15 @@ import { Link as LinkRouter } from 'react-router-dom'
 
 export const Nav = styled.nav`
   display: flex;
-  position: sticky;
-  height: 80px;
-  top: 0;
-  z-index: 10;
-  background-color: #e6e6e6;
   justify-content: center;
   align-items: center;
-  font-size: 17px;
+  height: 90px;
+  z-index: 10;
+  top: 0;  
+  background-color: #e6e6e6;
   
   @media screen and (max-width: 968px) {
-    transition: 0.7s all ease;
+    transition: 0.3s all ease;
     background-color: #09798C;
   }
 `;
@@ -21,11 +19,12 @@ export const Nav = styled.nav`
 export const NavbarContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  height: 70%;
-  max-width: 1100px;
+  justify-content: space-evenly;
+  max-width: 1200px;
   width: 100%;
+  height: 70%;
+  margin-right: 2rem;
+  padding-right: 1rem;
   z-index: 1;
 `;
 
@@ -33,12 +32,19 @@ export const NavbarLogo = styled(LinkRouter)`
   display: flex;
   justify-self: flex-start;
   align-items: center;
-  margin-left: 20px;
+  margin-left: -50px;
+  margin-right: 2rem;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #09798C;
   text-decoration: none;
-  color: #000;
-  font-size: 2.5rem;
-  font-weight: bold;
   cursor: pointer;
+`;
+
+export const Icon = styled.div`
+  padding-right: 6px;
+  padding-bottom: 4px;
+  color: #09798C;
 `;
 
 export const MobileIcon = styled.div`
@@ -58,11 +64,14 @@ export const MobileIcon = styled.div`
 `;
 
 export const NavbarMenu = styled.ul`
-   align-items: center;
-   text-align: center;
    display: flex;
+   align-items: center;
    list-style: none;
-   margin-left: 35px;
+   margin-left: 4rem;
+   margin-right: 3rem;
+   margin-top: 1rem;
+   height: 100%;
+   text-align: center;
 
    @media screen and (max-width: 768px) {
     display: none;
@@ -70,16 +79,14 @@ export const NavbarMenu = styled.ul`
 `;
 
 export const NavbarItems = styled.li`
-  height: 70px;
+  font-size: 17px;
 `;
 
 export const NavbarLink = styled(LinkRouter)`
   display: flex;
-  padding: 0 1rem;
-  margin-top: 0.6rem;
+  padding: 1rem;
+  margin-top: 0.5rem; 
   color: #09798C;
-  align-items: center;
-  height: 100%;
   text-decoration: none;
   cursor: pointer;
 
@@ -91,26 +98,28 @@ export const NavbarLink = styled(LinkRouter)`
 
 export const NavbarButton = styled.nav`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: -20px;
-  margin-left: -8px;
-
+  justify-content: space-evenly;
+  margin-right: -70px;
+  margin-left: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: blue;
+ 
   @media screen and (max-width: 768px) {
     display: none;
   }
 `;
 
 export const NavbarButtonLink = styled(LinkRouter)`
-   background-color: #000;
    outline: none;
-   padding: 0.5rem 1.2rem;
+   padding: 0.6rem 1.2rem;
    border-radius: 4px;
    border: none;
    color: #fff;
    font-size: 1rem;
-   white-space: nowrap;
    text-decoration: none;
+   background-color: #000;
    cursor: pointer;
 
 @media only screen and (max-width: 1000px) {

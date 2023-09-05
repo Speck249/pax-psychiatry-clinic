@@ -13,7 +13,7 @@ export const SlideContainer = styled.div`
   background-color: transparent;
   margin: 0 auto;
   width: 450px;
-  height: 700px;
+  height: 600px;
   overflow: hidden;
   cursor: pointer;
 `;
@@ -22,28 +22,26 @@ export const SlideContent = styled.div`
   display: flex;
   align-items: center;
   width: 200%;
-  height: 110%;
+  height: 100%;
   transition: transform 0.3s ease-in-out;
-  transform: ${({ isSignUp }) => (isSignUp ? 'translateX(-50%)' : 'translateX(0)')};
+  /*transform: ${({ isSignUp }) => (isSignUp ? 'translateX(-50%)' : 'translateX(0)')};*/
 `;
 
 export const Slide = styled.div`
-  background-color: transparent;
-  backdrop-filter: blur(25px);
+  width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin-bottom: 4rem;
   padding-top: -25px;
-  width: 50%;
+  background-color: transparent;
+  backdrop-filter: blur(25px);
 `;
 
 export const FormWrap = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 
   @media screen and (max-width: 480px) {
      height: 80%;
@@ -51,10 +49,9 @@ export const FormWrap = styled.div`
 `;
 
 export const FormContent = styled.div`
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  height: 100%;
 
   @media screen and (max-width: 480px) {
     padding: 10px;
@@ -64,7 +61,6 @@ export const FormContent = styled.div`
 export const FormTitle = styled.h1`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   font-size: 35px;
   font-weight: bold;
@@ -76,7 +72,6 @@ export const FormTitle = styled.h1`
 `;
 
 export const Form = styled.form`
-  background-color: transparent;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -86,6 +81,7 @@ export const Form = styled.form`
   height: auto;
   width: 100%;
   z-index: 1;
+  background-color: transparent;
   
   @media screen and (max-width: 400px) {
     padding: 32px 32px;
@@ -93,10 +89,10 @@ export const Form = styled.form`
 `;
 
 export const FormLabel = styled.label`
-  text-align: left;
-  font-size: 14px;
-  color: #000;
   margin-bottom: 5px;
+  font-size: 14px;
+  text-align: left;
+  color: #000;
 `;
 
 export const FormInput = styled.input`
@@ -104,45 +100,36 @@ export const FormInput = styled.input`
   width: 350px;
   margin-bottom: 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 14px;
 `;
 
 export const FormButton = styled.button`
-   background-color: #09798C;
-   color: #fff;
+   width: 100%;
    padding: 10px 10px;
    border-radius: 8px;
    border: none;
-   font-size: 15px;
    margin-top: 8px;
+   color: #fff;
+   font-size: 15px;
+   background-color: #09798C;
    cursor: pointer;
-   width: 100%;
 `;
 
 export const SlidePrompt = styled.h3`
-  font-size: 14px;
-  color: #000;
+  display: flex; 
+  align-items: center;
   margin-top: 20px;
   margin-left: 3rem;
   margin-right: 30px;
-  display: flex; 
-  align-items: center;
+  font-size: 14px;
+  color: #09798C;
 `;
 
 export const Prompt = styled(Link)`
-  font-size: 14px;
-  color: #09798C;
   white-space: nowrap;
   margin-left: 6px;
-  text-decoration: none;
-`;
-
-export const Paragraph = styled.p`
+  font-size: 14px;
   color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-  font-size: 13px;
+  text-decoration: none;
 `;

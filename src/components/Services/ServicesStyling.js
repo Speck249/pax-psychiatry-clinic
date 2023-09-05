@@ -12,7 +12,7 @@ export const HeaderContainer = styled.div`
   background-size: cover;
   background-position: center;
   height: 100vh;
-  padding-top: 11rem; 
+  padding-top: 10rem; 
 
   @media only screen and (max-width: 1550px) {
    height: 90vh;
@@ -30,50 +30,39 @@ export const HeaderTitle = styled.h1`
 `;
 
 export const HeaderText = styled.h2`
+  width: 60%;
   font-size: 15px;
   font-family: 'Sora', sans-serif;
   font-weight: 400;
   text-align: justify;
-  padding-right: 18rem;
+  line-height: 1.4rem;
+  padding-right: 20rem;
   padding-left: 2.5rem;
   margin-left: 1rem;
-  width: 60%;
-  color: #e6e6e6;
-  line-height: 1.4rem;
   margin-bottom: 1rem;
+  color: #e6e6e6;
 `;
 
 export const IconContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-left: 2rem;
+  margin-left: 3.5rem;
 `;
 
 export const IconWrapper = styled.div`
- margin-right: -32px;
+ margin-right: -25px;
  padding-left: 1.5rem;
- padding-right: 1.3rem;
-`;
-
-export const HeaderSubtext = styled.h3`
-  font-size: 13px;
-  font-family: 'Sora', sans-serif;
-  font-weight: 400;
-  text-align: left;
-  padding-left: 0.8rem;
-  padding-right: -25px;
-  margin-left: 0.5rem;
-  margin-top: 0.3rem;
-  color: #e6e6e6;
+ padding-right: 1.2rem;
+ margin-top: -3px;
 `;
 
 export const ButtonContainer = styled.div`
    display: flex;
    flex-direction: column;
    align-items: center;
-   margin-left: 1.5rem;
-   margin-top: 5px;
+   margin-left: 2rem;
+   margin-top: 3px;
 `;
 
 export const Button = styled(LinkRouter)`
@@ -83,8 +72,8 @@ export const Button = styled(LinkRouter)`
    padding: 0.7rem 1.2rem;
    border-radius: 3px;
    border: none;
-   text-decoration: none;
    font-size: 14px;
+   text-decoration: none;
    transition: all 0.3s ease;
    cursor: pointer;
 
@@ -92,7 +81,6 @@ export const Button = styled(LinkRouter)`
     background-color: ${({primary}) => primary ? '#000': '#09798C'};  
     transform: translateY(-0.5rem) scale(1.01);
     color: #fff;
-    text-decoration: none;
    }
 
    &:active{
@@ -101,7 +89,18 @@ export const Button = styled(LinkRouter)`
    }
 `;
 
-export const SectionTitle = styled.h2`
+export const HeaderSubtext = styled.h3`
+  font-size: 13px;
+  font-family: 'Sora', sans-serif;
+  font-weight: 400;
+  text-align: left;
+  padding-left: 0.5rem;
+  margin-left: 0.8rem;
+  margin-top: 0.4rem;
+  color: #e6e6e6;
+`;
+
+export const ServiceTitle = styled.h2`
    display: flex;
    justify-content: center;
    text-align: center;
@@ -109,7 +108,7 @@ export const SectionTitle = styled.h2`
    font-size: 35px;
    font-weight: bolder;
    margin-top: 2rem;
-   margin-bottom: 14px;
+   margin-bottom: 1.2rem;
 `;
 
 export const ServiceText = styled.p`
@@ -117,12 +116,11 @@ export const ServiceText = styled.p`
    flex-direction: column;
    justify-content: center;
    text-align: center;
-   margin-left: 3rem;
    margin-right: 3rem;
    margin-bottom: 1.5rem;
-   padding-left: 3rem;
-   padding-right: 3rem;
-   font-size: 16px;
+   padding-left: 4rem;
+   padding-right: 2rem;
+   font-size: 15px;
    font-family: 'Sora', sans-serif;
    font-weight: 200;
    color: #000;
@@ -138,14 +136,13 @@ export const InformationContainer = styled.div`
 `;
 
 export const ServiceCard = styled.div`
-  width: 280px; 
+  width: 300px; 
   height: auto;
-  background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 18px;
-  border-radius: 8px;
+  border-radius: 4px;
   margin: 1rem;
-  margin-bottom: 1.3rem;
+  padding: 2rem;
+  background-color: #fff;
 
   &:hover{
     background-color: ${({primary}) => primary ? '#000': '#09798C'};  
@@ -155,15 +152,18 @@ export const ServiceCard = styled.div`
 `;
 
 export const ServiceCardHeader = styled.h3`
-  margin-bottom: 0.5rem;
-  font-size: 14px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+  font-weight: bolder;
 `;
 
 export const ServiceCardContent = styled.p`
   font-size: 13px;
+  font-family: 'Sora', sans-serif;
   text-align: justify;
+  margin-bottom: 0.3rem;
 `;

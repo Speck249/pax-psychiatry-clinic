@@ -1,9 +1,10 @@
 import React from 'react';
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaHeartbeat } from 'react-icons/fa';
 import {
   Nav,
   NavbarContainer,
   NavbarLogo,
+  Icon,
   MobileIcon,
   NavbarMenu,
   NavbarItems,
@@ -18,16 +19,13 @@ const Navbar = ({toggle}) => {
     <>
       <Nav>
         <NavbarContainer>
-            <NavbarLogo to='/'>PAX</NavbarLogo>
+            <NavbarLogo to='/'><Icon><FaHeartbeat size={45}/></Icon>PAX</NavbarLogo>
             <MobileIcon onClick={toggle}>
             <FaBars />
             </MobileIcon>
             <NavbarMenu>
               <NavbarItems>
                 <NavbarLink to='/about'>ABOUT</NavbarLink>
-              </NavbarItems>
-              <NavbarItems>
-                <NavbarLink to='/team'>OUR TEAM</NavbarLink>
               </NavbarItems>
               <NavbarItems>
                 <NavbarLink to='/services'>SERVICES</NavbarLink>

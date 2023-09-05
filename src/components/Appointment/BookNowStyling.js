@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import BookImg from '../../images/AppointmentBg.jpg';
+import '../../fonts/webfont.css';
 
 export const PageContainer = styled.div`
-  width: 70%;
+  width: 58%;
   background-image: linear-gradient( to top right, #0b0a0a61, #0b0a0a30), url(${BookImg});
   background-size: cover;
   background-position: center;
@@ -10,11 +11,14 @@ export const PageContainer = styled.div`
 `;
 
 export const FormContainer = styled.div`
-  width: 87%;
+  width: 78%;
   height: 100%;
-  margin-left: 48rem;
-  margin-top: -56px;
-  margin-bottom: -10px;
+  padding-left: 3rem;
+  padding-right: 1rem;
+  margin-left: 50rem;
+  margin-top: -90px;
+  margin-bottom: -30px;
+  background-color: #e6e6e6;
 
   @media screen and (max-width: 650px) {
     max-width: 90%;
@@ -22,10 +26,10 @@ export const FormContainer = styled.div`
 `;
 
 export const FormWrap = styled.div`
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
 
   @media screen and (max-width: 480px) {
      height: 80%;
@@ -33,9 +37,9 @@ export const FormWrap = styled.div`
 `;
 
 export const FormContent = styled.div`
-  height: 100%;
   display: flex;
   flex-direction: column;
+  height: 100%;
   
   @media screen and (max-width: 480px) {
     padding: 10px;
@@ -47,22 +51,21 @@ export const FormTitle = styled.h1`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 35px;
+  font-size: 24px;
   text-align: center;
   color: #000;
-  padding-bottom: 8px;
-  padding-top: 8px;
   margin-bottom: 2rem;
+  margin-top: -5px;
+  margin-right: 1.8rem;
 `;
 
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  margin: auto;
-  padding: 50px 30px;
+  padding: 40px 20px;
+  margin-bottom: 1.35rem;
   background-color: #e6e6e6;
-  /*background-color: #09798C;*/
-  max-width: 600px;
+  max-width: 700px;
   height: 100%;
   width: 100%;
   z-index: 1;
@@ -80,7 +83,7 @@ export const RequiredIndicator = styled.span`
 export const FormLabel = styled.label`
   font-size: 14px;
   color: #000;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
   margin-left: 2rem;
 `;
 
@@ -89,7 +92,7 @@ export const FormInput = styled.input`
   border: none;
   border-radius: 4px;
   margin-left: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   width: 85%;
 `;
 
@@ -118,7 +121,7 @@ export const FormButton = styled.button`
    border-radius: 4px;
    border: none;
    font-size: 1rem;
-   margin-top: -5px;
-   margin-bottom: -20px;
+   margin-top: -10px;
+   margin-bottom: -30px;
    cursor: pointer;
 `;

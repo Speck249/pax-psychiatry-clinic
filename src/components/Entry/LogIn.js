@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../firebase';
+import { useUserAuth } from '../../context/userAuthContext';
 import { Alert } from 'react-bootstrap';
-import ProfilePage from '../PrivatePages/ProfilePage';
+import NavigationBar from '../Navbar/Navigation';
 import {
   PageContainer,
   SlideContainer,
@@ -19,38 +18,45 @@ import {
   SlidePrompt,
   Prompt
 } from './EntryStyling';
-import NavigationBar from '../Navbar/Navigation';
+
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { logIn } = useUserAuth();
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        setError(null);
-        console.log(userCredential);
-        setIsLoggedIn(true);
-        navigate('/profile');
-      })
-      .catch((error) => {
-        setError('Incorrect Email or Password.');
-        console.log(error);
-      });
+    setError('');
+    
+    try {
+      await logIn(email, password);
+      navigate('/profile');
+    } catch (error) {
+      setError('Incorrect Email or Password.');
+      console.log(error);
+    }
   };
 
-  if (isLoggedIn) {
-    return <ProfilePage />;
-  }
+  useEffect(() => {
+    const clearFields = setTimeout(() => {
+      setEmail('');
+      setPassword('');
+      setError('');
+    }, 5000);
+
+    return () => {
+      clearTimeout(clearFields);
+    };
+  }, [email, password, error]);
+
 
   return (
+    <>
     <PageContainer>
-    <NavigationBar />
+      <NavigationBar />
       <SlideContainer>
         <SlideContent>
           <Slide>
@@ -62,25 +68,22 @@ const LoginPage = () => {
                   <FormLabel>Email</FormLabel>
                   <FormInput
                     type="email"
-                    required
                     placeholder="Enter your email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => setEmail(e.target.value)} required
                   />
 
                   <FormLabel>Password</FormLabel>
                   <FormInput
                     type="password"
-                    required
                     placeholder="Enter your password"
                     value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={(e) => setPassword(e.target.value)} required
                   />
+                  <FormButton variant='primary' type="submit">Log In</FormButton>
 
-                  <FormButton type="submit">Log In</FormButton>
                   <SlidePrompt>
-                    New to PAX?
-                    <Prompt to="/signup"> Create an account</Prompt>
+                    New to PAX? <Prompt to="/signup">Create an account</Prompt>
                   </SlidePrompt>
                 </Form>
               </FormContent>
@@ -89,6 +92,7 @@ const LoginPage = () => {
         </SlideContent>
       </SlideContainer>
     </PageContainer>
+    </>
   );
 };
 

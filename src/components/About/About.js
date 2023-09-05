@@ -1,104 +1,106 @@
 import React from 'react';
 import {
+  PageContainer,
   HeaderContainer,
+  HeaderContent,
+  HeaderContentText,
   HeaderTitle,
+  Highlight,
   HeaderText,
-  AboutTitle,
-  AboutText,
-  SectionContainer,
-  ValueContent,
-  ValueContentText,
-  ValueTitle,
-  ValueText,
-  Paragraph,
-  VisionContentText,
-  VisionContent,
-  VisionTitle,
-  VisionText,
-  FacilityTitle,
-  FacilityText
+  ButtonContainer,
+  Button,
+  InformationContainer,
+  SectionTitle,
+  TeamCard,
+  Image,
+  TeamCardHeader,
+  TeamCardContent,
+  IconWrapper
 } from './AboutStyling';
+import { FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa';
+
 
 const AboutPage = () => {
   return (
     <>
+    <PageContainer>
       <HeaderContainer>
-      <HeaderTitle>Exceptional Healthcare.</HeaderTitle>
-      <HeaderText>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-       sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-       Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-       nisi ut aliquid ex ea commodi consequatur?</HeaderText>
-      </HeaderContainer>
+      <HeaderContent>
+        <HeaderContentText>
+          <HeaderTitle>Building <Highlight>Stronger</Highlight> Minds, One <Highlight>Patient</Highlight> at a Time</HeaderTitle>
+            <HeaderText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          </HeaderText>
+        </HeaderContentText>
+        <ButtonContainer><Button to='https://www.medium.com/' target='_blank'>Learn More</Button></ButtonContainer>
+      </HeaderContent>
+       </HeaderContainer>
+
+       <SectionTitle>Meet Our Medical Team</SectionTitle>
+       <InformationContainer>
+        <TeamCard>
+        <Image src={require('../../images/Team01.jpg')} alt='person' />
+         <TeamCardHeader>Dr. Aisha Nkosi</TeamCardHeader>
+        <TeamCardContent>Clinical Psychologist | Clinical Director</TeamCardContent>
+       <IconWrapper>
+           <FaLinkedin  size='20px' color='#000' />
+           <FaFacebook  size='20px' color='#000' />
+           <FaTwitter size='20px' color='#000' />
+         </IconWrapper>
+       </TeamCard>
+       <TeamCard>
+        <Image src={require('../../images/Team02.jpg')} alt='person' />
+         <TeamCardHeader>Dr. Kwame Osei</TeamCardHeader>
+        <TeamCardContent>Adolescent Therapist | Clinical Lead</TeamCardContent>
+       <IconWrapper>
+           <FaLinkedin  size='20px' color='#000' />
+           <FaFacebook  size='20px' color='#000' />
+           <FaTwitter size='20px' color='#000' />
+         </IconWrapper>
+       </TeamCard>
+       <TeamCard>
+        <Image src={require('../../images/Team03.jpg')} alt='person' />
+         <TeamCardHeader>Dr. Zara Abiola</TeamCardHeader>
+      <TeamCardContent>Couples & Marriage Counsellor | Medical Director</TeamCardContent>
+       <IconWrapper>
+           <FaLinkedin  size='20px' color='#000' />
+           <FaFacebook  size='20px' color='#000' />
+           <FaTwitter size='20px' color='#000' />
+         </IconWrapper>
+       </TeamCard>
+       <TeamCard>
+        <Image src={require('../../images/Team04.jpg')} alt='person' />
+         <TeamCardHeader>Dr. Jabari Sibanda</TeamCardHeader>
+        <TeamCardContent>Clinical Psychiatrist | Operational Lead</TeamCardContent>
+       <IconWrapper>
+           <FaLinkedin  size='20px' color='#000' />
+           <FaFacebook  size='20px' color='#000' />
+           <FaTwitter size='20px' color='#000' />
+         </IconWrapper>
+       </TeamCard>
+       <TeamCard>
+        <Image src={require('../../images/Team05.jpg')} alt='person' />
+         <TeamCardHeader>Dr. Tariq Adewale</TeamCardHeader>
+        <TeamCardContent>Marriage & Family Counsellor</TeamCardContent>
+       <IconWrapper>
+           <FaLinkedin  size='20px' color='#000' />
+           <FaFacebook  size='20px' color='#000' />
+           <FaTwitter size='20px' color='#000' />
+         </IconWrapper>
+       </TeamCard>
+       <TeamCard>
+        <Image src={require('../../images/Team06.jpg')} alt='person' />
+         <TeamCardHeader>Dr. Nia Jelani</TeamCardHeader>
+        <TeamCardContent>Family Therapist | Consultant Psychologist</TeamCardContent>
+       <IconWrapper>
+           <FaLinkedin size={25} color='#000' />
+           <FaFacebook  size={25} color='#000' />
+           <FaTwitter size={25} color='#000' />
+         </IconWrapper>
+       </TeamCard>
       
-        <AboutTitle>PAX Private Psychiatry & Therapy Clinic.</AboutTitle>
-          <AboutText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </AboutText>
-
-      <SectionContainer>
-        <ValueContent>
-        <ValueContentText>
-        <ValueTitle>We Are Committed to Your Health.</ValueTitle>
-          <ValueText>
-            <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Excepteur sint occaecat cupidatat non proident, sunt
-            in culpa qui officia deserunt mollit anim id est laborum.</Paragraph>
-
-            <Paragraph>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-            quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-            </Paragraph>
-          </ValueText>
-        </ValueContentText>
-        </ValueContent>
-
-        <VisionContent>
-        <VisionContentText>
-        <VisionTitle>We Help You Live Your Best Life.</VisionTitle>
-        <VisionText>
-              <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Excepteur sint occaecat cupidatat non proident, sunt
-              in culpa qui officia deserunt mollit anim id est laborum.</Paragraph>
-
-              <Paragraph>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-              eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-              quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-              Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-              </Paragraph>
-        </VisionText>
-        </VisionContentText>
-        </VisionContent>
-      </SectionContainer>
-
-        <FacilityTitle>Cutting Edge Facility.</FacilityTitle>
-        <FacilityText>
-        <Paragraph>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-        sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-        est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi
-        tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
-        nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
-        vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</Paragraph>
-        
-        <Paragraph>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
-        atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
-        sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum
-        facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-        impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
-        Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates
-        repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut
-        reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
-        </Paragraph>
-        </FacilityText>
+       </InformationContainer>
+       </PageContainer>
     </>
   );
 };

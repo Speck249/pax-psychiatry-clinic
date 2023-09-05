@@ -9,18 +9,14 @@ export const FooterContainer = styled.footer`
 export const FooterWrap = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  max-width: 1200px;
-  padding: 46px 22px;
-  margin: 0 auto;
+  padding-top: 50px;
 `;
 
 export const Newsletter = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 `;
 
 export const NewsletterTitle = styled.h2`
@@ -33,17 +29,16 @@ export const NewsletterTitle = styled.h2`
 export const NewsletterBody = styled.h3`
   color: #e6e6e6;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
   line-height: 1.0;
 `;
 
-export const NewsletterForm = styled.form`
+export const Form = styled.form`
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 1.6rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 
   @media only screen and (max-width: 820px) {
     flex-direction: column;
@@ -51,19 +46,22 @@ export const NewsletterForm = styled.form`
   }
 `;
 
-export const Label = styled.label`
+export const FormLabel = styled.label`
    display: none;
 `;
 
-export const NewsletterInput = styled.input`
-   background-color: #fff;
+export const FormInput = styled.input`
    color: #000;
-   font-size: 1.2rem;
    text-align: left;
-   padding: 9px 25px;
+   font-size: 14px;
+   width: 100%;
+   padding-left: 20px;
+   padding-right: 30px;
+   padding-bottom: 10px;
+   padding-top: 9px;
+   margin-right: 2rem;
    border: 1px solid #000;
    border-radius: 2px;
-   margin-right: 15px;
    outline: none;
 
    &::placeholder {
@@ -78,20 +76,20 @@ export const NewsletterInput = styled.input`
    }
 `;
 
-export const Button = styled.button`
-   background-color: #09798C;
+export const FormButton = styled.button`
+   font-size: 1rem;
    color: #fff;
    outline: none;
-   padding: 0.7rem 1.3rem;
+   padding: 0.6rem 1.2rem;
+   margin-left: 15px;
    border-radius: 3px;
    border: none;
-   font-size: 1rem;
+   background-color: #09798C;
    cursor: pointer;
 `;
 
 export const FooterLinkContainer = styled.div`
-  display: flex;
-  justify-content: center;
+   display: flex;
 
   @media screen and (max-width: 820px) {
     padding-top: 12px;
@@ -112,8 +110,8 @@ export const FooterLinks = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 20px;
-  width: 125px;
+  margin: 10px;
+  width: 155px;
   box-sizing: border-box;
 
   @media screen and (max-width: 420px) {
@@ -125,20 +123,22 @@ export const FooterLinks = styled.div`
 
 export const FooterLinkName = styled.h1`
   font-size: 14px;
+  font-weight: bold;
   margin-bottom: 12px;
 `;
 
 export const FooterLink = styled(LinkRouter)`
   color: #fff;
-  font-size: 13px;
+  font-size: 12px;
   text-decoration: none;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
 `;
 
 export const FooterCopyright = styled.small`
   color: #fff;
   font-size: 10px;
   text-align: center;
-  margin-top: 18px;
-  /*margin-bottom: 12px;*/
+  margin-top: 13px;
+  margin-bottom: 13px;
 `;
