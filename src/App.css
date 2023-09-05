@@ -11,3 +11,10 @@
 .golden-star {
   color: gold;
 }
+
+.swal2-popup {
+  font-size: 10px;
+  font-weight: 400;
+  font-family: 'Sora', sans-serif;
+  margin-left: 1rem;
+}

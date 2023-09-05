@@ -38,7 +38,7 @@ const ProfilePage = () => {
               <CardContent>
             <CardTitle>Welcome!</CardTitle>
           {error && <Alert variant="danger">{error}</Alert>}
-          <CardBody> <strong>Email:</strong> {user && user.email}</CardBody>
+          <CardBody>Logged in as {user && user.email}</CardBody>
         <Button variant="link" onClick={handleLogout}>Log Out</Button>
             </CardContent>
         </Card>

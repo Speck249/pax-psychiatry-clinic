@@ -23,8 +23,6 @@ export const NavbarContainer = styled.div`
   max-width: 1200px;
   width: 100%;
   height: 70%;
-  margin-right: 2rem;
-  padding-right: 1rem;
   z-index: 1;
 `;
 
@@ -32,19 +30,25 @@ export const NavbarLogo = styled(LinkRouter)`
   display: flex;
   justify-self: flex-start;
   align-items: center;
-  margin-left: -50px;
-  margin-right: 2rem;
   font-size: 2rem;
   font-weight: 400;
   color: #09798C;
   text-decoration: none;
   cursor: pointer;
+
+   @media screen and (max-width: 768px) {
+    color: #fff;
+   }
 `;
 
 export const Icon = styled.div`
   padding-right: 6px;
   padding-bottom: 4px;
   color: #09798C;
+
+   @media screen and (max-width: 768px) {
+    color: #fff;
+   }
 `;
 
 export const MobileIcon = styled.div`

@@ -31,7 +31,7 @@ const Navbar = ({toggle}) => {
                 <NavbarLink to='/services'>SERVICES</NavbarLink>
               </NavbarItems>
               <NavbarItems>
-                <NavbarLink to='https://medium.com/' target='_blank'>BLOG</NavbarLink>
+                <NavbarLink to='/blog' >BLOG</NavbarLink>
               </NavbarItems>
                <NavbarItems>
                 <NavbarLink to='/contact'>CONTACT</NavbarLink>

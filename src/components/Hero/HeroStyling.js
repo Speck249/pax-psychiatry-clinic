@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import HeroImg from '../../images/HeroBg.png';
+import ServicesImg from '../../images/ServicesBg.jpg';
 import '../../fonts/webfont.css';
 
 export const HeroContainer = styled.div`
@@ -70,4 +71,40 @@ export const HeroParagraph = styled.h3`
    @media only screen and (max-width: 375px) {
     padding: 1.5rem 0;
 }
+`;
+
+export const ImageContainer = styled.div`
+  background-image: linear-gradient( to top right, #0b0a0a61, #0b0a0a30), url(${ServicesImg});
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding-top: 10rem; 
+
+  @media only screen and (max-width: 1550px) {
+   height: 90vh;
+}
+`;
+
+export const HeaderTitle = styled.h1`
+  font-size: 5rem;
+  font-weight: bolder;
+  text-align: left;
+  padding-left: 2rem;
+  margin-left: 1rem;
+  width: 50%;
+  color: #09798C;
+`;
+
+export const HeaderText = styled.h2`
+  width: 60%;
+  font-size: 15px;
+  font-family: 'Sora', sans-serif;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 1.4rem;
+  padding-right: 20rem;
+  padding-left: 2.5rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  color: #e6e6e6;
 `;

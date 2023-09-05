@@ -51,10 +51,10 @@ export const IconContainer = styled.div`
 `;
 
 export const IconWrapper = styled.div`
- margin-right: -25px;
- padding-left: 1.5rem;
- padding-right: 1.2rem;
- margin-top: -3px;
+  margin-right: -25px;
+  padding-left: 1.5rem;
+  padding-right: 1.2rem;
+  margin-top: -3px;
 `;
 
 export const ButtonContainer = styled.div`
@@ -66,7 +66,6 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Button = styled(LinkRouter)`
-   background-color: #000;
    color: #fff;
    outline: none;
    padding: 0.7rem 1.2rem;
@@ -74,6 +73,7 @@ export const Button = styled(LinkRouter)`
    border: none;
    font-size: 14px;
    text-decoration: none;
+   background-color: #000;
    transition: all 0.3s ease;
    cursor: pointer;
 
@@ -109,6 +109,7 @@ export const ServiceTitle = styled.h2`
    font-weight: bolder;
    margin-top: 2rem;
    margin-bottom: 1.2rem;
+   background-color: #e6e6e6;
 `;
 
 export const ServiceText = styled.p`
@@ -125,6 +126,7 @@ export const ServiceText = styled.p`
    font-weight: 200;
    color: #000;
    line-height: 1.5rem;
+   background-color: #e6e6e6;
 `;
 
 export const InformationContainer = styled.div`
@@ -133,6 +135,8 @@ export const InformationContainer = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  padding-bottom: 2rem;
+  background-color: #e6e6e6;
 `;
 
 export const ServiceCard = styled.div`

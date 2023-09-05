@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useUserAuth } from '../../context/userAuthContext';
 import { Alert } from 'react-bootstrap';
+import GoogleButton from 'react-google-button';
 import NavigationBar from '../Navbar/Navigation';
 import {
   PageContainer,
@@ -24,7 +25,7 @@ const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
-  const { logIn } = useUserAuth();
+  const { logIn, googleSignIn } = useUserAuth();
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -51,6 +52,21 @@ const LoginPage = () => {
       clearTimeout(clearFields);
     };
   }, [email, password, error]);
+
+  const handleGoogleSignIn = async (e) => {
+    e.preventDefault();
+    try {
+      await googleSignIn();
+      navigate('/profile');
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  const buttonStyles = {
+    width: '100%',
+    maxWidth: '400px',
+  };
 
 
   return (
@@ -81,7 +97,13 @@ const LoginPage = () => {
                     onChange={(e) => setPassword(e.target.value)} required
                   />
                   <FormButton variant='primary' type="submit">Log In</FormButton>
-
+                  <hr />
+                  <GoogleButton
+                    className="g-btn"
+                    type="dark"
+                    onClick={handleGoogleSignIn} 
+                    styled={buttonStyles}
+                  />
                   <SlidePrompt>
                     New to PAX? <Prompt to="/signup">Create an account</Prompt>
                   </SlidePrompt>

@@ -8,8 +8,8 @@ import SignUp from './pages/signup';
 import Book from './pages/book';
 import ProfilePage from './pages/profile';
 import ProtectedRoute from './components/Entry/ProtectedRoute';
-import './App.css';
 import { UserAuthContextProvider } from './context/userAuthContext';
+import './App.css';
 
 
 function App() {

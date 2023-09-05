@@ -9,6 +9,14 @@ import {
   HeaderText,
   ButtonContainer,
   Button,
+  AboutTitle,
+  AboutText,
+  SectionContainer,
+  ValueContent,
+  ValueContentText,
+  ValueTitle,
+  ValueText,
+  Paragraph,
   InformationContainer,
   SectionTitle,
   TeamCard,
@@ -35,6 +43,34 @@ const AboutPage = () => {
         <ButtonContainer><Button to='https://www.medium.com/' target='_blank'>Learn More</Button></ButtonContainer>
       </HeaderContent>
        </HeaderContainer>
+
+       <AboutTitle>PAX Private Psychiatry & Therapy Clinic.</AboutTitle>
+          <AboutText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </AboutText>
+
+      <SectionContainer>
+        <ValueContent>
+        <ValueContentText>
+        <ValueTitle>We Are Committed to Your Health.</ValueTitle>
+          <ValueText>
+            <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Excepteur sint occaecat cupidatat non proident, sunt
+            in culpa qui officia deserunt mollit anim id est laborum.</Paragraph>
+
+            <Paragraph>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+            quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+            </Paragraph>
+          </ValueText>
+        </ValueContentText>
+        </ValueContent>
+        </SectionContainer>
 
        <SectionTitle>Meet Our Medical Team</SectionTitle>
        <InformationContainer>

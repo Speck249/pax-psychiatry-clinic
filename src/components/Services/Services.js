@@ -4,8 +4,8 @@ import { renderStars } from '../../utility/renderStars';
 import {
     PageContainer,
     HeaderContainer,
-    HeaderTitle,
     HeaderText,
+    HeaderTitle,
     IconContainer,
     IconWrapper,
     HeaderSubtext,

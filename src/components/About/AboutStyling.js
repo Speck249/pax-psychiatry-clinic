@@ -4,7 +4,7 @@ import { Link as LinkRouter } from 'react-router-dom';
 import '../../fonts/webfont.css';
 
 export const PageContainer = styled.div`
-   background-color: #e6e6e6;
+   background-color: #fff;
 `;
 
 export const HeaderContainer = styled.div`
@@ -112,6 +112,76 @@ export const ButtonContainer = styled.div`
    margin-top: 5px;
 `;
 
+export const AboutTitle = styled.h2`
+   display: flex;
+   justify-content: center;
+   color: #000;
+   font-size: 45px;
+   margin-top: 1rem;
+   margin-bottom: 9px;
+`;
+
+export const AboutText = styled.p`
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   margin-left: 3rem;
+   margin-right: 3rem;
+   color: #000;
+   font-size: 16px;
+   font-family: 'Sora', sans-serif;
+   font-weight: 200;
+   margin-bottom: 2rem;
+`;
+
+export const SectionContainer = styled.div`
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+`;
+
+export const ValueContent = styled.div`
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 1rem;
+   border-width: 20px;
+`;
+
+export const ValueContentText = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  border-style: solid;
+  border-width: 0px 2px 0px 0px;
+  border-color: #09798C;
+`;
+
+export const ValueTitle = styled.h2`
+  font-size: 30px;
+  color: #000;
+  margin-bottom: 1rem;
+  margin-top: 10px;
+`;
+
+export const ValueText = styled.div`
+  font-size: 16px;
+  color: #000;
+  text-align: justify;
+  margin-left: 2rem;
+  margin-right: 2rem;
+`;
+
+export const Paragraph = styled.p`
+  margin-bottom: 1rem;
+  font-family: 'Sora', sans-serif;
+  font-weight: 200;
+`;
+
 export const SectionTitle = styled.h2`
    display: flex;
    justify-content: center;
@@ -119,8 +189,8 @@ export const SectionTitle = styled.h2`
    color: #000;
    font-size: 35px;
    font-weight: bolder;
-   margin-top: 2rem;
-   margin-bottom: 14px;
+   margin-top: 1rem;
+   background-color: #e6e6e6;
 `;
 
 export const InformationContainer = styled.div`
@@ -129,6 +199,7 @@ export const InformationContainer = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background-color: #e6e6e6;
 `;
 
 export const TeamCard = styled.div`

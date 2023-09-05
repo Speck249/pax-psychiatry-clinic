@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Alert } from 'react-bootstrap';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../../firebase';
 import NavigationBar from '../Navbar/Navigation';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 import {
     PageContainer,
     FormContainer,
@@ -19,6 +22,8 @@ import {
 } from './BookNowStyling';
 
 
+const MySwal = withReactContent(Swal);
+
 const BookAppointment = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
@@ -26,6 +31,7 @@ const BookAppointment = () => {
   const [time, setTime] = useState('');
   const [message, setMessage] = useState('');
   const [bookingStatus, setBookingStatus] = useState(null);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -48,42 +54,57 @@ const BookAppointment = () => {
       setMessage('');
 
       setBookingStatus(true);
+
       setTimeout(() => {
         setBookingStatus(null);
-      }, 5000);
+      }, 4000);
+
+      MySwal.fire({
+        title: 'Appointment Booked! Create An Account?',
+        icon: 'success',
+        showCancelButton: true,
+        confirmButtonText: 'Yes',
+        cancelButtonText: 'No',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate('/signup');
+        } else {
+          navigate('/');
+        }
+      });
     } catch (error) {
       setBookingStatus(false);
 
       setTimeout(() => {
         setBookingStatus(null);
-    }, 5000);
+    }, 4000);
   }
 };
 
 return (
     <>
-      <PageContainer>
-        <NavigationBar />
-        <FormContainer>
-          <FormWrap>
-            <FormContent>
-              <Form onSubmit={handleSubmit}>
-              {bookingStatus === true && <Alert variant="success">Appointment Booked!</Alert>}
-              {bookingStatus === false && <Alert variant="danger">Appointment Booking Failed. Give it another Try.</Alert>}
-              <FormTitle>BOOK YOUR FIRST FREE APPOINTMENT!</FormTitle>
-
-        <div><RequiredIndicator><FormLabel>Full Name</FormLabel> *</RequiredIndicator></div>
-        <div>
-          <FormInput
-            type="text"
-            id="fullName"
-            value={fullName}
-            onChange={(e) => setFullName(e.target.value)} required />
-        </div>
-        
-        <div><RequiredIndicator><FormLabel>Email</FormLabel> *</RequiredIndicator></div>
-        <div>
-          <FormInput
+     <PageContainer>
+       <NavigationBar />
+       <FormContainer>
+        <FormWrap>
+          <FormContent>
+            <Form onSubmit={handleSubmit}>
+            {bookingStatus === false && (
+              <Alert variant="danger">Appointment Booking Failed. Give it another Try.</Alert>
+            )}
+            <FormTitle>BOOK YOUR FIRST FREE APPOINTMENT!</FormTitle>
+            <div><RequiredIndicator><FormLabel>Full Name</FormLabel> *</RequiredIndicator></div>
+            <div>
+              <FormInput
+               type="text"
+               id="fullName"
+               value={fullName}
+               onChange={(e) => setFullName(e.target.value)} required />
+            </div>
+            
+            <div><RequiredIndicator><FormLabel>Email</FormLabel> *</RequiredIndicator></div>
+            <div>
+            <FormInput
             type="email"
             id="email"
             value={email}
@@ -116,7 +137,7 @@ return (
               onChange={(e) => setMessage(e.target.value)} required />
             </div>
 
-        <ButtonContainer><FormButton variant="primary" type="submit">Submit</FormButton></ButtonContainer>
+           <ButtonContainer><FormButton variant="primary" type="submit">Submit</FormButton></ButtonContainer>
         </Form>
        </FormContent>
       </FormWrap>

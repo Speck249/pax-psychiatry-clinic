@@ -28,14 +28,16 @@ const SignupPage = () => {
 
   const handleSignup = async (e) => {
     e.preventDefault();
-    setError('');
+    setError(null);
+    setInfoMessage('');
 
     try {
       await signUp(email, password);
       setInfoMessage('Verification Email Sent');
       console.log(infoMessage);
     } catch (error) {
-      return;
+      setError(error.message);
+      setInfoMessage('');
     }
   };
 
@@ -54,9 +56,9 @@ const SignupPage = () => {
 
   return (
     <>
-    <PageContainer>
+     <PageContainer>
       <NavigationBar />
-      <SlideContainer>
+       <SlideContainer>
         <SlideContent>
           <Slide>
             <FormWrap>

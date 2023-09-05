@@ -4,7 +4,10 @@ import {
   HeroContent,
   HeroContentText,
   HeroTitle,
-  HeroParagraph
+  HeroParagraph,
+  ImageContainer,
+  HeaderTitle,
+  HeaderText
 } from './HeroStyling';
 
 
@@ -21,10 +24,11 @@ const Hero = () => {
           </HeroParagraph>
             <Button to='/services'>Learn More</Button>
          </HeroContentText>
-        </HeroContent>
+        </HeroContent>        
      </HeroContainer>
+
     </>
-  );
+    );
 };
 
 export default Hero;
