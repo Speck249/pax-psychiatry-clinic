@@ -13,11 +13,11 @@ import {
 } from './ProfileStyling';
 import NavigationBar from '../Navbar/Navigation';
 
+
 const ProfilePage = () => {
   const { logOut, user } = useUserAuth();
   const navigate = useNavigate();
   const [error, setError] = useState(null);
-
 
   const handleLogout = async () => {
     try {
@@ -34,8 +34,8 @@ const ProfilePage = () => {
     <PageContainer>
       <NavigationBar />
       <CardContainer>
-          <Card>
-              <CardContent>
+        <Card>
+          <CardContent>
             <CardTitle>Welcome!</CardTitle>
           {error && <Alert variant="danger">{error}</Alert>}
           <CardBody>Logged in as {user && user.email}</CardBody>

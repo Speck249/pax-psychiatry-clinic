@@ -8,20 +8,15 @@ export const PageContainer = styled.div`
 `;
 
 export const HeaderContainer = styled.div`
-  background-image: linear-gradient(to top right, #0b0a0a61, #0b0a0a30), url(${ServicesImg});
+  background-image: linear-gradient( to top right, #0b0a0a61, #0b0a0a30), url(${ServicesImg});
   background-size: cover;
   background-position: center;
   height: 100vh;
-  padding-top: 10rem;
+  padding-top: 10rem; 
 
-  @media only screen and (max-width: 768px) {
-    padding-top: 11rem;
-    padding-left: 2rem;
-  }
-
-  @media only screen and (max-width: 480px) {
-    padding-top: 11rem;
-  }
+  @media only screen and (max-width: 1550px) {
+   height: 90vh;
+}
 `;
 
 export const HeaderTitle = styled.h1`
@@ -32,17 +27,6 @@ export const HeaderTitle = styled.h1`
   margin-left: 1rem;
   width: 50%;
   color: #09798C;
-
-  @media only screen and (max-width: 768px) {
-    font-size: 4rem;
-    margin-left: -5px;
-    width: 100%;
-  }
-
-  @media only screen and (max-width: 480px) {
-    font-size: 3rem;
-    width: 90%;
-  }
 `;
 
 export const HeaderText = styled.h2`
@@ -57,19 +41,6 @@ export const HeaderText = styled.h2`
   margin-left: 1rem;
   margin-bottom: 1rem;
   color: #e6e6e6;
-
-  @media only screen and (max-width: 768px) {
-    width: 100%;
-    font-size: 14px;
-    padding-left: 1rem;
-  }
-
-  @media only screen and (max-width: 480px) {
-    font-size: 14px;
-    width: 90%;
-    padding-right: 3rem;
-    line-height: 1.4;
-  }
 `;
 
 export const IconContainer = styled.div`
@@ -77,14 +48,6 @@ export const IconContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   margin-left: 3.5rem;
-
-  @media only screen and (max-width: 768px) {
-    margin-left: 0.7rem;
-  }
-
-  @media only screen and (max-width: 480px) {
-    margin-left: 0.2rem;
-  }
 `;
 
 export const IconWrapper = styled.div`
@@ -92,12 +55,38 @@ export const IconWrapper = styled.div`
   padding-left: 1.5rem;
   padding-right: 1.2rem;
   margin-top: -3px;
+`;
 
-  @media only screen and (max-width: 480px) {
-    margin-left: -30px;
-    padding-right: 10px;
-    padding-left: 30px;
-  }
+export const ButtonContainer = styled.div`
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-left: 2rem;
+   margin-top: 3px;
+`;
+
+export const Button = styled(LinkRouter)`
+   color: #fff;
+   outline: none;
+   padding: 0.7rem 1.2rem;
+   border-radius: 3px;
+   border: none;
+   font-size: 14px;
+   text-decoration: none;
+   background-color: #000;
+   transition: all 0.3s ease;
+   cursor: pointer;
+
+   &:hover{
+    background-color: ${({primary}) => primary ? '#000': '#09798C'};  
+    transform: translateY(-0.5rem) scale(1.01);
+    color: #fff;
+   }
+
+   &:active{
+    transform: translateY(0.5rem);
+    text-decoration: none;
+   }
 `;
 
 export const HeaderSubtext = styled.h3`
@@ -109,54 +98,6 @@ export const HeaderSubtext = styled.h3`
   margin-left: 0.8rem;
   margin-top: 0.4rem;
   color: #e6e6e6;
-
-  @media only screen and (max-width: 480px) {
-    padding: 0.6rem 1rem;
-    font-size: 12px;
-    margin-left: 5px;
-  }
-`;
-
-export const ButtonContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 2rem;
-  margin-top: 3px;
-
-  @media only screen and (max-width: 480px) {
-    margin-left: -5px;
-  }
-`;
-
-export const Button = styled(LinkRouter)`
-  color: #fff;
-  outline: none;
-  padding: 0.7rem 1.2rem;
-  border-radius: 3px;
-  border: none;
-  font-size: 14px;
-  text-decoration: none;
-  background-color: #000;
-  transition: all 0.3s ease;
-  cursor: pointer;
-
-  &:hover {
-    background-color: ${({ primary }) => (primary ? '#000' : '#09798C')};
-    transform: translateY(-0.5rem) scale(1.01);
-    color: #fff;
-  }
-
-  &:active {
-    transform: translateY(0.5rem);
-    text-decoration: none;
-  }
-
-  @media only screen and (max-width: 480px) {
-    padding: 0.6rem 1rem;
-    font-size: 12px;
-    margin-left: 5px;
-  }
 `;
 
 export const ServiceTitle = styled.h2`

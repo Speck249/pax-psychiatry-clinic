@@ -1,11 +1,8 @@
 import styled from 'styled-components';
-import WelcomeImg from '../../images/WelcomeBg.jpg';
 import { Link as LinkRouter } from 'react-router-dom';
 
-
 export const PageContainer = styled.div`
- background-image: url(${WelcomeImg});
- height: 100vh;
+ background-color: #000;
 `;
 
 export const CardContainer = styled.div`
@@ -19,7 +16,8 @@ export const Card = styled.div`
   flex-direction: column;
   align-items: center;
   margin: auto;
-  margin-top: 7rem;
+  margin-top: 6rem;
+  margin-bottom: 12rem;
   padding: 3.5rem 20px;
   border: none;
   border-radius: 6px;
@@ -28,7 +26,6 @@ export const Card = styled.div`
   height: 45vh;
   z-index: 1;
   background-color: #09798C;
-
 `;
 
 export const CardContent = styled.div`

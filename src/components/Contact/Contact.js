@@ -62,52 +62,52 @@ const ContactForm = () => {
         <FormContainer>
         {contactStatus === true && <Alert variant="success">Thank you for your message! We will get back to you shortly.</Alert>}
         {contactStatus === false && <Alert variant="danger">Submission Failed. Please try again.</Alert>}
-            <FormWrap>
-             <FormContent>
-               <Form onSubmit={handleSubmit}>
-               <FormTitle>GET IN TOUCH</FormTitle>
+          <FormWrap>
+            <FormContent>
+              <Form onSubmit={handleSubmit}>
+              <FormTitle>GET IN TOUCH</FormTitle>
 
-               <div><RequiredIndicator><FormLabel>Full Name</FormLabel> *</RequiredIndicator></div>
-               <div>
+              <div><RequiredIndicator><FormLabel>Full Name</FormLabel> *</RequiredIndicator></div>
+              <div>
                 <FormInput
-                   type="text"
-                   id="fullName"
-                   value={fullName}
-                   onChange={(e) => setFullName(e.target.value)} required />
-                </div>
+                  type="text"
+                  id="fullName"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)} required />
+              </div>
 
-                <div><RequiredIndicator><FormLabel>Email</FormLabel> *</RequiredIndicator></div>
-                <div>
+              <div><RequiredIndicator><FormLabel>Email</FormLabel> *</RequiredIndicator></div>
+              <div>
                 <FormInput
-                   type="email"
-                   id="email"
-                   value={email}
-                   onChange={(e) => setEmail(e.target.value)} required />
-                </div>
+                  type="email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)} required />
+              </div>
 
-                <div><FormLabel>Subject</FormLabel></div>
-                <div>
+              <div><FormLabel>Subject</FormLabel></div>
+              <div>
                 <FormInput
-                   type="text"
-                   id="subject"
-                   value={subject}
-                   onChange={(e) => setSubject(e.target.value)} />
-                </div>
+                  type="text"
+                  id="subject"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)} />
+              </div>
 
-                <div><RequiredIndicator><FormLabel>Message</FormLabel> *</RequiredIndicator></div>
-                <div>
+              <div><RequiredIndicator><FormLabel>Message</FormLabel> *</RequiredIndicator></div>
+              <div>
                 <StyledTextarea
-                   rows={3}
-                   value={message}
-                   onChange={(e) => setMessage(e.target.value)} required />
-                </div>
+                  rows={3}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)} required />
+              </div>
 
-                <ButtonContainer><FormButton variant="primary" type="submit">Submit</FormButton></ButtonContainer>
+              <ButtonContainer><FormButton variant="primary" type="submit">Submit</FormButton></ButtonContainer>
             </Form>
-            </FormContent>
-            </FormWrap>
-            </FormContainer>
-        </PageContainer>
+          </FormContent>
+         </FormWrap>
+        </FormContainer>
+      </PageContainer>
     </>
   );
 };

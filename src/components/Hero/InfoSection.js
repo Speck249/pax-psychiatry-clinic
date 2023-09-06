@@ -4,43 +4,56 @@ import {
     InfoWrapper,
     InfoRow,
     ColumnOne,
+    ColumnTwo,
+    ColumnThree,
     TextWrapper,
     TopLine,
     Heading,
-    Subtitle,
-    ColumnTwo,
-    ImgWrap,
-    Img 
+    Subtitle
 } from './InfoStyling';
 
 const InfoSection = ({
     light,
     id,
-    imgOne,
-    topLine,
-    headLine,
+    firsttopLine,
+    firstheadLine,
+    firstdescription,
+    secondtopLine,
+    secondheadLine,
+    seconddescription,
+    thirdtopLine,
+    thirdheadLine,
+    thirddescription,
     lightTxt,
-    darkTxt,
-    description,
-    img,
-    alt
+    darkTxt
 }) => {
 
   return (
     <>
       <InfoContainer light={light} id={id}>
          <InfoWrapper>
-           <InfoRow imgOne={imgOne}>
+           <InfoRow >
                <ColumnOne>
                   <TextWrapper>
-                      <TopLine>{topLine}</TopLine>
-                      <Heading lightTxt={lightTxt}>{headLine}</Heading>
-                      <Subtitle darkTxt={darkTxt}>{description}</Subtitle>
+                      <TopLine>{firsttopLine}</TopLine>
+                      <Heading lightTxt={lightTxt}>{firstheadLine}</Heading>
+                      <Subtitle darkTxt={darkTxt}>{firstdescription}</Subtitle>
                   </TextWrapper>
                 </ColumnOne>
                 <ColumnTwo>
-                    <ImgWrap><Img src={img} alt={alt}/></ImgWrap>
+                  <TextWrapper>
+                      <TopLine>{secondtopLine}</TopLine>
+                      <Heading lightTxt={lightTxt}>{secondheadLine}</Heading>
+                      <Subtitle darkTxt={darkTxt}>{seconddescription}</Subtitle>
+                  </TextWrapper>
                 </ColumnTwo>
+              <ColumnThree>
+                  <TextWrapper>
+                      <TopLine>{thirdtopLine}</TopLine>
+                      <Heading lightTxt={lightTxt}>{thirdheadLine}</Heading>
+                      <Subtitle darkTxt={darkTxt}>{thirddescription}</Subtitle>
+                  </TextWrapper>
+                </ColumnThree>
             </InfoRow>
         </InfoWrapper>
       </InfoContainer>

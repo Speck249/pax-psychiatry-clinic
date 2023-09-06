@@ -7,18 +7,18 @@ import NavigationBar from '../Navbar/Navigation';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import {
-    PageContainer,
-    FormContainer,
-    FormWrap,
-    FormContent,
-    Form,
-    FormTitle,
-    RequiredIndicator,
-    FormLabel,
-    FormInput,
-    StyledTextarea,
-    ButtonContainer,
-    FormButton
+  PageContainer,
+  FormContainer,
+  FormWrap,
+  FormContent,
+  Form,
+  FormTitle,
+  RequiredIndicator,
+  FormLabel,
+  FormInput,
+  StyledTextarea,
+  ButtonContainer,
+  FormButton
 } from './BookNowStyling';
 
 
@@ -95,7 +95,7 @@ return (
             <FormTitle>BOOK YOUR FIRST FREE APPOINTMENT!</FormTitle>
             <div><RequiredIndicator><FormLabel>Full Name</FormLabel> *</RequiredIndicator></div>
             <div>
-              <FormInput
+             <FormInput
                type="text"
                id="fullName"
                value={fullName}
@@ -104,46 +104,45 @@ return (
             
             <div><RequiredIndicator><FormLabel>Email</FormLabel> *</RequiredIndicator></div>
             <div>
-            <FormInput
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)} required />
-        </div>
-
-        <div><RequiredIndicator><FormLabel>Date</FormLabel> *</RequiredIndicator></div>
-          <div>
-            <FormInput
+             <FormInput
+               type="email"
+               id="email"
+               value={email}
+               onChange={(e) => setEmail(e.target.value)} required />
+            </div>
+            
+            <div><RequiredIndicator><FormLabel>Date</FormLabel> *</RequiredIndicator></div>
+            <div>
+             <FormInput
               type="date"
               id="date"
               value={date}
               onChange={(e) => setDate(e.target.value)} required />
-          </div>
-
-        <div><RequiredIndicator><FormLabel>Time</FormLabel> *</RequiredIndicator></div>
-          <div>
-            <FormInput
+            </div>
+            
+            <div><RequiredIndicator><FormLabel>Time</FormLabel> *</RequiredIndicator></div>
+            <div>
+             <FormInput
               type="time"
               id="time"
               value={time}
               onChange={(e) => setTime(e.target.value)} required />
-          </div>
-
-        <div><RequiredIndicator><FormLabel>Message</FormLabel> *</RequiredIndicator></div>
-          <div>
-            <StyledTextarea
+            </div>
+            
+            <div><RequiredIndicator><FormLabel>Message</FormLabel> *</RequiredIndicator></div>
+            <div>
+             <StyledTextarea
               rows={3}
               value={message}
               onChange={(e) => setMessage(e.target.value)} required />
             </div>
-
-           <ButtonContainer><FormButton variant="primary" type="submit">Submit</FormButton></ButtonContainer>
-        </Form>
-       </FormContent>
-      </FormWrap>
-     </FormContainer>
-    </PageContainer>
-  </>  
+            <ButtonContainer><FormButton variant="primary" type="submit">Submit</FormButton></ButtonContainer>
+           </Form>
+          </FormContent>
+        </FormWrap>
+       </FormContainer>
+      </PageContainer>
+    </>  
   );
 };
 

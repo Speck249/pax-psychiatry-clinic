@@ -43,19 +43,6 @@ export const FormContent = styled.div`
   };
 `;
 
-export const FormTitle = styled.h1`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  font-weight: bolder;
-  color: #fff;
-  padding-bottom: 28px;
-  margin-top: -5px;
-  margin-bottom: 0.5rem;
-`;
-
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -71,6 +58,19 @@ export const Form = styled.form`
   @media screen and (max-width: 400px) {
     padding: 32px 32px;
   };
+`;
+
+export const FormTitle = styled.h1`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #fff;
+  padding-bottom: 28px;
+  margin-top: -5px;
+  margin-bottom: 0.5rem;
 `;
 
 export const RequiredIndicator = styled.span`

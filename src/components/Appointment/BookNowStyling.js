@@ -8,6 +8,12 @@ export const PageContainer = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100vh;
+
+   @media screen and (max-width: 768px) {
+    height: 210vh;
+    width: 100%
+  }
 `;
 
 export const FormContainer = styled.div`
@@ -16,12 +22,12 @@ export const FormContainer = styled.div`
   padding-left: 3rem;
   padding-right: 1rem;
   margin-left: 50rem;
-  margin-top: -90px;
+  margin-top: -80px;
   margin-bottom: -30px;
-  background-color: #e6e6e6;
 
-  @media screen and (max-width: 650px) {
-    max-width: 90%;
+  @media screen and (max-width: 768px) {
+    max-width: 1200;
+    width: 100%;
   }
 `;
 
@@ -30,6 +36,7 @@ export const FormWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  background-color: black;
 
   @media screen and (max-width: 480px) {
      height: 80%;
@@ -40,39 +47,41 @@ export const FormContent = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  
+  background-color: yellow;
+
   @media screen and (max-width: 480px) {
     padding: 10px;
   };
 `;
 
-export const FormTitle = styled.h1`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  text-align: center;
-  color: #000;
-  margin-bottom: 2rem;
-  margin-top: -5px;
-  margin-right: 1.8rem;
-`;
-
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  padding: 40px 20px;
-  margin-bottom: 1.35rem;
-  background-color: #e6e6e6;
+  padding: 10px 20px;
+  background-color: purple;
   max-width: 700px;
   height: 100%;
   width: 100%;
   z-index: 1;
   
-  @media screen and (max-width: 400px) {
-    padding: 32px 32px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding-left: -50px;
+    padding-right: -30px;
   };
+`;
+
+export const FormTitle = styled.h1`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-align: center;
+  color: #000;
+  margin-right: 1.8rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  background-color: green;
 `;
 
 export const RequiredIndicator = styled.span`
@@ -101,7 +110,7 @@ export const StyledTextarea = styled.textarea`
   border: none;
   border-radius: 4px;
   margin-left: 2rem;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   width: 85%;
 ;`
 

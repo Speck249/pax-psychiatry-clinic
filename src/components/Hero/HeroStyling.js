@@ -1,18 +1,25 @@
 import styled from 'styled-components';
 import HeroImg from '../../images/HeroBg.png';
-import ServicesImg from '../../images/ServicesBg.jpg';
 import '../../fonts/webfont.css';
 
 export const HeroContainer = styled.div`
-   background-image: linear-gradient( to top right, #0b0a0a61, #0b0a0a30), url(${HeroImg});
+   background-image: linear-gradient(to top right, #0b0a0a61, #0b0a0a30), url(${HeroImg});
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
    height: 100vh;
 
-@media only screen and (max-width: 1550px) {
-   height: 90vh;
-}
+   @media only screen and (max-width: 480px) {
+      height: 90vh;
+   }
+
+   @media only screen and (max-width: 768px) {
+      height: 80vh;
+   }
+
+   @media only screen and (max-width: 1440px) {
+      height: 70vh;
+   }
 `;
 
 export const HeroContent = styled.section`
@@ -23,33 +30,33 @@ export const HeroContent = styled.section`
    text-align: center;
    height: 100%;
    width: 100%;
-   
-   @media only screen and (max-width: 375px) {
-    text-align: start;
-    height: 80%;
-    }
+
+   @media only screen and (max-width: 480px) {
+      text-align: center;
+      height: 80%;
+   }
 `;
 
 export const HeroContentText = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 55%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-top: 11rem;
-    background-color: transparent;
-    color: #fff;
-    
-    @media only screen and (max-width: 500px) {
-        width: 50%;
-    }
-    
-    @media only screen and (max-width: 375px) {
-        position: absolute;
-        align-items: flex-start;
-    }
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 55%;
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+   margin-top: 9rem;
+   background-color: transparent;
+   color: #fff;
+
+   @media only screen and (max-width: 768px) {
+      width: 60%;
+   }
+
+   @media only screen and (max-width: 480px) {
+      position: absolute;
+      align-items: center;
+      width: 70%;
+   }
 `;
 
 export const HeroTitle = styled.h1`
@@ -58,6 +65,10 @@ export const HeroTitle = styled.h1`
    font-weight: 400;
    letter-spacing: 0.3rem;
    margin-bottom: 3px;
+
+   @media only screen and (max-width: 480px) {
+      font-size: 24px;
+   }
 `;
 
 export const HeroParagraph = styled.h3`
@@ -67,44 +78,8 @@ export const HeroParagraph = styled.h3`
    letter-spacing: 0.2rem;
    line-height: 1.8;
    padding: 1.3rem;
-   
-   @media only screen and (max-width: 375px) {
-    padding: 1.5rem 0;
-}
-`;
 
-export const ImageContainer = styled.div`
-  background-image: linear-gradient( to top right, #0b0a0a61, #0b0a0a30), url(${ServicesImg});
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  padding-top: 10rem; 
-
-  @media only screen and (max-width: 1550px) {
-   height: 90vh;
-}
-`;
-
-export const HeaderTitle = styled.h1`
-  font-size: 5rem;
-  font-weight: bolder;
-  text-align: left;
-  padding-left: 2rem;
-  margin-left: 1rem;
-  width: 50%;
-  color: #09798C;
-`;
-
-export const HeaderText = styled.h2`
-  width: 60%;
-  font-size: 15px;
-  font-family: 'Sora', sans-serif;
-  font-weight: 400;
-  text-align: justify;
-  line-height: 1.4rem;
-  padding-right: 20rem;
-  padding-left: 2.5rem;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-  color: #e6e6e6;
+   @media only screen and (max-width: 480px) {
+      font-size: 15px;
+   }
 `;

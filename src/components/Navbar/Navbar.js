@@ -9,7 +9,8 @@ import {
   NavbarMenu,
   NavbarItems,
   NavbarLink,
-  NavbarButton,
+  NavbarButtonOne,
+  NavbarButtonTwo,
   NavbarButtonLink
 } from './NavbarStyling';
 
@@ -37,12 +38,12 @@ const Navbar = ({toggle}) => {
                 <NavbarLink to='/contact'>CONTACT</NavbarLink>
               </NavbarItems>
             </NavbarMenu>
-            <NavbarButton>
+            <NavbarButtonOne>
               <NavbarButtonLink to='/login'>Log In</NavbarButtonLink>
-            </NavbarButton>
-            <NavbarButton>
+            </NavbarButtonOne>
+            <NavbarButtonTwo>
               <NavbarButtonLink to='/signup'>Sign Up</NavbarButtonLink>
-            </NavbarButton>
+            </NavbarButtonTwo>
         </NavbarContainer>
       </Nav>
     </>

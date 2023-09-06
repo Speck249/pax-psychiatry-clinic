@@ -4,10 +4,7 @@ import {
   HeroContent,
   HeroContentText,
   HeroTitle,
-  HeroParagraph,
-  ImageContainer,
-  HeaderTitle,
-  HeaderText
+  HeroParagraph
 } from './HeroStyling';
 
 
@@ -28,7 +25,7 @@ const Hero = () => {
      </HeroContainer>
 
     </>
-    );
+  );
 };
 
 export default Hero;

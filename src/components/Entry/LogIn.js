@@ -80,7 +80,7 @@ const LoginPage = () => {
               <FormContent>
                 <Form onSubmit={handleLogin}>
                   <FormTitle>Log In</FormTitle>
-                  {error && <Alert variant="danger">{error}</Alert>}
+                   {error && <Alert variant="danger">{error}</Alert>}
                   <FormLabel>Email</FormLabel>
                   <FormInput
                     type="email"

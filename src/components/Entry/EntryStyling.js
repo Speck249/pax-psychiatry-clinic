@@ -1,20 +1,32 @@
 import styled from 'styled-components';
-import LogInImg from '../../images/LogInBg.jpg'
 import { Link } from 'react-router-dom';
-import GoogleButton from 'react-google-button';
+import EntryImg from '../../images/EntryBg.jpg';
 
 export const PageContainer = styled.div`
- background-image: url(${LogInImg});
+ background-image: url(${EntryImg});
  background-size: cover;
  background-repeat: no-repeat;
  height: 100vh;
+
+ @media screen and (max-width: 480px) {
+    height: 100vh;
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 115vh;
+  }
+
+   @media screen and (max-width: 1024px) {
+    height: 100vh;
+  }
 `;
 
 export const SlideContainer = styled.div`
   background-color: transparent;
   margin: 0 auto;
+  margin-top: 1rem;
   width: 450px;
-  height: 600px;
+  height: 582px;
   overflow: hidden;
   cursor: pointer;
 `;
@@ -25,7 +37,6 @@ export const SlideContent = styled.div`
   width: 200%;
   height: 100%;
   transition: transform 0.3s ease-in-out;
-  /*transform: ${({ isSignUp }) => (isSignUp ? 'translateX(-50%)' : 'translateX(0)')};*/
 `;
 
 export const Slide = styled.div`
@@ -33,7 +44,7 @@ export const Slide = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   padding-top: -25px;
   background-color: transparent;
   backdrop-filter: blur(25px);

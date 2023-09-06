@@ -4,7 +4,7 @@ import { Link as LinkRouter } from 'react-router-dom';
 import '../../fonts/webfont.css';
 
 export const PageContainer = styled.div`
-   background-color: #fff;
+   background-color: #e6e6e6;
 `;
 
 export const HeaderContainer = styled.div`
@@ -13,10 +13,10 @@ export const HeaderContainer = styled.div`
    background-position: center;
    background-repeat: no-repeat;
    height: 80vh;
-
-@media only screen and (max-width: 1550px) {
-   height: 90vh;
-}
+   
+   @media only screen and (max-width: 1550px) {
+      height: 90vh;
+   }
 `;
 
 export const HeaderContent = styled.section`
@@ -29,26 +29,20 @@ export const HeaderContent = styled.section`
    height: 100%;
    width: 100%;
    
-   @media only screen and (max-width: 375px) {
-    text-align: start;
-    height: 80%;
+   @media only screen and (max-width: 480px) {
+      text-align: center;
+      height: 80%;
     }
 `;
 
 export const HeaderContentText = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    
-    @media only screen and (max-width: 500px) {
-        width: 50%;
-    }
-    
-    @media only screen and (max-width: 375px) {
-        position: absolute;
-        align-items: flex-start;
-    }
+
+   @media screen and (max-width: 480px) {
+      margin-top: 9rem;
+   }
 `;
 
 export const HeaderTitle = styled.h1`
@@ -56,7 +50,7 @@ export const HeaderTitle = styled.h1`
    color: #e6e6e6;
    letter-spacing: 0.3rem;
    line-height: 1.5;
-   margin-top: 2rem;
+   margin-top: 1rem;
 `;
 
 export const Highlight = styled.span`
@@ -73,9 +67,17 @@ export const HeaderText = styled.h3`
    color: #e6e6e6;
    line-height: 1.4rem;
    
-   @media only screen and (max-width: 375px) {
-    padding: 1.5rem 0;
-}
+   @media only screen and (max-width: 480px) {
+      width: 100%;
+   }
+`;
+
+export const ButtonContainer = styled.div`
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-left: 1.5rem;
+   margin-top: 5px;
 `;
 
 export const Button = styled(LinkRouter)`
@@ -104,82 +106,64 @@ export const Button = styled(LinkRouter)`
    }
 `;
 
-export const ButtonContainer = styled.div`
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   margin-left: 1.5rem;
-   margin-top: 5px;
-`;
-
 export const AboutTitle = styled.h2`
    display: flex;
-   justify-content: center;
+   text-align: left;
    color: #000;
+   font-weight: bolder;
    font-size: 45px;
-   margin-top: 1rem;
-   margin-bottom: 9px;
-`;
+   margin-top: 4rem;
+   margin-left: 5.7rem;
+   width: 90%;
 
-export const AboutText = styled.p`
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   text-align: center;
-   margin-left: 3rem;
-   margin-right: 3rem;
-   color: #000;
-   font-size: 16px;
-   font-family: 'Sora', sans-serif;
-   font-weight: 200;
-   margin-bottom: 2rem;
+   @media screen and (max-width: 480px) {
+      display: flex;
+      align-items: center;
+      width: 80%;
+      margin-left: 2rem;
+      text-align: left;
+      font-size: 35px;
+   }
+
+   @media screen and (max-width: 768px) {
+      display: flex;
+      align-items: center;
+      width: 90%;
+      margin-left: 3.5rem;
+      text-align: left;
+      font-size: 40px;
+   }
 `;
 
 export const SectionContainer = styled.div`
    display: flex;
    justify-content: center;
    align-items: center;
-   width: 100%;
-`;
+   margin-left: 3rem;
 
-export const ValueContent = styled.div`
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-top: 1rem;
-   border-width: 20px;
+   @media screen and (max-width: 480px) {
+      display: flex;
+      align-items: center;
+      width: 90%;
+      margin-left: 3rem;
+      text-align: left;
+      font-size: 30px;
+   }
 `;
 
 export const ValueContentText = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 1.2rem;
-  border-style: solid;
-  border-width: 0px 2px 0px 0px;
-  border-color: #09798C;
-`;
-
-export const ValueTitle = styled.h2`
-  font-size: 30px;
-  color: #000;
-  margin-bottom: 1rem;
-  margin-top: 10px;
+  margin-bottom: 3rem;
 `;
 
 export const ValueText = styled.div`
   font-size: 16px;
   color: #000;
   text-align: justify;
-  margin-left: 2rem;
-  margin-right: 2rem;
-`;
-
-export const Paragraph = styled.p`
-  margin-bottom: 1rem;
-  font-family: 'Sora', sans-serif;
-  font-weight: 200;
+  margin-right: 3rem;
+  width: 90%;
 `;
 
 export const SectionTitle = styled.h2`
@@ -242,6 +226,6 @@ export const IconWrapper = styled.div`
   justify-content: space-evenly;
   padding-top: 0.5rem;
   margin-top: 8px;
-  cursor: pointer;
   padding-left: 1px;
+  cursor: pointer;
 `;

@@ -57,7 +57,7 @@ const SignupPage = () => {
   return (
     <>
      <PageContainer>
-      <NavigationBar />
+     <NavigationBar />
        <SlideContainer>
         <SlideContent>
           <Slide>
