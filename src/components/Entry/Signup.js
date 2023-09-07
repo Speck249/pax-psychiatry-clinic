@@ -47,7 +47,7 @@ const SignupPage = () => {
       setPassword('');
       setError(null);
       setInfoMessage('');
-    }, 4000);
+    }, 6000);
 
     return () => {
       clearTimeout(clearFields);

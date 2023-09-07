@@ -111,10 +111,12 @@ export const AboutTitle = styled.h2`
    text-align: left;
    color: #000;
    font-weight: bolder;
-   font-size: 45px;
+   font-size: 35px;
    margin-top: 4rem;
-   margin-left: 5.7rem;
-   width: 90%;
+   margin-bottom: 1rem;
+   margin-left: 6rem;
+   width: 85%;
+   text-decoration: none;
 
    @media screen and (max-width: 480px) {
       display: flex;
@@ -155,16 +157,24 @@ export const ValueContentText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 `;
 
 export const ValueText = styled.div`
-  font-size: 16px;
+  font-size: 15px;
+  font-family: 'Sora', sans-serif;
+  font-weight: 400;
   color: #000;
   text-align: justify;
   margin-right: 3rem;
   width: 90%;
+  text-decoration: none;
 `;
+
+export const Paragraph = styled.p`
+  text-decoration: none;
+  display: block;
+`
 
 export const SectionTitle = styled.h2`
    display: flex;

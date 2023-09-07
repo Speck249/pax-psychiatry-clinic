@@ -33,7 +33,7 @@ export const HeroContent = styled.section`
 
    @media only screen and (max-width: 480px) {
       text-align: center;
-      height: 80%;
+      height: 100%;
    }
 `;
 
@@ -49,7 +49,7 @@ export const HeroContentText = styled.div`
    color: #fff;
 
    @media only screen and (max-width: 768px) {
-      width: 60%;
+      width: 80%;
    }
 
    @media only screen and (max-width: 480px) {

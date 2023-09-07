@@ -84,7 +84,6 @@ const Footer = () => {
                 <FooterLinks>
                     <FooterLinkName>SERVICES</FooterLinkName>
                     <FooterLink to='/services'>Adolescent Therapy</FooterLink>
-                    <FooterLink to='/services'>Adult Therapy</FooterLink>
                     <FooterLink to='/services'>Family Therapy</FooterLink>
                     <FooterLink to='/services'>Couples Therapy</FooterLink>
                     <FooterLink to='/services'>Marriage Counselling</FooterLink>
@@ -104,7 +103,6 @@ const Footer = () => {
 
                 <FooterLinks>
                     <FooterLinkName>RESOURCES</FooterLinkName>
-                    <FooterLink to='/'>FAQs</FooterLink>
                     <FooterLink to='https://www.medium.com/' target='_blank'>Blog</FooterLink>
                 </FooterLinks>
                 </FooterLinkWrapper>

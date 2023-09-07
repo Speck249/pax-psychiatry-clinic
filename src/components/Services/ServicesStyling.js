@@ -199,8 +199,9 @@ export const InformationContainer = styled.div`
 `;
 
 export const ServiceCard = styled.div`
-  width: 300px; 
+  width: 350px; 
   height: auto;
+  line-height: 1.5;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   margin: 1rem;

@@ -32,7 +32,7 @@ const Navbar = ({toggle}) => {
                 <NavbarLink to='/services'>SERVICES</NavbarLink>
               </NavbarItems>
               <NavbarItems>
-                <NavbarLink to='/blog' >BLOG</NavbarLink>
+                <NavbarLink>BLOG</NavbarLink>
               </NavbarItems>
                <NavbarItems>
                 <NavbarLink to='/contact'>CONTACT</NavbarLink>

@@ -1,18 +1,9 @@
-import React, { useState } from "react";
-import { Alert } from "react-bootstrap";
-import { useNavigate } from "react-router";
+import React, { useState } from 'react';
+import { Alert } from 'react-bootstrap';
+import { useNavigate } from 'react-router';
 import { useUserAuth } from '../../context/userAuthContext';
-import {
-  PageContainer, 
-  CardContainer,
-  CardContent,
-  CardTitle,
-  CardBody,
-  Card,
-  Button
-} from './ProfileStyling';
-import NavigationBar from '../Navbar/Navigation';
-
+import Dashboard from '../Dashboard/Dashboard';
+import { PageContainer, Button } from './ProfileStyling';
 
 const ProfilePage = () => {
   const { logOut, user } = useUserAuth();
@@ -22,9 +13,9 @@ const ProfilePage = () => {
   const handleLogout = async () => {
     try {
       await logOut();
-      navigate("/");
+      navigate('/');
     } catch (error) {
-      setError('Error Logging Out.')
+      setError('Error Logging Out.');
       console.log(error);
     }
   };
@@ -32,18 +23,10 @@ const ProfilePage = () => {
   return (
     <>
     <PageContainer>
-      <NavigationBar />
-      <CardContainer>
-        <Card>
-          <CardContent>
-            <CardTitle>Welcome!</CardTitle>
-          {error && <Alert variant="danger">{error}</Alert>}
-          <CardBody>Logged in as {user && user.email}</CardBody>
-        <Button variant="link" onClick={handleLogout}>Log Out</Button>
-            </CardContent>
-        </Card>
-        </CardContainer>
-      </PageContainer>
+      <Dashboard />
+        {error && <Alert variant="danger">{error}</Alert>}
+         <Button to='/' onClick={handleLogout}>Log Out</Button>
+    </PageContainer>
     </>
   );
 };

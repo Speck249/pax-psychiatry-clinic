@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import {
   PageContainer,
   HeaderContainer,
@@ -8,12 +8,11 @@ import {
   HeaderTitle,
   Highlight,
   HeaderText,
-  ButtonContainer,
-  Button,
   AboutTitle,
   SectionContainer,
   ValueContentText,
   ValueText,
+  Paragraph,
   SectionTitle,
   InformationContainer,
   TeamCard,
@@ -22,6 +21,7 @@ import {
   TeamCardContent,
   IconWrapper
 } from './AboutStyling';
+import { Link } from 'react-router-dom';
 
 
 const AboutPage = () => {
@@ -32,26 +32,40 @@ const AboutPage = () => {
          <HeaderContent>
          <HeaderContentText>
            <HeaderTitle>Building <Highlight>Stronger</Highlight> Minds, One <Highlight>Patient</Highlight> at a Time</HeaderTitle>
-            <HeaderText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <HeaderText>Our team of experienced therapists is here to guide you through your mental health and emotional well-being journey.
+             We believe that with the right support and guidance, everyone has the potential to overcome obstacles and achieve personal growth. 
             </HeaderText>
          </HeaderContentText>
-         <ButtonContainer><Button>Learn More</Button></ButtonContainer>
          </HeaderContent>
        </HeaderContainer>
 
-       <AboutTitle>PAX Private Psychiatry & Therapy Clinic.</AboutTitle>
+       <AboutTitle>About Portfolio Project - PAX Private Psychiatry & Therapy Clinic.</AboutTitle>
 
        <SectionContainer>
          <ValueContentText>
          <ValueText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Excepteur sint occaecat cupidatat non proident, sunt
-          in culpa qui officia deserunt mollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-          id est laborum.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <Paragraph>This Portfolio Project for <Link to='https://www.alxafrica.com/' target='_blank'>Holberton School's Software Engineering Program</Link> was born out of a meaningful conversation 
+          with a close friend, during which we explored various topics related to the dire shortage of Therapy clinics in Ethiopia. The discussion highlighted the prevailing taboo surrounding mental
+          health in the country, and the absence of compelling online presence of mental health clinics, and those that have websites often underutilize them.</Paragraph>
+         
+          <Paragraph>With these insights in mind, a conceptual website for a hypothetical therapy clinic (PAX) was born. This website not only serves as a comprehensive resource for the company but
+          also aims to ease doctor-patient relationship by integrating technology into the therapeutic process. The goal is to bridge the gap between patients and therapists, making mental health services
+          more accessible and engaging. By embracing technology, PAX aspires to empower individuals on their mental health journey, providing them with tools to actively participate in their own healing process.
+          </Paragraph>
+        
+          <Paragraph>Beyond its functionality, the website emphasizes creating a welcoming and approachable space where individuals feel comfortable seeking support. Through engaging visuals and 
+          informative content, it aims to reduce the stigma associated with therapy and inspire individuals to prioritize their mental well-being. While this project is conceptual, it seeks
+          to address the pressing need for therapy clinics and destigmatizing mental health in Ethiopia. Please note that this website serves as a demonstration of what is possible, highlighting
+          the invaluable importance of inclusive innovative solutions within the therapy field.</Paragraph>
+          
+          <Paragraph>
+           <Link to='www.linkedin.com/in/redietkifle' target='_blank'><FaLinkedin  size='20px' color='#000'/> LinkedIn Profile</Link>
+          </Paragraph>
+
+          <Paragraph>
+           <Link to='https://github.com/Speck249/pax-psychiatry-clinic' target='_blank'><FaGithub size='20px' color='#000' /> Project Repository</Link>
+          </Paragraph>
+
          </ValueText>
          </ValueContentText>
       </SectionContainer>

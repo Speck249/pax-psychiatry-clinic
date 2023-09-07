@@ -24,18 +24,29 @@ export const PageContainer = styled.div`
 export const SlideContainer = styled.div`
   background-color: transparent;
   margin: 0 auto;
-  margin-top: 1rem;
   width: 450px;
-  height: 582px;
+  height: 570px;
   overflow: hidden;
   cursor: pointer;
+
+  @media screen and (max-width: 480px) {
+    margin-top: 3rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 3rem;
+  }
+
+  @media screen and (max-width: 1440px) {
+    margin-top: 3rem;
+  }
 `;
 
 export const SlideContent = styled.div`
   display: flex;
   align-items: center;
   width: 200%;
-  height: 100%;
+  height: 90%;
   transition: transform 0.3s ease-in-out;
 `;
 
@@ -79,7 +90,7 @@ export const FormTitle = styled.h1`
   color: #09798C;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-top: -30px;
+  margin-top: 2rem;
   margin-bottom: 20px;
 `;
 
@@ -88,7 +99,7 @@ export const Form = styled.form`
   flex-direction: column;
   margin: auto;
   padding: 35px 30px;
-  margin-top: 4rem;
+  margin-top: 3rem;
   max-width: 600px;
   height: auto;
   width: 100%;

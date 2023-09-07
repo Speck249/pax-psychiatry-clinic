@@ -29,8 +29,8 @@ const ServicesPage = () => {
       <HeaderContainer>
        <HeaderText>Customer Rating: {renderStars(averageRating)} </HeaderText>
         <HeaderTitle>Exceptional Healthcare.</HeaderTitle>
-          <HeaderText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</HeaderText>
+          <HeaderText>With a patient-centered approach, we prioritize active collaboration and open communication. We believe in building a strong
+           doctor-patient relationship based on trust, empathy, and respect. Together, we will work towards your recovery and personal growth.</HeaderText>
           <IconContainer>
             <IconWrapper>
               <FaHandHoldingHeart size='25px' color='#000' />
@@ -45,58 +45,50 @@ const ServicesPage = () => {
       </HeaderContainer>
 
       <ServiceTitle>Our Expertise</ServiceTitle>
-       <ServiceText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+       <ServiceText>At PAX clinic, we pride ourselves on our unmatched expertise in a wide range of mental health services.
+        Our dedicated team of professionals specializes in providing comprehensive care tailored to the unique needs of a range of demographics
+        while consistently staying up-to-date with the latest research and treatment modalities, ensuring that you receive the highest standard 
+        of care. 
        </ServiceText>
        
        <InformationContainer>
         <ServiceCard>
          <ServiceCardHeader>Adolescent Therapy</ServiceCardHeader>
-           <ServiceCardContent>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-            sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+           <ServiceCardContent>Navigating the challenges of adolescence can be overwhelming. Our skilled therapists address 
+             the specific issues faced by teenagers, while offering a supportive environment where they can explore their emotions,
+            develop coping strategies, and thrive in their personal growth.
          </ServiceCardContent>
         </ServiceCard>
         
         <ServiceCard>
-         <ServiceCardHeader>Adult Therapy</ServiceCardHeader>
-          <ServiceCardContent>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-           sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-         </ServiceCardContent>
-        </ServiceCard>
-        
-        <ServiceCard>
-         <ServiceCardHeader>Family Therapy</ServiceCardHeader>
-          <ServiceCardContent>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-         sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+         <ServiceCardHeader>Marriage and Family Therapy</ServiceCardHeader>
+          <ServiceCardContent>Strong relationships form the foundation of a fulfilling life. Our compassionate therapists are 
+           here to guide Married couples and families through their challenges, fostering effective communication, resolving conflicts,
+           and strengthening the bonds that bring you closer together. 
          </ServiceCardContent>
         </ServiceCard>
         
         <ServiceCard>
          <ServiceCardHeader>Couples Therapy</ServiceCardHeader>
-          <ServiceCardContent>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-         sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+          <ServiceCardContent>Strong and fulfilling relationships require effort and understanding. Our skilled therapists specialize in couples
+           counseling, where they work with you and your partner to enhance your communication, resolve any conflicts, and strengthen the foundation
+           of your relationship.
           </ServiceCardContent>
-        </ServiceCard>
-        
-        <ServiceCard>
-         <ServiceCardHeader>Marriage Counselling</ServiceCardHeader>
-          <ServiceCardContent>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-         sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-         </ServiceCardContent>
         </ServiceCard>
          
          <ServiceCard>
           <ServiceCardHeader>Psychiatry</ServiceCardHeader>
-           <ServiceCardContent>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-         sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+           <ServiceCardContent>When it comes to mental health disorders, our psychiatrists are highly trained and experienced in accurate diagnosis,
+            medication management, and evidence-based treatments. We offer comprehensive psychiatric evaluations and care to individuals of all ages, 
+            ensuring that you receive the support you need on your journey to recovery.
           </ServiceCardContent>
          </ServiceCard>
 
          <ServiceCard>
          <ServiceCardHeader>Corporate Counselling</ServiceCardHeader>
-          <ServiceCardContent>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-           sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+          <ServiceCardContent>We understand that the well-being of your workforce is vital for a thriving business. 
+          We collaborate with organizations to create tailored corporate counselling programs designed to address workplace stress,
+          improve team dynamics, and enhance leadership skills.
           </ServiceCardContent>
          </ServiceCard>
 

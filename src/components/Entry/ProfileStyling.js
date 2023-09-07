@@ -2,86 +2,47 @@ import styled from 'styled-components';
 import { Link as LinkRouter } from 'react-router-dom';
 
 export const PageContainer = styled.div`
- background-color: #000;
-`;
-
-export const CardContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-export const Card = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  margin-top: 6rem;
-  margin-bottom: 12rem;
-  padding: 3.5rem 20px;
-  border: none;
-  border-radius: 6px;
-  max-width: 400px;
-  width: 100%;
-  height: 45vh;
-  z-index: 1;
-  background-color: #09798C;
-`;
-
-export const CardContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 0.2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-
-  @media screen and (max-width: 480px) {
-    padding: 10px;
-  };
-`;
-
-
-export const CardTitle = styled.h1`
-  align-items: center;
-  font-size: 35px;
-  font-weight: bold;
-  color: #fff;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 1.2rem;
-  
-  @media screen and (max-width: 400px) {
-    padding: 32px 32px;
-  };
-`;
-
-export const CardBody = styled.h1`
-  align-items: center;
-  font-size: 16px;
-  font-family: 'Sora', sans-serif;
-  font-weight: 400;
-  color: #fff;
-  padding-top: 9px;
-  padding-bottom: 10px;
-  margin-bottom: 2rem;
-  
-  @media screen and (max-width: 400px) {
-    padding: 32px 32px;
-  };
+  background-color: #e6e6e6;
 `;
 
 export const Button = styled(LinkRouter)`
-   width: 100%;
-   padding: 10px 10px;
-   margin-top: 8px;
-   margin-bottom: 8px;
-   border: none;
-   border-radius: 4px;
-   color: #fff;
-   font-size: 15px;
-   text-align: center;
+   width: 15%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 0.7rem 1.3rem;
+   border-radius: 3px;
+   background-color: ${({primary}) => primary ? '#09798C': '#000'};
+   color: ${({primary}) => primary ? '#000': '#fff'}; 
+   font-size: 18px;
    text-decoration: none;
-   background-color: #000;
+   transition: all 0.3s ease;
    cursor: pointer;
+   margin-top: -80px;
+   margin-bottom: 1.5rem;
+   margin-left: 40rem;
+  
+&:hover{
+    background-color: ${({primary}) => primary ? '#000': '#09798C'};  
+    transform: translateY(-0.5rem) scale(1.01);
+    color: #fff;
+    text-decoration: none;
+}
+
+&:active{
+    transform: translateY(0.5rem);
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    padding: ${({big}) => big ? '16px 30px' : '10px 15px'};
+    font-size: ${({font}) => font ? '16px': '16px'};
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 375px) {
+    padding: ${({big}) => big ? '12px 20px' : '10px 12px'};
+    font-size: ${({font}) => font ? '16px': '16px'};
+    text-decoration: none;
+}
 `;
