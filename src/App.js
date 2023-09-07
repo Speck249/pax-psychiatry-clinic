@@ -25,13 +25,13 @@ function App() {
             </ProtectedRoute>
           }
         />
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/book" element={<Book />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<LogIn />} />
-          <Route path="/signup" element={<SignUp />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/book" element={<Book />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/signup" element={<SignUp />} />
         </Routes>
     </UserAuthContextProvider>
     </Router>

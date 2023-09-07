@@ -61,7 +61,7 @@ const ServicesPage = () => {
         </ServiceCard>
         
         <ServiceCard>
-         <ServiceCardHeader>Marriage and Family Therapy</ServiceCardHeader>
+         <ServiceCardHeader>Marriage & Family Therapy</ServiceCardHeader>
           <ServiceCardContent>Strong relationships form the foundation of a fulfilling life. Our compassionate therapists are 
            here to guide Married couples and families through their challenges, fostering effective communication, resolving conflicts,
            and strengthening the bonds that bring you closer together. 
@@ -79,8 +79,7 @@ const ServicesPage = () => {
          <ServiceCard>
           <ServiceCardHeader>Psychiatry</ServiceCardHeader>
            <ServiceCardContent>When it comes to mental health disorders, our psychiatrists are highly trained and experienced in accurate diagnosis,
-            medication management, and evidence-based treatments. We offer comprehensive psychiatric evaluations and care to individuals of all ages, 
-            ensuring that you receive the support you need on your journey to recovery.
+            medication management, and targeted treatments. We offer comprehensive psychiatric evaluations to ensure perosnalized treatment plans.
           </ServiceCardContent>
          </ServiceCard>
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Alert } from 'react-bootstrap';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { useUserAuth } from '../../context/userAuthContext';
 import Dashboard from '../Dashboard/Dashboard';
 import { PageContainer, Button } from './ProfileStyling';
@@ -21,13 +21,11 @@ const ProfilePage = () => {
   };
 
   return (
-    <>
     <PageContainer>
       <Dashboard />
-        {error && <Alert variant="danger">{error}</Alert>}
-         <Button to='/' onClick={handleLogout}>Log Out</Button>
+      {error && <Alert variant="danger">{error}</Alert>}
+      <Button to="/" onClick={handleLogout}>Log Out</Button>
     </PageContainer>
-    </>
   );
 };
 

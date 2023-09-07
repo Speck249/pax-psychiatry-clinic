@@ -14,11 +14,11 @@ const Hero = () => {
      <HeroContainer>
        <HeroContent>
          <HeroContentText>
-             <HeroTitle>Your Health Journey Starts Here</HeroTitle>
-          <HeroParagraph>
+            <HeroTitle>Your Health Journey Starts Here</HeroTitle>
+            <HeroParagraph>
             Book Your First Free Appointment & Prioritize Your
             Mental Health at PAX Private Psychiatry & Therapy Clinic.
-          </HeroParagraph>
+            </HeroParagraph>
             <Button to='/services'>Learn More</Button>
          </HeroContentText>
         </HeroContent>        

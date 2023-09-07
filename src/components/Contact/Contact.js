@@ -3,18 +3,18 @@ import { Alert } from 'react-bootstrap';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../../firebase';
 import {
-    PageContainer,
-    FormContainer,
-    FormWrap,
-    FormContent,
-    Form,
-    FormTitle,
-    RequiredIndicator,
-    FormLabel,
-    FormInput,
-    StyledTextarea,
-    ButtonContainer,
-    FormButton
+  PageContainer,
+  FormContainer,
+  FormWrap,
+  FormContent,
+  Form,
+  FormTitle,
+  RequiredIndicator,
+  FormLabel,
+  FormInput,
+  StyledTextarea,
+  ButtonContainer,
+  FormButton
 } from './ContactStyling';
 
 

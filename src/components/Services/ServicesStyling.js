@@ -176,11 +176,11 @@ export const ServiceText = styled.p`
    flex-direction: column;
    justify-content: center;
    text-align: center;
-   margin-right: 3rem;
+   margin-right: 2rem;
    margin-bottom: 1.5rem;
-   padding-left: 4rem;
-   padding-right: 2rem;
-   font-size: 15px;
+   padding-left: 3rem;
+   padding-right: 3rem;
+   font-size: 16px;
    font-family: 'Sora', sans-serif;
    font-weight: 200;
    color: #000;
@@ -201,11 +201,11 @@ export const InformationContainer = styled.div`
 export const ServiceCard = styled.div`
   width: 350px; 
   height: auto;
-  line-height: 1.5;
+  line-height: 1.6;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   margin: 1rem;
-  padding: 2rem;
+  padding: 1.9rem;
   background-color: #fff;
 
   &:hover{
@@ -221,12 +221,12 @@ export const ServiceCardHeader = styled.h3`
   justify-content: center;
   align-items: center;
   margin-bottom: 0.5rem;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bolder;
 `;
 
 export const ServiceCardContent = styled.p`
-  font-size: 13px;
+  font-size: 12.5px;
   font-family: 'Sora', sans-serif;
   text-align: justify;
   margin-bottom: 0.3rem;
