@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useUserAuth } from '../../context/userAuthContext';
 import { Alert } from 'react-bootstrap';
-import GoogleButton from 'react-google-button';
 import NavigationBar from '../Navbar/Navigation';
 import {
   PageContainer,
@@ -16,6 +15,7 @@ import {
   FormLabel,
   FormInput,
   FormButton,
+  CustomGoogleButton,
   SlidePrompt,
   Prompt
 } from './EntryStyling';
@@ -63,12 +63,6 @@ const LoginPage = () => {
     }
   };
 
-  const buttonStyles = {
-    width: '100%',
-    maxWidth: '400px',
-  };
-
-
   return (
     <>
     <PageContainer>
@@ -79,7 +73,7 @@ const LoginPage = () => {
             <FormWrap>
               <FormContent>
                 <Form onSubmit={handleLogin}>
-                  <FormTitle>Log In</FormTitle>
+                  <FormTitle>Sign In</FormTitle>
                    {error && <Alert variant="danger">{error}</Alert>}
                   <FormLabel>Email</FormLabel>
                   <FormInput
@@ -96,14 +90,9 @@ const LoginPage = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)} required
                   />
-                  <FormButton variant='primary' type="submit">Log In</FormButton>
+                  <FormButton variant='primary' type="submit">Sign In</FormButton>
                   <hr />
-                  <GoogleButton
-                    className="g-btn"
-                    type="dark"
-                    onClick={handleGoogleSignIn} 
-                    styled={buttonStyles}
-                  />
+                  <CustomGoogleButton onClick={handleGoogleSignIn}>Sign in with Google</CustomGoogleButton>
                   <SlidePrompt>
                     New to PAX? <Prompt to="/signup">Create an account</Prompt>
                   </SlidePrompt>

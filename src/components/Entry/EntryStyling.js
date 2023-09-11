@@ -127,10 +127,28 @@ export const FormInput = styled.input`
   font-size: 14px;
 `;
 
+export const CustomGoogleButton = styled.button`
+    background-color: rgb(66, 133, 244);
+    color: #fff;
+    height: 50px;
+    width: 350px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px 0px;
+    font-size: 15px;
+    line-height: 48px;
+    display: block;
+    border-radius: 1px;
+    transition: background-color 0.218s ease 0s, border-color 0.218s ease 0s, box-shadow 0.218s ease 0s;
+    font-family: 'Sora', sans-serif;
+    cursor: pointer;
+    user-select: none;
+  `;
+
 export const FormButton = styled.button`
-   width: 100%;
+   width: 350px;
+   height: 50px;
    padding: 10px 10px;
-   border-radius: 8px;
+   border-radius: 1px;
    border: none;
    margin-top: 8px;
    color: #fff;
