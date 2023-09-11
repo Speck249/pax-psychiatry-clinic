@@ -44,7 +44,7 @@ const AboutPage = () => {
        <SectionContainer>
          <ValueContentText>
          <ValueText>
-          <Paragraph>This Portfolio Project for <Link to='https://www.holbertonschool.com/' target='_blank'>Holberton</Link> School's <Link to='https://www.alxafrica.com/' target='_blank'>Software Engineering</Link> Program
+          <Paragraph>This Portfolio Project for <Link to='https://www.holbertonschool.com/' target='_blank'>Holberton School's</Link> <Link to='https://www.alxafrica.com/' target='_blank'>Software Engineering</Link> Program
           [offered by ALX Africa], aka my very first humble excursion into the exciting yet daunting world of Front End Engineering, was born out of a meaningful conversation with a close friend, during which we explored various
           topics related to the dire shortage of Therapy clinics in Ethiopia. The discussion highlighted the prevailing taboo surrounding mental health in the country, and the absence of compelling online presence of mental
           health clinics, and how those that have websites often underutilize them.</Paragraph>
