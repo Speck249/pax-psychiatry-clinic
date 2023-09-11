@@ -44,14 +44,14 @@ const AboutPage = () => {
        <SectionContainer>
          <ValueContentText>
          <ValueText>
-          <Paragraph>This Portfolio Project for <Link to='https://www.alxafrica.com/' target='_blank'>Holberton School's Software Engineering Program</Link> was born out of a meaningful conversation 
-          with a close friend, during which we explored various topics related to the dire shortage of Therapy clinics in Ethiopia. The discussion highlighted the prevailing taboo surrounding mental
-          health in the country, and the absence of compelling online presence of mental health clinics, and those that have websites often underutilize them.</Paragraph>
+          <Paragraph>This Portfolio Project for <Link to='https://www.alxafrica.com/' target='_blank'>Holberton School's Software Engineering Program, aka my very first humble excursion into the exciting
+          yet daunting world of front end engineering (take it easy on me will ya), </Link> was born out of a meaningful conversation with a close friend, during which we explored various topics related to
+          the dire shortage of Therapy clinics in Ethiopia. The discussion highlighted the prevailing taboo surrounding mental health in the country, and the absence of compelling online presence of mental
+          health clinics, and how those that have websites often underutilize them.</Paragraph>
          
-          <Paragraph>With these insights in mind, a conceptual website for a hypothetical therapy clinic (PAX) was born. This website not only serves as a comprehensive resource for the company but
-          also aims to ease doctor-patient relationship by integrating technology into the therapeutic process. The goal is to bridge the gap between patients and therapists, making mental health services
-          more accessible and engaging. By embracing technology, PAX aspires to empower individuals on their mental health journey, providing them with tools to actively participate in their own healing process.
-          </Paragraph>
+          <Paragraph>With these insights in mind, a conceptual website for a therapy clinic (PAX) was born. This website not only aims to serve as a comprehensive resource for the company but also seeks to ease
+          doctor-patient relationship by integrating technology into the therapeutic process. The goal is to bridge the gap between patients and therapists, making mental health services more accessible and engaging.
+          By embracing technology, PAX aspires to empower individuals on their mental health journey, providing them with tools to actively participate in their own healing process. </Paragraph>
         
           <Paragraph>Beyond its functionality, the website emphasizes creating a welcoming and approachable space where individuals feel comfortable seeking support. Through engaging visuals and 
           informative content, it aims to reduce the stigma associated with therapy and inspire individuals to prioritize their mental well-being. While this project is conceptual, it seeks
