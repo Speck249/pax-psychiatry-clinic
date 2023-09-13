@@ -3,6 +3,7 @@ import { Navbar, Container } from 'react-bootstrap';
 import { faHeartbeat } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+/* Creates alternative navigation for pages that don't require full topbar action. */
 const NavigationBar = () => {
   return (
     <Navbar bg="#e6e6e6" expand="lg">

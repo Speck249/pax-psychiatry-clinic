@@ -19,7 +19,8 @@ import {
     ServiceCardContent
 } from './ServicesStyling';
 
-
+/* Creates page layout that emphasizes full-scale clinic services. */
+/* Creates header button that routes to Booking page. */
 const ServicesPage = () => {
     const averageRating = 4.5;
 

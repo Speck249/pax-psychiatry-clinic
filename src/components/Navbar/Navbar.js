@@ -14,7 +14,7 @@ import {
   NavbarButtonLink
 } from './NavbarStyling';
 
-
+/* Creates website topbar with icon, navigations links and buttons that . */
 const Navbar = ({toggle}) => {
   return (
     <>

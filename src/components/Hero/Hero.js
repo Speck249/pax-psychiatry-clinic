@@ -7,7 +7,7 @@ import {
   HeroParagraph
 } from './HeroStyling';
 
-
+/* Create Banner section that serves as the primary part of the landing page along with topbar. */
 const Hero = () => {
   return (
     <>

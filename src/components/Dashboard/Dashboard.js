@@ -15,6 +15,7 @@ import {
 
 const { Meta } = Card;
 
+/* Creates private dashboard for logged in users to access. */
 const Dashboard = () => {
   const patientData = [
     {

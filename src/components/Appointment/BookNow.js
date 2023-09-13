@@ -24,6 +24,8 @@ import {
 
 const MySwal = withReactContent(Swal);
 
+/* Creates Booking page layout for the website. */
+/* Firebase configuration for storing booking data from users. */
 const BookAppointment = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');

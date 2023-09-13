@@ -10,7 +10,7 @@ import {
     SidebarRoute
 } from './SidebarStyling';
 
-
+/* Creates website navigation sidebar to be used in minimized screen or mobile dimensions. */ 
 const Sidebar = ( {isOpen, toggle} ) => {
   return (
     <>

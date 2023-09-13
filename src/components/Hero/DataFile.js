@@ -1,3 +1,4 @@
+/* Outlines data to be inserted into information section. */
 export const featureSection = {
     id: 'about',
     light: true,

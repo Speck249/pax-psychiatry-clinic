@@ -20,7 +20,9 @@ import {
   Prompt
 } from './EntryStyling';
 
-
+/* Creates page layout and form with slide feature that alternates between user Login and Signup. */
+/* Enables user Login actions on the basis of a few conditions. */
+/* Firebase configurations sets up user authentication. */
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

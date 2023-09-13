@@ -12,6 +12,8 @@ import {
     Subtitle
 } from './InfoStyling';
 
+
+/* A Reusable information section for service highlights. */ 
 const InfoSection = ({
     light,
     id,

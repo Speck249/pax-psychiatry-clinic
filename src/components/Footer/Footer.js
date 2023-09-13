@@ -21,7 +21,8 @@ import {
     FooterCopyright
 } from './FooterStyling';
 
-
+/* Creates Footer section within the landing page that include newsletter subscription. */
+/* Firebase configuration maanages email data storage for newsletter subscription. */
 const Footer = () => {
     const [email, setEmail] = useState('');
     const [subscriptionStatus, setSubscriptionStatus] = useState('');
@@ -56,7 +57,7 @@ const Footer = () => {
              <Newsletter>
                 <NewsletterTitle>Subscribe to Our Weekly Newsletter.</NewsletterTitle>
                     <NewsletterBody>Get Exclusive Health Content Curated by Industry Experts.</NewsletterBody>
-                    {subscriptionStatus === true && <Alert variant="success">Welcome to the PAX community!</Alert>}
+                    {subscriptionStatus === true && <Alert variant="success">Welcome to the PAX Community!</Alert>}
                     {subscriptionStatus === false && <Alert variant="danger">Subscription Failed. Please try again.</Alert>}
                         <Form onSubmit={handleSubmit}>
                             <div><FormLabel>Email Address</FormLabel></div>

@@ -23,7 +23,7 @@ import {
 } from './AboutStyling';
 import { Link } from 'react-router-dom';
 
-
+/* Creates page layout for Clinic's About Page. */
 const AboutPage = () => {
   return (
     <>

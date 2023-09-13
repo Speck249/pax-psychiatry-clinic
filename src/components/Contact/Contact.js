@@ -17,7 +17,8 @@ import {
   FormButton
 } from './ContactStyling';
 
-
+/* Creates page layout with form for accepting users contact information. */
+/* Firebase configuration for storing contact data from users. */
 const ContactForm = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
