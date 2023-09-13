@@ -1,70 +1,39 @@
-# PAX Private Psychiatry & Therapy Clinic
+![Landing Page](/src/images/Banner.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# PAX - Web App
+A Web Application that serves as a comprehensive platform with curated information about a conceptual medical institution - [PAX] Private Psychiatry & Therapy Clinic. It aims to create a safe space where users can access the clinic's services right from the comfort of their home while offering registered users access to a private dashboard to conveniently schedule appointments, securely communicate with therapists, and access personalized resources designed to support their mental health journey.  
 
-## Available Scripts
+## Features
+Developed with React.js
+Fully Functional with Firebase
+Multi-Page Layout
 
-In the project directory, you can run:
+## Technologies
+* Node.js
+* React.js
+* Styled Components
+* Bootstrap
+* Sweet Alert
+* Ant Design
+* Firebase
+* VSCode
 
-### `npm start`
+## Getting Started
+To view the website, just head on over to https://pax-therapy-clinic.web.app/ and take a look around.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run in development mode:
+1. Install node.js >>> Latest LTS,
+2. Install git & Clone this Repository,
+3. Install Project Dependencies >>> npm install,
+4. Start Development Server >>> npm start,
+5. View website at http://localhost:3000 where corresponding changes to code will be displayed;
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Usage Instructions
+View Project folder & navigate to /src/components to find all Front-End inputs.
 
-### `npm test`
+Keep in mind that website uses Firebase Backend component setup (Authentication + Firestore) for functionality as Front-End Development was the primary focus. As such, sensitive configuration files have been ommitted from this repo for security reasons. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contributions
+As this is my very first development project, there are enhancements and iterations to be made. Nonetheless, feel free to fork this repo and make your own changes if you would like. Just make sure to give due credit by linking back to Speck249 ;)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thanks for stopping by!
