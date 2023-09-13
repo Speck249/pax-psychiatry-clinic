@@ -35,6 +35,6 @@ View Project folder & navigate to */src/components* to find all Front-End inputs
 Keep in mind that website uses Firebase Backend component setup (Authentication + Firestore) for functionality as Front-End Development was the primary focus. As such, sensitive configuration files have been ommitted from this repo for security reasons. 
 
 ## Contributions
-As this is my very first development project, there are enhancements and iterations to be made. Nonetheless, feel free to fork this repo and make your own changes if you would like. Just make sure to give due credit by linking back to Speck249 ;)
+As this is my very first development project, there are enhancements and iterations to be made. Nonetheless, feel free to fork this repo and make your own changes if you would like. Just make sure to give due credit by linking to Speck249 ;)
 
 Thanks for stopping by!
