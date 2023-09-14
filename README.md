@@ -45,7 +45,7 @@ Much respect to Freepik that offers a diverse range of assets. As the majority o
 * Asset: 'Dashboard Card Image #5' | source: bit.ly/3PgbMF3
 * Asset: 'Dashboard Card Image #6' | source: bit.ly/3LiJp8g
 
-Please be sure to credit the work of these artists & contributors. 
+Please be sure to credit the work of these artists & contributors for your own projects. 
 
 ## Contributions
 As this is my very first website, there are enhancements and iterations to be made. Nonetheless, feel free to fork this repo and make your own changes if you would like. Just make sure to give due credit by linking to Speck249 ;)
