@@ -1,52 +1,49 @@
 import React from 'react';
-import { FaBars, FaHeartbeat } from 'react-icons/fa';
+import sidebarLogo from '../../images/Sidebar.png'
 import {
   Nav,
-  NavbarContainer,
-  NavbarLogo,
-  Icon,
+  LogoContainer,
+  Logo,
   MobileIcon,
+  SidebarLogo,
+  NavbarWrapper,
   NavbarMenu,
-  NavbarItems,
-  NavbarLink,
-  NavbarButtonOne,
-  NavbarButtonTwo,
-  NavbarButtonLink
+  NavbarItem,
+  ButtonContainer,
+  SignIn,
+  Contact,
 } from './NavbarStyling';
+import { FaBars } from 'react-icons/fa';
+import logo from '../../images/Logo.png';
 
-/* Creates website topbar with icon, navigations links and buttons that . */
+
 const Navbar = ({toggle}) => {
   return (
-    <>
       <Nav>
-        <NavbarContainer>
-            <NavbarLogo to='/'><Icon><FaHeartbeat size={45}/></Icon>PAX</NavbarLogo>
-            <MobileIcon onClick={toggle}>
-            <FaBars />
-            </MobileIcon>
-            <NavbarMenu>
-              <NavbarItems>
-                <NavbarLink to='/about'>ABOUT</NavbarLink>
-              </NavbarItems>
-              <NavbarItems>
-                <NavbarLink to='/services'>SERVICES</NavbarLink>
-              </NavbarItems>
-              <NavbarItems>
-                <NavbarLink>BLOG</NavbarLink>
-              </NavbarItems>
-               <NavbarItems>
-                <NavbarLink to='/contact'>CONTACT</NavbarLink>
-              </NavbarItems>
-            </NavbarMenu>
-            <NavbarButtonOne>
-              <NavbarButtonLink to='/login'>Sign In</NavbarButtonLink>
-            </NavbarButtonOne>
-            <NavbarButtonTwo>
-              <NavbarButtonLink to='/signup'>Sign Up</NavbarButtonLink>
-            </NavbarButtonTwo>
-        </NavbarContainer>
+        <LogoContainer>
+          <Logo src={logo} width={95} alt='Pax Logo'/>
+        </LogoContainer>
+            
+        <SidebarLogo src={sidebarLogo} width={95} alt='Pax Logo' />    
+        <MobileIcon onClick={toggle}>
+          <FaBars size={40} color='#fff' />
+        </MobileIcon>
+
+        <NavbarWrapper>
+          <NavbarMenu>
+            <NavbarItem to='/'>About Us</NavbarItem>
+            <NavbarItem to='/services'>Medical Services & Care</NavbarItem>
+            <NavbarItem to='/doctors'>Meet Our Doctors</NavbarItem>
+            <NavbarItem to='#'>Research & Innovation</NavbarItem>
+            <NavbarItem to='#'>Giving</NavbarItem>
+          </NavbarMenu>
+        </NavbarWrapper>
+
+        <ButtonContainer>
+          <SignIn to='/signin'>Sign In</SignIn>
+          <Contact to='/contact'>Contact Us</Contact>
+        </ButtonContainer>
       </Nav>
-    </>
   );
 };
 
