@@ -2,36 +2,37 @@ import React from 'react';
 import {
     SidebarContainer,
     Icon,
-    CloseIcon,
     SidebarWrapper,
     SidebarMenu,
-    SidebarLink,
-    SidebarButtonWrap,
-    SidebarRoute
+    SidebarItem,
+    ButtonContainer,
+    SignIn
 } from './SidebarStyling';
+import { FaTimes } from 'react-icons/fa';
 
-/* Creates website navigation sidebar to be used in minimized screen or mobile dimensions. */ 
+
 const Sidebar = ( {isOpen, toggle} ) => {
-  return (
-    <>
-        <SidebarContainer isOpen={isOpen} onClick={toggle}>
-            <Icon onClick={toggle}>
-                <CloseIcon />
-            </Icon>
-            <SidebarWrapper>
-                <SidebarMenu>
-                    <SidebarLink to='/about' onClick={toggle}>About</SidebarLink>
-                    <SidebarLink to='/services' onClick={toggle}>Services</SidebarLink>
-                    <SidebarLink>Blog</SidebarLink>
-                    <SidebarLink to='/contact' onClick={toggle}>Contact</SidebarLink>
-                </SidebarMenu>
-                <SidebarButtonWrap>
-                    <SidebarRoute to="/login">Sign In</SidebarRoute>
-                </SidebarButtonWrap>
-            </SidebarWrapper>
-        </SidebarContainer>
-    </>
-  );
+    return (
+      <SidebarContainer isOpen={isOpen} onClick={toggle}>
+        <Icon onClick={toggle}>
+          <FaTimes size={25} color='#fff' />
+        </Icon>
+        
+        <SidebarWrapper>
+          <SidebarMenu>
+            <SidebarItem to='/' onClick={toggle}>About Us</SidebarItem>
+            <SidebarItem to='/services' onClick={toggle}>Medical Services & Care</SidebarItem>
+            <SidebarItem to='/doctors' onClick={toggle}>Meet Our Doctor</SidebarItem>
+            <SidebarItem to='#' onClick={toggle}>Research & Innovation</SidebarItem>
+            <SidebarItem to='/contact' onClick={toggle}>Contact Us</SidebarItem> 
+          </SidebarMenu>
+
+          <ButtonContainer>
+            <SignIn to='/signin'>Sign In</SignIn>
+          </ButtonContainer>
+        </SidebarWrapper>
+      </SidebarContainer>
+    );
 };
 
 export default Sidebar;
