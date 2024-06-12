@@ -1,92 +1,76 @@
 import styled from 'styled-components';
 import { Link as LinkRouter} from 'react-router-dom';
-import {FaTimes} from 'react-icons/fa';
 
 export const SidebarContainer = styled.aside`
   display: grid;
   position: fixed;
-  align-items: center;
-  top: 0;
-  left: 0;
+  top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+  right: 0;
+  max-width: 100%;
   width: 100%;
   height: 100%;
-  z-index: 999;
-  background: black;  
+  z-index: 999;  
   opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
-  top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
+  background-color: #000;
 `;
 
 export const Icon = styled.div`
-  background: transparent;
-  position: absolute;
+  position: fixed;
+  top: 40px;
+  right: 45px;
   outline: none;
-  top: 1.5rem;
-  right: 1.5rem;
-  font-size: 1.5rem;
   cursor: pointer;
-`;
-
-export const CloseIcon = styled(FaTimes)`
-  color: #fff;
-  margin-right: 1rem;
-`;
-
-export const SidebarMenu = styled.ul`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 60px);
-  text-align: center;
-  margin-right: 2.4rem;
-
-  @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(6, 60px);
-  }
 `;
 
 export const SidebarWrapper = styled.div`
-   color: #fff;
-`;
-
-export const SidebarLink = styled(LinkRouter)`
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  font-size: 1.5rem;
-  text-decoration: none;
-  list-style: none;
-  transition: 0.2s ease-in-out;
-  color: #fff;
-  cursor: pointer;
-
-  &:hover {
-    color: #09798C;
-    transition: 0.2s ease-in-out;
-  }
+  gap: 15px;
 `;
 
-export const SidebarButtonWrap = styled.div`
-   display: flex;
-   justify-content: center;
+export const SidebarMenu = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  line-height: 3.1;
 `;
 
-export const SidebarRoute = styled(LinkRouter)`
-  padding: 16px 50px;
-  white-space: nowrap;
-  outline: none;
-  border: none;
-  border-radius: 50px;
-  color: #fff;
+export const SidebarItem = styled(LinkRouter)`
   font-size: 22px;
-  line-height: 1.1rem;
-  background: #09798C;
-  transition: all 0.2s ease-in-out;
+  font-weight: 300;
   text-decoration: none;
+  color: #fff;
   cursor: pointer;
 
   &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
     color: #09798C;
+    transition: 0.3s ease-in-out;
   }
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  max-width: 100%;
+  width: 100%;
+`;
+
+export const SignIn = styled(LinkRouter)`
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+  padding: 0.75rem 3rem;
+  margin-left: 2rem;
+  outline: none;
+  text-decoration: none;
+  border-radius: 0.6rem;
+  border: 2px solid #09798C;
+  background-color: #000;
+  cursor: pointer;
 `;
