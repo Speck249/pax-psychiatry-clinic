@@ -1,135 +1,108 @@
 import styled from 'styled-components';
 import { Link as LinkRouter } from 'react-router-dom';
 
-// Web Breakpoints 
-export const Nav = styled.header`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 100%;
-  height: 15vh;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background-color: #fff;
+export const NavbarHeader = styled.header `
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 3rem;
+    height: auto;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
 
-  @media screen and (max-width: 768px) {
-    transition: 0.3s all ease;
-    background-color: #09798C;
-  } 
-`;  
-
-export const LogoContainer = styled(LinkRouter)`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: relative;
-  top: 0;
-  left: 3%;
-
-  @media screen and (max-width: 768px) {
-    display: none;  
-  } 
+    @media screen and (max-width: 868px) {
+      background-color: #09798C;
+      padding-left: 1rem;
+    }
 `;
 
-export const Logo = styled.img`
-  background-repeat: no-repeat;
+export const LogoContainer = styled.div`
+    cursor: pointer;
+
+    @media screen and (max-width: 868px) {
+      display: none;
+    }
 `;
 
-export const SidebarLogo = styled.img`
-  display: none;
+export const NavbarLogo = styled.img`
+    display: flex;
+    margin: 0.2rem 0.5rem;
+    max-width: 85px;
+    max-height: 80px;
+`;
 
-  @media screen and (max-width: 768px) {
-    background-repeat: no-repeat;
-    display: block;
-    position: absolute;
-    top: 8px;
-    left: 20px;
-  }
+export const SidebarLogo = styled.img `
+    display: none;
+
+    @media screen and (max-width: 868px) {
+      display: block;
+      margin: 0.2rem 0 0.2rem 2rem;
+      max-width: 93px;
+      max-height: 85px;
+      cursor: pointer;
+    }
 `;
 
 export const MobileIcon = styled.div`
-  display: none;
+    display: none;
 
-  @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 6px;
-    right: 0;
-    transform: translate(-100%, 60%);
-  }
+    @media screen and (max-width: 868px) {
+      display: block;
+      margin-right: 1rem;
+      color: #fff;
+      cursor: pointer;
+    }
 `;
 
 export const NavbarWrapper = styled.nav`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  width: 65%;
-  height: auto;
+    display: flex;
+    align-items: center;
+    width: 780px;
+    height: 100%;
 
-  @media screen and (max-width: 768px) {
-    display: none;  
-  } 
+    @media screen and (max-width: 868px) {
+      display: none;
+    }
 `;
 
 export const NavbarMenu = styled.ul`
-   display: flex;
-   flex-direction: row;
-   justify-content: space-evenly;
-   align-items: center;
-   max-width: 100%;
-   width: 100%;
-   margin-top: 1rem;
-   padding: 1rem;
-   list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin-top: 1rem;
+    list-style: none;
 `;
 
 export const NavbarItem = styled(LinkRouter)`
-  font-size: 16px;
-  font-weight: 400;
-  color: #09798C;
-  text-decoration: none;
-  cursor: pointer;
+    font-weight: bold;
+    color: #09798C;
+    text-decoration: none;
+    cursor: pointer;
 `;
 
 export const ButtonContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  right: 3%;
-  gap: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 
-  @media screen and (max-width: 768px) {
-    display: none;  
-  } 
-`;
+    @media screen and (max-width: 868px) {
+      display: none; 
+    }
+`
 
-export const SignIn = styled(LinkRouter)`
-  font-size: 14px;
-  font-weight: 400;
-  color: #09798C;
-  padding: 0.75rem 2rem;
-  outline: none;
-  text-decoration: none;
-  border-radius: 1rem;
-  border: 2px solid #09798C;
-  cursor: pointer;
-`;
-
-export const Contact = styled(LinkRouter)`
-  font-size: 14px;
-  font-weight: 400;
-  color: #fff;
-  background-color: #09798C;
-  padding: 0.75rem 1rem;
-  outline: none;
-  text-decoration: none;
-  border-radius: 1rem;
-  border: 2px solid #09798C;
-  cursor: pointer;
+export const SignIn = styled.div`
+    font-weight: 400;
+    color: #fff;
+    padding: 0.8rem 2.5rem;
+    outline: none;
+    border-radius: 1rem;
+    background-color: #09798C;
+    cursor: pointer;
 `;
