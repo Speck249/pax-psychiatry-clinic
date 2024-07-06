@@ -1,49 +1,46 @@
 import React from 'react';
-import sidebarLogo from '../../images/Sidebar.png'
 import {
-  Nav,
+  NavbarHeader,
   LogoContainer,
-  Logo,
+  NavbarLogo,
   MobileIcon,
   SidebarLogo,
   NavbarWrapper,
   NavbarMenu,
   NavbarItem,
   ButtonContainer,
-  SignIn,
-  Contact,
+  SignIn
 } from './NavbarStyling';
+import navbarLogo from '../../images/Logo.png';
+import sidebarLogo from '../../images/Sidebar.png';
 import { FaBars } from 'react-icons/fa';
-import logo from '../../images/Logo.png';
-
 
 const Navbar = ({toggle}) => {
   return (
-      <Nav>
+    <NavbarHeader>
         <LogoContainer>
-          <Logo src={logo} width={95} alt='Pax Logo'/>
+          <NavbarLogo src={navbarLogo} width={132} height={125} alt='Pax Logo' />
         </LogoContainer>
-            
-        <SidebarLogo src={sidebarLogo} width={95} alt='Pax Logo' />    
+
+        <SidebarLogo src={sidebarLogo} width={143} height={128} alt='Pax Logo' />
         <MobileIcon onClick={toggle}>
-          <FaBars size={40} color='#fff' />
+          <FaBars size={40} />
         </MobileIcon>
+        
 
         <NavbarWrapper>
           <NavbarMenu>
             <NavbarItem to='/'>About Us</NavbarItem>
-            <NavbarItem to='/services'>Medical Services & Care</NavbarItem>
+            <NavbarItem to='/services'>Medical Care & Services</NavbarItem>
             <NavbarItem to='/doctors'>Meet Our Doctors</NavbarItem>
             <NavbarItem to='#'>Research & Innovation</NavbarItem>
-            <NavbarItem to='#'>Giving</NavbarItem>
           </NavbarMenu>
         </NavbarWrapper>
 
         <ButtonContainer>
-          <SignIn to='/signin'>Sign In</SignIn>
-          <Contact to='/contact'>Contact Us</Contact>
+          <SignIn to='/login'>Sign In</SignIn>
         </ButtonContainer>
-      </Nav>
+    </NavbarHeader>
   );
 };
 
