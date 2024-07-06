@@ -61,5 +61,5 @@ export const ColumnDescription = styled.p`
   text-align: justify;
   color: #fff;
   line-height: 1.8;
-  margin-top: 0.75rem;
+  margin: 0;
 `;
