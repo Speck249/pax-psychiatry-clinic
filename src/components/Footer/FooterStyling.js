@@ -1,123 +1,127 @@
 import styled from 'styled-components';
-import { Link as LinkRouter } from 'react-router-dom';
 
-// Social Media Icons
-// Web Breakpoints
-export const FooterContainer = styled.footer`
+export const FooterContainer = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  max-height: 100%;
-  height: 55vh;
+  width: 100%;
+  height: auto;
   background-color: #000;
 `;
 
-export const FooterWrap = styled.div`
+export const FooterWrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  max-width: 100%;
   width: 100%;
-  height: 100%;
+  height: inherit;
+  gap: 35px;
+  padding: 2rem 0;
+  overflow: hidden;
 `;
 
-export const Newsletter = styled.div`
+export const NewsletterContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 1rem;
+  width: auto; 
+  height: inherit;
+  overflow: hidden;
 `;
 
 export const NewsletterTitle = styled.h2`
   color: #fff;
-  font-size: 18px;
+  font-size: 1.2rem;
+  font-weight: 700;
   text-align: center;
   line-height: 1.8;
+  margin-top: 1rem;
 `;
 
-export const NewsletterBody = styled.h3`
-  font-size: 14px;
-  font-weight: 300;
+export const NewsletterDescription = styled.p`
+  color: #fff;
+  font-size: 0.85rem;
   text-align: center;
-  margin-bottom: 1.5rem;
-  color: #e6e6e6;
+  padding: 0 1rem;
 `;
 
-export const Form = styled.form`
+export const SubscriptionContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  gap: 10px;
-`;
-
-export const FormLabel = styled.label`
-   display: none;
-`;
-
-export const FormInput = styled.input`
-   font-size: 14px;
-   width: 100%;
-   padding: 0.75rem 1.2rem;
-   border: none;
-   border-radius: 2px;
-
-   &::placeholder {
-    color: gray;
-    font-size: 12px;
-   }
-`;
-
-export const FormButton = styled.button`
-   font-size: 14px;
-   color: #fff;
-   padding: 0.75rem 1rem;
-   border: none;
-   border-radius: 2px;
-   background-color: #09798C;
-   cursor: pointer;
-`;
-
-export const SocialMediaLinks = styled.div`
-   display: flex;
-   flex-direction: row;
-   justify-content: space-evenly;
-   align-items: center;
-   padding: 0.5rem;
-   margin-top: 1.5rem;
-   cursor: pointer;
-`;
-
-export const FooterLinkWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-self: center;
+  width: 100%;
   padding: 1rem;
-  width: 40%;
-  gap: 70px;
 `;
 
-export const FooterLinks = styled.div`
-  display: flex;
-  flex-direction: column;
+export const SubscriptionLabel = styled.label`
+  display: none;
 `;
 
-export const FooterLinkName = styled.h1`
+export const SubscriptionBox = styled.input`
+  flex: 2;
+  padding: 0.75rem 1.5rem;
+  margin-right: 0.8rem;
+  border: none;
+  border-radius: 2px;
+
+  &::placeholder {
+    color: gray;
+    font-size: 13px;
+  }
+`;
+
+export const SubscriptionButton = styled.button`
+  flex: 1;
+  color: #fff;
   font-size: 15px;
-  font-weight: bold;
-  color: #fff;
+  font-weight: 700;
+  padding: 0.75rem 1.2rem;
+  margin-right: 1rem;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: #09798C;
 `;
 
-export const FooterLink = styled(LinkRouter)`
-  font-size: 12px;
-  text-decoration: none;
-  line-height: 2.5;
-  color: #fff;
-`;
-
-export const FooterCopyright = styled.small`
+export const SocialMediaContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: inherit;
   padding: 0.5rem;
-  font-size: 10px;
-  text-align: center;
+  margin-top: 0.5rem;
+  cursor: pointer;
+`;
+
+export const FooterLinkContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  width: auto;
+  height: inherit;
+  padding: 2rem 1.6rem;
+`;
+
+export const FooterLinkHeader = styled.h3`
   color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+`;
+
+export const FooterLinkList = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`;
+
+export const FooterLink = styled.li`
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 2.8;
+`;
+
+export const FooterCopyright = styled.p`
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
 `;
