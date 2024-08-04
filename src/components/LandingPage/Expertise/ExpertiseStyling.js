@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+
 
 export const ExpertiseSection = styled.section`
   display: flex;
@@ -6,25 +7,24 @@ export const ExpertiseSection = styled.section`
   overflow: hidden;
 `;
 
-export const ExpertiseContent = styled.div`
+export const ContentContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 4rem 0.85rem;
-  gap: 15px;
+  padding: 3rem 0.85rem;
+  gap: 20px;
   width: 100%;
-  height: 100%;
+  overflow: hidden;
 `;
 
-export const Column = styled.article`
-  width: 420px;
-  max-width: 100%;
+export const CompanyExpertise = styled.article`
+  max-width: 420px;
   padding: 1.5rem;
   background-color: #000;
 `;
 
-export const ColumnHighlight = styled.h3`
+export const ExpertiseHighlight = styled.h3`
   font-size: 1rem;
   font-weight: 700;
   color: #09798c;
@@ -32,14 +32,14 @@ export const ColumnHighlight = styled.h3`
   text-transform: uppercase;
 `;
 
-export const ColumnTitle = styled.h2`
+export const ExpertiseTitle = styled.h2`
   font-size: 2.5rem;
   font-weight: 700;
   padding-bottom: 0.5rem;
   color: #efefef;
 `;
 
-export const ColumnDescription = styled.p`
+export const ExpertiseDescription = styled.p`
   font-size: 0.85rem;
   text-align: justify;
   color: #fff;
