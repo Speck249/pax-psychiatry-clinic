@@ -1,20 +1,20 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const FooterContainer = styled.section`
+
+export const FooterSection = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: auto;
+  overflow: hidden;
   background-color: #000;
 `;
 
-export const FooterWrapper = styled.div`
+export const ContentContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: inherit;
   gap: 35px;
   padding: 2rem 0;
   overflow: hidden;
@@ -23,31 +23,31 @@ export const FooterWrapper = styled.div`
 export const NewsletterContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: auto; 
-  height: inherit;
   overflow: hidden;
 `;
 
 export const NewsletterTitle = styled.h2`
-  color: #fff;
   font-size: 1.2rem;
   font-weight: 700;
   text-align: center;
+  color: #fff;
   line-height: 1.8;
   margin-top: 1rem;
 `;
 
 export const NewsletterDescription = styled.p`
-  color: #fff;
   font-size: 0.85rem;
   text-align: center;
+  color: #fff;
   padding: 0 1rem;
+  margin: 0;
 `;
 
 export const SubscriptionContainer = styled.div`
   display: flex;
   width: 100%;
   padding: 1rem;
+  gap: 8px;
 `;
 
 export const SubscriptionLabel = styled.label`
@@ -55,39 +55,44 @@ export const SubscriptionLabel = styled.label`
 `;
 
 export const SubscriptionBox = styled.input`
-  flex: 2;
-  padding: 0.75rem 1.5rem;
-  margin-right: 0.8rem;
+  flex: 2.2;
+  font-size: 13px;
+  padding: 0.75rem 1rem;
+  outline: none;
   border: none;
   border-radius: 2px;
 
   &::placeholder {
     color: gray;
-    font-size: 13px;
+    font-size: 14px;
   }
 `;
 
 export const SubscriptionButton = styled.button`
   flex: 1;
-  color: #fff;
   font-size: 15px;
-  font-weight: 700;
+  color: #fff;
   padding: 0.75rem 1.2rem;
-  margin-right: 1rem;
+  outline: none;
   border: none;
-  border-radius: 2px;
-  cursor: pointer;
+  border-radius: 4px;
   background-color: #09798C;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const SocialMediaContainer = styled.div`
   display: flex;
   justify-content: space-around;
-  width: 100%;
-  height: inherit;
-  padding: 0.5rem;
+  align-items: center;
+  padding: 0;
   margin-top: 0.5rem;
-  cursor: pointer;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const FooterLinkContainer = styled.div`
@@ -95,15 +100,14 @@ export const FooterLinkContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding: 2rem 1rem;
+  margin: 0 1rem;
   gap: 45px;
-  width: auto;
-  height: inherit;
-  padding: 2rem 1.6rem;
 `;
 
-export const FooterLinkHeader = styled.h3`
+export const FooterLinkHeader = styled.p`
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
 `;
 
@@ -115,13 +119,16 @@ export const FooterLinkList = styled.ul`
 
 export const FooterLink = styled.li`
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   line-height: 2.8;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const FooterCopyright = styled.p`
   color: #fff;
   font-size: 11px;
-  font-weight: 700;
   text-align: center;
 `;
