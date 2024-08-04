@@ -1,22 +1,21 @@
 import {
-  HeroContainer,
-  HeroContentContainer,
-  HeroTitle,
-  HeroDescription,
+  HeroSection,
+  HeroContent,
+  SectionTitle,
+  HeroHighlight,
 } from './HeroStyling';
 
 
 const Hero = () => {
   return (
-    <HeroContainer>
-      <HeroContentContainer>
-        <HeroTitle>Your Health Journey Starts Here</HeroTitle>
-        <HeroDescription>
-          Book Your First Free Appointment & Prioritize Your
-          Mental Health <br /> at PAX Private Psychiatry & Therapy Clinic.
-        </HeroDescription>
-      </HeroContentContainer>
-    </HeroContainer>
+    <HeroSection>
+      <HeroContent>
+        <SectionTitle>Your Health Journey Starts Here</SectionTitle>
+        <HeroHighlight>
+          Book Your First Free Appointment & Prioritize Your Mental Health <br /> at PAX Private Psychiatry & Therapy Clinic.
+        </HeroHighlight>
+      </HeroContent>
+    </HeroSection>
   )
 };
 
