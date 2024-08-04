@@ -1,30 +1,36 @@
 import styled, { css } from 'styled-components';
-import aisha from '../../images/Aisha.jpg';
-import kwame from '../../images/Kwame.jpg';
-import nia from '../../images/Nia.jpg';
-import zara from '../../images/Zara.jpg';
-import tariq from '../../images/Tariq.jpg';
-import jabari from '../../images/Jabari.jpg';
+const imageImporter = (imageFiles) => {
+  let images = {};
+  imageFiles.forEach((item) => {
+    images[item] = require(`../../images/${item}`);
+  })
+  return images;
+}
+const imageFiles = [ 'Aisha.jpg', 'Kwame.jpg', 'Nia.jpg', 'Zara.jpg', 'Tariq.jpg', 'Jabari.jpg' ];
+const img = imageImporter(imageFiles)
 
-export const TeamSection = styled.section`
+
+export const DisplayLayout = css`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+export const MedicalTeamSection = styled.section`
+  ${ DisplayLayout };
   width: 100%;
   padding-bottom: 5rem;
   overflow: hidden;
   background-color: #efefef;
 `;
 
-export const TeamIntroduction = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+export const SectionBrief = styled.div`
+  ${ DisplayLayout };
   width: 1280px;
   max-width: 95%;
   margin: 6rem 0;
+  overflow: hidden;
 `;
 
 export const SectionTitle = styled.h1`
@@ -42,17 +48,21 @@ export const SectionDescription = styled.p`
   margin: 0;
 `;
 
-export const ParagraphImg = styled.img`
+export const ImageContainer = styled.div`
+  width: 100%;
+`;
+
+export const Image = styled.img`
   display: block;
+  margin: 0 auto;
   max-width: 140px;
   max-height: 70px;
 `;
 
-export const TeamContainer = styled.div`
-  display: flex;
+export const MedicalTeamContainer = styled.div`
+  ${ DisplayLayout };
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center; 
   width: 100%;
   padding: 1rem;
   margin: 0;
@@ -60,7 +70,7 @@ export const TeamContainer = styled.div`
   overflow: hidden;
 `;
 
-export const SharedStyling = css`
+export const CommonStyle = css`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -68,6 +78,8 @@ export const SharedStyling = css`
   position: relative;
   width: 380px;
   height: 450px;
+  outline: none;
+  border: none;
   border-radius: 5px;
   background-position: center;
   background-repeat: no-repeat;
@@ -78,15 +90,16 @@ export const SharedStyling = css`
 
 export const ContentContainer = styled.div`
   position: absolute;
-  width: 250px;
+  width: 270px;
   padding: 0.5rem 0;
   border-radius: 2px;
   transform: translateY(-10px);
   transition: 0.5s all ease-in-out;
   background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 `;
 
-export const MoreDescription = styled.div`
+export const AdditionalDescription = styled.div`
   font-size: 0.85rem;
   text-align: justify;
   line-height: 2.1;
@@ -100,16 +113,16 @@ export const MoreDescription = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
 `;
 
-export const MedicalTeamOne = styled.div`
-  ${SharedStyling};
-  background-image: linear-gradient(to top right, #0b0a0a61, #0b0a0a30), url(${aisha});
+export const FirstDoctor = styled.article`
+  ${ CommonStyle };
+  background-image: linear-gradient(to top right, #0b0a0a61, #0b0a0a30), url(${img['Aisha.jpg']});
 
   &:hover, &:focus {
-   ${ContentContainer} {
+   ${ ContentContainer } {
      opacity: 0;
    }
    
-   ${MoreDescription} {
+   ${ AdditionalDescription } {
      opacity: 1;
      transform: translateY(0);
      transition: all 0.6s ease-in-out;
@@ -117,16 +130,16 @@ export const MedicalTeamOne = styled.div`
   }
 `;
 
-export const MedicalTeamTwo = styled.div`
-  ${SharedStyling};
-  background-image: url(${kwame});
+export const SecondDoctor = styled.article`
+  ${ CommonStyle };
+  background-image: url(${img['Kwame.jpg']});
 
   &:hover, &:focus {
-   ${ContentContainer} {
+   ${ ContentContainer } {
      opacity: 0;
    }
 
-   ${MoreDescription} {
+   ${ AdditionalDescription } {
      opacity: 1;
      transform: translateY(0);
      transition: all 0.6s ease-in-out;
@@ -134,34 +147,17 @@ export const MedicalTeamTwo = styled.div`
   }
 `;
 
-export const MedicalTeamThree = styled.div`
-  ${SharedStyling};
-  background-image: linear-gradient(to top right, #0b0a0a61, #0b0a0a30), url(${zara});
+export const ThirdDoctor = styled.article`
+  ${ CommonStyle };
+  background-image: linear-gradient(to top right, #0b0a0a61, #0b0a0a30), url(${img['Zara.jpg']});
 
 
   &:hover, &:focus {
-   ${ContentContainer} {
-     opacity: 0;
-   }
-   
-   ${MoreDescription} {
-     opacity: 1;
-     transform: translateY(0);
-     transition: all 0.6s ease-in-out;
-   }
-  }
-`;
-
-export const MedicalTeamFour = styled.div`
-  ${SharedStyling};
-  background-image: linear-gradient(to top right, #0b0a0a61, #0b0a0a30), url(${nia});
-
-  &:hover, &:focus {
-   ${ContentContainer} {
+   ${ ContentContainer } {
      opacity: 0;
    }
    
-   ${MoreDescription} {
+   ${ AdditionalDescription } {
      opacity: 1;
      transform: translateY(0);
      transition: all 0.6s ease-in-out;
@@ -169,16 +165,16 @@ export const MedicalTeamFour = styled.div`
   }
 `;
 
-export const MedicalTeamFive = styled.div`
-  ${SharedStyling};
-  background-image: linear-gradient(to top right, #0b0a0a61, #0b0a0a30), url(${tariq});
+export const FourthDoctor = styled.article`
+  ${ CommonStyle };
+  background-image: linear-gradient(to top right, #0b0a0a61, #0b0a0a30), url(${img['Nia.jpg']});
 
   &:hover, &:focus {
-   ${ContentContainer} {
+   ${ ContentContainer } {
      opacity: 0;
    }
    
-   ${MoreDescription} {
+   ${ AdditionalDescription } {
      opacity: 1;
      transform: translateY(0);
      transition: all 0.6s ease-in-out;
@@ -186,16 +182,16 @@ export const MedicalTeamFive = styled.div`
   }
 `;
 
-export const MedicalTeamSix = styled.div`
-  ${SharedStyling};
-  background-image: linear-gradient(to top right, #0b0a0a61, #0b0a0a30), url(${jabari});
+export const FifthDoctor = styled.article`
+  ${ CommonStyle };
+  background-image: linear-gradient(to top right, #0b0a0a61, #0b0a0a30), url(${img['Tariq.jpg']});
 
   &:hover, &:focus {
-   ${ContentContainer} {
+   ${ ContentContainer } {
      opacity: 0;
    }
    
-   ${MoreDescription} {
+   ${ AdditionalDescription } {
      opacity: 1;
      transform: translateY(0);
      transition: all 0.6s ease-in-out;
@@ -203,13 +199,33 @@ export const MedicalTeamSix = styled.div`
   }
 `;
 
-export const DoctorName = styled.h3`
+export const SixthDoctor = styled.article`
+  ${ CommonStyle };
+  background-image: linear-gradient(to top right, #0b0a0a61, #0b0a0a30), url(${img['Jabari.jpg']});
+
+  &:hover, &:focus {
+   ${ ContentContainer } {
+     opacity: 0;
+   }
+   
+   ${ AdditionalDescription } {
+     opacity: 1;
+     transform: translateY(0);
+     transition: all 0.6s ease-in-out;
+   }
+  }
+`;
+
+export const DoctorName = styled.p`
    font-size: 0.85rem;
    font-weight: 700;
    text-align: center;
+   line-height: 2;
    color: #fff;
+   margin: 0;
 `;
-export const DoctorDescription = styled.p`
+
+export const MedicalTitle = styled.p`
    font-size: 0.8rem;
    text-align: center;
    margin: 0;
