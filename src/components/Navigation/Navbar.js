@@ -1,29 +1,29 @@
-import React from 'react';
+import React from "react";
 import {
-  NavbarHeader,
+  NavbarSection,
   LogoContainer,
   NavbarLogo,
-  MobileIcon,
   SidebarLogo,
+  MobileIcon,
   NavbarWrapper,
   NavbarMenu,
   NavbarItem,
   ButtonContainer,
   SignIn
-} from './NavbarStyling';
-import MainLogo from '../../images/PrimaryLogo.png';
-import SecondLogo from '../../images/SecondaryLogo.png';
-import { FaBars } from 'react-icons/fa';
+} from "./NavbarStyling";
+import MainLogo from "../../images/PrimaryLogo.png";
+import SecondaryLogo from "../../images/SecondaryLogo.png";
+import { FaBars } from "react-icons/fa";
 
 
 const Navbar = ({toggle}) => {
   return (
-    <NavbarHeader>
+    <NavbarSection>
         <LogoContainer to='/'>
-          <NavbarLogo src={MainLogo} width={132} height={125} alt='Pax Logo' />
+          <NavbarLogo src={MainLogo} width={132} height={125} alt="Pax Logo" />
         </LogoContainer>
 
-        <SidebarLogo src={SecondLogo} width={143} height={128} alt='Pax Logo' />
+        <SidebarLogo src={SecondaryLogo} width={143} height={128} alt='Pax Logo' />
         <MobileIcon onClick={toggle}>
           <FaBars size={40} />
         </MobileIcon>
@@ -40,7 +40,7 @@ const Navbar = ({toggle}) => {
         <ButtonContainer>
           <SignIn to='/signin'>Sign In</SignIn>
         </ButtonContainer>
-    </NavbarHeader>
+    </NavbarSection>
   )
 };
 

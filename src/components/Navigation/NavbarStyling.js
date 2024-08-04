@@ -1,15 +1,22 @@
-import styled from 'styled-components';
+import { styled, css } from "styled-components";
 import { Link as LinkRouter } from 'react-router-dom';
 
-export const NavbarHeader = styled.header `
+
+export const DisplayLayout = css`
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 0 3rem;
+`;
+
+export const NavbarSection = styled.section `
+  ${ DisplayLayout };
+  justify-content: space-between;
   position: sticky;
   top: 0;
+  width: 100%;
+  padding: 0.25rem 3rem;
+  margin: 0;
   z-index: 10;
+  overflow: hidden;
   background-color: #fff;
 
   @media screen and (max-width: 835px) {
@@ -19,17 +26,17 @@ export const NavbarHeader = styled.header `
   @media screen and (min-width: 835px) and (max-width: 1024px) {
     display: flex;
     margin-right: auto;
+    margin-left: 0;
     width: 100%;
-    height: 12vh;
   }
 `;
 
-export const LogoContainer = styled(LinkRouter)`
+export const LogoContainer = styled.div`
   cursor: pointer;
 `;
 
 export const NavbarLogo = styled.img`
-  display: flex;
+  ${ DisplayLayout };
   margin: 0.2rem 0.5rem;
   max-width: 85px;
   max-height: 80px;
@@ -73,10 +80,10 @@ export const MobileIcon = styled.div`
 `;
 
 export const NavbarWrapper = styled.nav`
-  display: flex;
-  align-items: center;
+  ${ DisplayLayout };
   width: 750px;
   height: 100%;
+  overflow: hidden;
   background-color: #fff;
 
   @media screen and (max-width: 835px) {
@@ -91,14 +98,12 @@ export const NavbarWrapper = styled.nav`
 `;
 
 export const NavbarMenu = styled.ul`
-  display: flex;
+  ${ DisplayLayout };
   justify-content: space-around;
-  align-items: center;
   width: 100%;
-  height: 100%;
+  height: inherit;
   padding: 0;
   margin-top: 1rem;
-  list-style: none;
 
   @media screen and (min-width: 835px) and (max-width: 1024px) {
     width: 100%;
@@ -110,6 +115,7 @@ export const NavbarItem = styled(LinkRouter)`
   font-weight: bold;
   text-decoration: none;
   color: #09798C;
+  list-style: none;
 
   &:active {
     text-decoration: none;
@@ -121,11 +127,9 @@ export const NavbarItem = styled(LinkRouter)`
 `;
 
 export const ButtonContainer = styled.div`
-  display: flex;
+  ${ DisplayLayout };
   justify-content: center;
-  align-items: center;
-  width: 130px;
-  overflow: hidden;
+  padding: 0.5rem 0;
   
   @media screen and (max-width: 835px) {
     display: none;
@@ -133,13 +137,13 @@ export const ButtonContainer = styled.div`
 `;
 
 export const SignIn = styled(LinkRouter)`
-  font-weight: 700;
-  text-decoration: none;
   color: #fff;
-  padding: 0.8rem 2rem;
+  text-decoration: none;
+  padding: 0.75rem 1.8rem;
+  // web breakpoints
   outline: none;
   border: none;
-  border-radius: 1rem;
+  border-radius: 4px;
   background-color: #09798C;
 
   &:hover {
