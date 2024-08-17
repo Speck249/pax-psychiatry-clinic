@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+
 const imageImporter = (imageFiles) => {
   let images = {};
   imageFiles.forEach((item) => {
@@ -21,11 +22,11 @@ export const MedicalTeamSection = styled.section`
   ${ DisplayLayout };
   width: 100%;
   padding-bottom: 5rem;
+  background-color: #f5f3f4;
   overflow: hidden;
-  background-color: #efefef;
 `;
 
-export const SectionBrief = styled.div`
+export const MedicalTeamHeader = styled.header`
   ${ DisplayLayout };
   width: 1280px;
   max-width: 95%;
@@ -48,15 +49,12 @@ export const SectionDescription = styled.p`
   margin: 0;
 `;
 
-export const ImageContainer = styled.div`
-  width: 100%;
-`;
-
 export const Image = styled.img`
   display: block;
   margin: 0 auto;
   max-width: 140px;
-  max-height: 70px;
+  max-height: 75px;
+  margin-top: 1rem;
 `;
 
 export const MedicalTeamContainer = styled.div`
@@ -90,7 +88,7 @@ export const CommonStyle = css`
 
 export const ContentContainer = styled.div`
   position: absolute;
-  width: 270px;
+  width: 280px;
   padding: 0.5rem 0;
   border-radius: 2px;
   transform: translateY(-10px);
