@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   HeroSection,
   HeroContent,
@@ -11,9 +12,9 @@ const Hero = () => {
     <HeroSection>
       <HeroContent>
         <SectionTitle>Your Health Journey Starts Here</SectionTitle>
-        <HeroHighlight>
+{        <HeroHighlight>
           Book Your First Free Appointment & Prioritize Your Mental Health <br /> at PAX Private Psychiatry & Therapy Clinic.
-        </HeroHighlight>
+        </HeroHighlight>}
       </HeroContent>
     </HeroSection>
   )
