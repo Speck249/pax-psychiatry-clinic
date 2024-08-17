@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
     SidebarContainer,
     Icon,
@@ -7,28 +7,24 @@ import {
     SidebarItem,
     ButtonContainer,
     SignIn
-} from './SidebarStyling';
-import { FaTimes } from 'react-icons/fa';
+} from "./SidebarStyling";
+import { FaTimes } from "react-icons/fa";
 
 
-const Sidebar = ( {isOpen, toggle} ) => {
+const Sidebar = ({ isOpen, toggle }) => {
     return (
       <SidebarContainer isOpen={isOpen} onClick={toggle}>
         <Icon onClick={toggle}>
           <FaTimes size={25} color='#fff' />
-        </Icon>
-        
+        </Icon> 
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarItem to='/' onClick={toggle}>About Us</SidebarItem>
-            <SidebarItem to='/services' onClick={toggle}>Medical Services & Care</SidebarItem>
-            <SidebarItem to='/doctors' onClick={toggle}>Meet Our Doctor</SidebarItem>
-            <SidebarItem to='#' onClick={toggle}>Research & Innovation</SidebarItem>
-            <SidebarItem to='/contact' onClick={toggle}>Contact Us</SidebarItem> 
+            <SidebarItem to="/" onClick={toggle}>Home</SidebarItem>
+            <SidebarItem to="/doctors" onClick={toggle}>Meet Our Doctor</SidebarItem>
+            <SidebarItem to="https://medium.com"  target="_blank" onClick={toggle}>Research & Innovation</SidebarItem>
           </SidebarMenu>
-
           <ButtonContainer>
-            <SignIn to='/signin'>Sign In</SignIn>
+            <SignIn to="/signin">Sign In</SignIn>
           </ButtonContainer>
         </SidebarWrapper>
       </SidebarContainer>

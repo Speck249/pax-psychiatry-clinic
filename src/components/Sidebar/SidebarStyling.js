@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Link as LinkRouter} from 'react-router-dom';
 
+
 export const SidebarContainer = styled.aside`
   display: grid;
   position: fixed;
@@ -17,8 +18,8 @@ export const SidebarContainer = styled.aside`
 
 export const Icon = styled.div`
   position: fixed;
-  top: 40px;
-  right: 45px;
+  top: 28px;
+  right: 55px;
   outline: none;
   cursor: pointer;
 `;
@@ -46,9 +47,8 @@ export const SidebarItem = styled(LinkRouter)`
   color: #fff;
   cursor: pointer;
 
-  &:hover {
-    color: #09798C;
-    transition: 0.3s ease-in-out;
+  &:active {
+    text-decoration: none;
   }
 `;
 
@@ -71,6 +71,10 @@ export const SignIn = styled(LinkRouter)`
   text-decoration: none;
   border-radius: 0.6rem;
   border: 2px solid #09798C;
-  background-color: #000;
-  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: ${({primary}) => primary ? '#000' : '#09798C'};
+  }
 `;
