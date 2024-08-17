@@ -4,23 +4,48 @@ import { Link as LinkRouter } from "react-router-dom";
 
 export const DisplayLayout = css`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 
-export const AboutUsSection = styled.section`
+export const MainContainer = styled.main`
   ${ DisplayLayout };
   width: 100%;  
   overflow: hidden;
-  background-color: #efefef;
+  background-color: #f5f3f4;
 `;
 
-export const ContentContainer = styled.div`
+export const SectionHeader = styled.header`
   ${ DisplayLayout };
-  flex-wrap: wrap;
+  width: 1350px;
+  max-width: 100%;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+`;
+
+export const SectionTitle = styled.h1`
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+`;
+
+export const SectionDescription = styled.p`
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 2.2;
+  max-width: 75%;
+  padding: 1rem 0;
+  margin: 0;
+`;
+
+export const AboutUsSection = styled.section`
+  ${ DisplayLayout };
+  flex-direction: row;
   width: 1300px;
+  max-width: 100%;
   padding: 0 0.75rem;
-  margin: 5rem 0;
+  margin: 0;
   gap: 20px;
   overflow: hidden;
 
@@ -54,7 +79,7 @@ export const CompanyMission = styled.div`
   gap: 20px;
 `;
 
-export const MissionHighlight = styled.h3`
+export const MissionHighlight = styled.h2`
   font-size: 1rem;
   font-weight: 700;
   color: #09798c;
@@ -69,7 +94,7 @@ export const Mission = styled.p`
 `;
 
 export const MissionDescription = styled.p`
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   text-align: justify;
   line-height: 1.9;
   margin: 0;

@@ -1,7 +1,10 @@
 import React from "react";
 import {
+  MainContainer,
+  SectionHeader,
+  SectionTitle,
+  SectionDescription,
   AboutUsSection,
-  ContentContainer,
   ImageContainer,
   Image,
   CompanyMission,
@@ -10,37 +13,41 @@ import {
   MissionDescription,
   ButtonContainer,
   MeetOurDoctors
-} from './AboutUsStyling';
-import AboutImg from '../../../images/NewAppointment.jpg';
+} from "./AboutUsStyling";
+import AboutImg from '../../../images/AboutUs.jpg';
 
 
 const AboutUs = () => {
     return (
-      <AboutUsSection>
-        <ContentContainer> 
-            <ImageContainer>
-                <Image src={AboutImg} width={2846} height={1754} alt="Doctor-Patient in Conversation"></Image>
-            </ImageContainer>
+      <MainContainer>
+        <SectionHeader id="about-section">
+          <SectionTitle>Empowering Minds, Empowering Lives.</SectionTitle>
+          <SectionDescription>
+            PAX Psychiatric & Therapy Clinic is dedicated to providing accessible and affordable quality healthcare that addresses our patient's mental health needs. We offer a holistic approach 
+            that combines evidence-based therapies with cutting-edge techniques that target a wide range of challenges. 
+          </SectionDescription>
+        </SectionHeader>
+
+        <AboutUsSection>
+          <ImageContainer>
+            <Image src={AboutImg} width={2846} height={1754} alt="Doctor-Patient in Conversation"></Image>
+          </ImageContainer>
              
-            <CompanyMission>
-                <MissionHighlight>Our Mission</MissionHighlight> 
-                <Mission>
-                  Lorem ipsum dolor sit amet. 
-                </Mission>
-
-                <MissionDescription>
-                  Donec neque mauris, pharetra ut metus quis, aliquet faucibus augue. Nunc vitae dolor vitae augue sodales dapibus 
-                  eu eget augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                  Vestibulum non nulla a odio dictum gravida nec a nisl. Maecenas maximus arcu tempor elit vehicula, sed ornare arcu pellentesque.
-                  Vestibulum non nulla a odio dictum gravida nec a nisl. Maecenas maximus arcu tempor elit vehicula, sed ornare arcu pellentesque. 
-                </MissionDescription>
-
-                <ButtonContainer>
-                    <MeetOurDoctors to='/doctors'>Meet Our Doctors</MeetOurDoctors>
-                </ButtonContainer>
-            </CompanyMission>
-        </ContentContainer> 
-      </AboutUsSection>
+          <CompanyMission>
+            <MissionHighlight>WHO WE ARE</MissionHighlight> 
+            <Mission>Your Path to Wellness.</Mission>
+            <MissionDescription>
+              We are a team of medical professionals with diverse expertise, offering compassionate psychiatric care and therapy in a safe, nurturing environment. 
+              Since our founding in 1978, our institution has built a strong legacy of innovation and patient-centered care that will empower you to live the life
+              you love. With tailored medical services that place our patients at the heart of everything we aim to accomplish, we are honored to become a steadfast 
+              partner in your journey to wellness.
+            </MissionDescription>
+            <ButtonContainer>
+              <MeetOurDoctors to="/doctors">Meet Our Doctors</MeetOurDoctors>
+            </ButtonContainer>
+          </CompanyMission>
+        </AboutUsSection> 
+      </MainContainer>
     );
 };
 
