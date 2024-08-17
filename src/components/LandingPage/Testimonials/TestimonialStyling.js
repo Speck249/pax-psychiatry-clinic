@@ -7,21 +7,25 @@ export const DisplayLayout = css`
   align-items: center;
 `;
 
-export const TestimonialSection = styled.section`
+export const MainContainer = styled.main`
   ${ DisplayLayout };
   flex-direction: column;
   width: 100%;
   padding: 5rem 0;
+  background-color: #f5f3f4;
   overflow: hidden;
 `;
 
-export const SectionTitle = styled.h1`
-  font-size: 3.2rem;
-  font-weight: 700;
-  text-align: center;
+export const TestimonialHeader = styled.header`
   max-width: 100%;
   padding: 1rem;
-  margin: 0;
+  margin: 1rem 0;
+`;
+
+export const SectionTitle = styled.h1`
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
 `;
 
 export const ImageContainer = styled.div`
@@ -35,12 +39,11 @@ export const Image = styled.img`
   max-height: 70px;
 `;
 
-export const TestimonialContainer = styled.div`
+export const TestimonialSection = styled.section`
   ${ DisplayLayout };
   flex-wrap: wrap;
   width: 90%;
   gap: 30px;
-  padding: 3rem 2rem;
   overflow: hidden;
 `;
 
@@ -50,24 +53,22 @@ export const TestimonialContent = styled.article`
   max-width: 385px;
   padding: 1.5rem;
   margin: 0;
-  border-top: 10px solid black;
-  background-color: #efefef;
   overflow: hidden;
 `;
 
 export const Testimonial = styled.p`
   font-size: 0.8rem;
-  text-align: justify;
+  text-align: center;
   line-height: 2;
   margin: 0;
 `;
 
 export const PatientInformation = styled.div`
   display: flex;
-  align-items: flex-end;
-  max-width: 65%;
+  align-items: center;
+  width: 100%;
   margin: 1rem 0;
-  gap: 15px;
+  gap: 20px;
 `;
 
 export const PatientImage = styled.img`
@@ -78,6 +79,7 @@ export const PatientImage = styled.img`
 
 export const PatientName = styled.p`
   font-size: 0.8rem;
+  font-weight: 700;
   line-height: 1.9;
   width: 100%;
 `;
