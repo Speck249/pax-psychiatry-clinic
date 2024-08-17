@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const FooterSection = styled.section`
+export const MainContainer = styled.footer`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -9,7 +9,7 @@ export const FooterSection = styled.section`
   background-color: #000;
 `;
 
-export const ContentContainer = styled.div`
+export const FooterSection = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -26,7 +26,7 @@ export const NewsletterContainer = styled.div`
   overflow: hidden;
 `;
 
-export const NewsletterTitle = styled.h2`
+export const NewsletterTitle = styled.h3`
   font-size: 1.2rem;
   font-weight: 700;
   text-align: center;
@@ -39,7 +39,7 @@ export const NewsletterDescription = styled.p`
   font-size: 0.85rem;
   text-align: center;
   color: #fff;
-  padding: 0 1rem;
+  padding: 0.35rem 1rem;
   margin: 0;
 `;
 
@@ -109,6 +109,9 @@ export const FooterLinkHeader = styled.p`
   color: #fff;
   font-size: 0.85rem;
   font-weight: 700;
+  width: 100px;
+  padding: 0.5rem 0;
+  margin: 0;
 `;
 
 export const FooterLinkList = styled.ul`
@@ -131,4 +134,6 @@ export const FooterCopyright = styled.p`
   color: #fff;
   font-size: 11px;
   text-align: center;
+  padding: 0.35rem 0;
+  margin: 0;
 `;

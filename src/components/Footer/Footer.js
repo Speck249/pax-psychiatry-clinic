@@ -1,8 +1,8 @@
 import React from "react";
-import { FaFacebook, FaLinkedin, FaQuora, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import {
+  MainContainer,
   FooterSection,
-  ContentContainer,
   NewsletterContainer,
   NewsletterTitle,
   NewsletterDescription,
@@ -16,32 +16,28 @@ import {
   FooterLinkList,
   FooterLink,
   FooterCopyright
-} from './FooterStyling';
+} from "./FooterStyling";
 
 
 const Footer = () => {
   return (
-    <FooterSection>
-      <ContentContainer>
+    <MainContainer>
+      <FooterSection>
         <NewsletterContainer>
           <NewsletterTitle>Subscribe to Our Weekly Newsletter</NewsletterTitle>
-          <NewsletterDescription>Get Exclusive Health Content Curated by Industry Experts.</NewsletterDescription>
-          
+          <NewsletterDescription>Get Exclusive Health Content Curated by Industry Experts.</NewsletterDescription> 
           <SubscriptionContainer>
             <SubscriptionLabel>Email</SubscriptionLabel>
             <SubscriptionBox id='email' type='email' placeholder='asterawoke@gmail.com' autoComplete='' ></SubscriptionBox>
             <SubscriptionButton>Subscribe</SubscriptionButton>
-          </SubscriptionContainer>
-          
+          </SubscriptionContainer>     
           <SocialMediaContainer>
             <FaFacebook to='https://www.facebook.com' target='_blank' size={30} color='#fff'></FaFacebook>
             <FaTwitter to='https://www.twitter.com' target='_blank' size={30} color='#fff'></FaTwitter>
-            <FaQuora to='https://www.quora.com' target='_blank' size={30} color='#fff'></FaQuora>
             <FaLinkedin to='https://www.linkedin.com' target='_blank' size={30} color='#fff'></FaLinkedin>
             <FaInstagram to='https://www.instagram.com' target='_blank' size={30} color='#fff'></FaInstagram>
           </SocialMediaContainer>
-        </NewsletterContainer>
-        
+        </NewsletterContainer>   
         <FooterLinkContainer>
           <FooterLinkList>
             <FooterLinkHeader>HOSPITAL</FooterLinkHeader>
@@ -52,7 +48,6 @@ const Footer = () => {
             <FooterLink>Careers</FooterLink>
             <FooterLink>FAQs</FooterLink>
           </FooterLinkList>
-
           <FooterLinkList> 
             <FooterLinkHeader>SERVICES</FooterLinkHeader>
             <FooterLink>Adolescent Therapy</FooterLink>
@@ -61,8 +56,7 @@ const Footer = () => {
             <FooterLink>Marriage Counselling</FooterLink>
             <FooterLink>Corporate Counselling</FooterLink>
             <FooterLink>Psychiatry</FooterLink>
-          </FooterLinkList>
-          
+          </FooterLinkList>        
           <FooterLinkList>
             <FooterLinkHeader>RESOURCES</FooterLinkHeader>
             <FooterLink>Research Journal</FooterLink>
@@ -73,10 +67,9 @@ const Footer = () => {
             <FooterLink>Terms & Conditions</FooterLink>
           </FooterLinkList>
         </FooterLinkContainer>
-      </ContentContainer>
-      
+      </FooterSection>      
       <FooterCopyright>Copyright &copy; {new Date().getFullYear()} Pax Therapy Clinic. All rights reserved.</FooterCopyright>
-    </FooterSection>
+    </MainContainer>
   )
 };
 
