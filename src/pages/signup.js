@@ -1,17 +1,13 @@
-import React, { useState } from 'react';
-import SignupPage from '../components/Entry/Signup';
+import React from 'react';
+import Signup from '../components/Authentication/Signup';
 
-const SignUp = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const toggle = () => {
-    setIsOpen(!isOpen)
-  };
+const SignUpPage = () => {
 
 return (
   <>
-    <SignupPage />
+    <Signup />
   </>
   );
 };
 
-export default SignUp;
+export default SignUpPage;

@@ -1,5 +1,5 @@
 import React from 'react';
-import ProfilePage from '../components/Entry/ProfilePage';
+import ProfilePage from '../components/Authentication/ProfilePage';
 
 
 const Profile = () => {
