@@ -1,7 +1,7 @@
 import React from "react";
 import { 
+  MainContainer,
   ExpertiseSection,
-  ContentContainer,
   CompanyExpertise,
   ExpertiseHighlight,
   ExpertiseTitle,
@@ -11,8 +11,8 @@ import {
 
 const Expertise = () => {
     return (
-      <ExpertiseSection>
-        <ContentContainer>
+      <MainContainer>
+        <ExpertiseSection>
           <CompanyExpertise>
             <ExpertiseHighlight>Exceptional Services</ExpertiseHighlight>
             <ExpertiseTitle>Get the Quality Healthcare You Deserve.</ExpertiseTitle>
@@ -36,8 +36,8 @@ const Expertise = () => {
               experience, our specialists are dedicated to helping you achieve a happier and healthier life. From personalized treatment plans to compassionate care, we are dedicated 
               to providing you with the highest quality therapeutic support.</ExpertiseDescription>
           </CompanyExpertise>
-        </ContentContainer>
-      </ExpertiseSection>
+        </ExpertiseSection>
+      </MainContainer>
     )
 };
 

@@ -1,18 +1,21 @@
 import styled from "styled-components";
 
 
-export const ExpertiseSection = styled.section`
+export const MainContainer = styled.main`
   display: flex;
   width: 100%;
+  background-color: #f5f3f4;
   overflow: hidden;
 `;
 
-export const ContentContainer = styled.div`
+export const ExpertiseSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 3rem 0.85rem;
+  padding: 0 0.85rem;
+  margin-top: 5rem; 
+  margin-bottom: 6rem;
   gap: 20px;
   width: 100%;
   overflow: hidden;
