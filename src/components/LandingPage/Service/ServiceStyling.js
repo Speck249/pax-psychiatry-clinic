@@ -42,7 +42,7 @@ export const ServiceSection = styled.section`
   ${ DisplayLayout };
   flex-wrap: wrap;
   flex-direction: row;
-  width: 1200px;
+  width: 1150px;
   max-width: 100%;
   padding: 0 1rem;
   margin: 0;
@@ -84,10 +84,6 @@ export const ContentContainer = styled.article`
   border: none;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   background-color: #000;
-
-  &:hover {
-    cursor: pointer;
-  }
 `;
 
 export const ServiceType = styled.div`
