@@ -7,7 +7,7 @@ import { PageContainer, Button } from './ProfileStyling';
 
 const ProfilePage = () => {
   const navigate = useNavigate();
-  const { logOut, user } = useUserAuth();
+  const { logOut } = useUserAuth();
   const [error, setError] = useState(null);
 
   const handleLogout = async () => {
