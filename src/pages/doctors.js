@@ -4,6 +4,7 @@ import Sidebar from '../components/Sidebar/Sidebar';
 import Doctors from '../components/Doctors/Doctors';
 import Footer from '../components/Footer/Footer';
 
+
 const DoctorsPage = () => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => {

@@ -1,12 +1,12 @@
 import React from 'react';
 import Signup from '../components/Authentication/Signup';
 
-const SignUpPage = () => {
 
-return (
-  <>
-    <Signup />
-  </>
+const SignUpPage = () => {
+  return (
+    <>
+      <Signup />
+    </>
   );
 };
 
