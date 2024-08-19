@@ -19,7 +19,6 @@ export const AuthenticationSection = styled.section`
 export const LogoContainer = styled.div`
   padding: 0;
   margin-top: 1rem;
-  background-color: yellow;
   cursor: pointer;
 `;
 
