@@ -31,19 +31,11 @@ Keep in mind that website uses Firebase Backend component setup (Authentication 
 
 ### Attribution
 Much respect to Freepik that offers a diverse range of assets. As the majority of the high-quality images used throughout this website was sourced from freepik, find below a mention of the sources:
-* Asset: 'About Page Header' | source: bit.ly/3RkZM7O
-* Asset: 'Medical Team Card Image #2' | source: bit.ly/3EEzciD
-* Asset: 'Medical Team Card Image #3' | source: bit.ly/3rfQAqY
-* Asset: 'Medical Team Card Image #5' | source: bit.ly/3Lpbdb0
-* Asset: 'Medical Team Card Image #6' | source: bit.ly/3EFfSSe
-* Asset: 'Services Page Header' | source: bit.ly/3PzgjUt
-* Asset: 'Booking Page Background' | source: bit.ly/4626rYS
-* Asset: 'Dashboard Card Image #1' | source: bit.ly/3ra3PJJ
-* Asset: 'Dashboard Card Image #2' | source: bit.ly/44TCnhd
-* Asset: 'Dashboard Card Image #3' | source: bit.ly/44VVy9U
-* Asset: 'Dashboard Card Image #4' | source: bit.ly/3ZeSNPT
-* Asset: 'Dashboard Card Image #5' | source: bit.ly/3PgbMF3
-* Asset: 'Dashboard Card Image #6' | source: bit.ly/3LiJp8g
+* Asset - Services Section Image >> source: bit.ly/3PzgjUt
+* Asset - Medical Team Images
+  * source: bit.ly/3EEzciD | bit.ly/3rfQAqY | bit.ly/3Lpbdb0 | bit.ly/3EFfSSe
+* Asset - Dashboard Card Images
+  * source: bit.ly/3ra3PJJ | bit.ly/44TCnhd | bit.ly/44VVy9U | bit.ly/3ZeSNPT | bit.ly/3PgbMF3 | bit.ly/3LiJp8g
 
 Please be sure to credit the work of these artists & contributors for your own projects. 
 
