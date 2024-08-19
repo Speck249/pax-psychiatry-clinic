@@ -1,7 +1,7 @@
 ![Landing Page](/src/images/Banner.png)
 
 # Project Description  
-**Mental Health Clinic Website: Exploring the Impact of Visual Representation on Consumer's Choice**
+**Exploring the Impact of Visual Representation on Consumer's Choice**
 
 A ReactJS-based website developed for a conceptual Mental Health Clinic geared towards investigating the influence of visual representation on consumer decision-making. By leveraging ReactJS and Styled Components, the website provides an engaging and user-friendly front end that eases Doctor-Patient communications and integrates automation of brick-and-mortar processes.
 
