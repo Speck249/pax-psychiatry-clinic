@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from 'react';
+import { Alert } from 'react-bootstrap';
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from '../../firebase';
 import { FaFacebook, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import {
   MainContainer,
@@ -20,16 +23,42 @@ import {
 
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [subscriptionStatus, setSubscriptionStatus] = useState('');
+
+  const handleSubmit = async (e) => {
+    try {
+      const newsletterData = {
+        email
+      };
+            
+      const dofRef = await addDoc(collection(db, 'newsletter'), newsletterData);  
+      
+      setEmail('');      
+      setSubscriptionStatus(true);
+      setTimeout(() => {
+        setSubscriptionStatus(null);
+      }, 5000);
+    } catch (error) {
+      setSubscriptionStatus(false);      
+      setTimeout(() => {
+        setSubscriptionStatus(null);
+      }, 5000);
+    }
+  }
+
   return (
     <MainContainer>
       <FooterSection>
         <NewsletterContainer>
+          {subscriptionStatus === true && <Alert style={{ display:"block", margin:"0 auto", color: "#fff", border: "1px solid green", padding: "0.5rem 1rem", borderRadius: "4px"}} variant="success">Subscribed!</Alert>}
+          {subscriptionStatus === false && <Alert style={{ display:"block", margin:"0 auto", color: "#fff", border: "1px solid red", padding: "0.5rem 1rem", borderRadius: "4px"}} variant="danger">Subscription Failed. Please try again.</Alert>}
           <NewsletterTitle>Subscribe to Our Weekly Newsletter</NewsletterTitle>
           <NewsletterDescription>Get Exclusive Health Content Curated by Industry Experts.</NewsletterDescription> 
           <SubscriptionContainer>
             <SubscriptionLabel>Email</SubscriptionLabel>
-            <SubscriptionBox id='email' type='email' placeholder='asterawoke@gmail.com' autoComplete='' ></SubscriptionBox>
-            <SubscriptionButton>Subscribe</SubscriptionButton>
+            <SubscriptionBox id='email' type='email' autoComplete='' ></SubscriptionBox>
+            <SubscriptionButton onClick={handleSubmit}>Subscribe</SubscriptionButton>
           </SubscriptionContainer>     
           <SocialMediaContainer>
             <FaFacebook to='https://www.facebook.com' target='_blank' size={30} color='#fff'></FaFacebook>

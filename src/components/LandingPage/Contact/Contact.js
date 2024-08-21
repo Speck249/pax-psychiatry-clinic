@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from 'react';
+import { Alert } from 'react-bootstrap';
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from '../../../firebase';
 import {
   MainContainer,
   ContactHeader,
@@ -22,6 +25,43 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 
 const Contact = () => {
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [contactStatus, setContactStatus] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const contactData = {
+        fullName,
+        email,
+        subject,
+        message,
+      };
+
+      const docRef = await addDoc(collection(db, 'contacts'), contactData);
+
+      setFullName('');
+      setEmail('');
+      setSubject('');
+      setMessage('');
+
+      setContactStatus(true);
+      setTimeout(() => {
+        setContactStatus(null);
+      }, 5000);
+    } catch (error) {
+      setContactStatus(false);
+
+      setTimeout(() => {
+        setContactStatus(null);
+      }, 5000);
+    }
+  };
+  
   return (
     <MainContainer>
       <ContactHeader>
@@ -29,16 +69,18 @@ const Contact = () => {
       </ContactHeader>
       <ContactSection>
           <Form>
+             {contactStatus === true && <Alert variant="success">Submitted. Check your email for updates!</Alert>}
+             {contactStatus === false && <Alert variant="danger">Submission Failed. Please try again.</Alert>}
             <FormContent>
               <FormLabel htmlFor='fullName'>Full Name</FormLabel>
               <FormInput id='fullName' type='text' required autoComplete='on' autoFocus />          
               <FormLabel htmlFor='email'>Email</FormLabel>
               <FormInput id='email' type='email' required autoComplete='on' /> 
-              <FormLabel htmlFor='phoneNumber'>Phone Number</FormLabel>
-              <FormInput id='phoneNumber' type='' autoComplete='off' />          
+              <FormLabel htmlFor='subject'>Subject</FormLabel>
+              <FormInput id='subject' type='text' required autoComplete='off' />          
               <FormLabel htmlFor='message'>Message</FormLabel>
               <Textarea id='message' type='textarea' rows={4} cols={2} placeholder="What's on your mind?" required autoComplete='off' />
-              <Submit>Send Message</Submit>
+              <Submit onClick={handleSubmit}>Send Message</Submit>
             </FormContent>
           </Form>
         <InformationContainer>
