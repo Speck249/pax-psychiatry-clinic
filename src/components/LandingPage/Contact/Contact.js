@@ -69,8 +69,8 @@ const Contact = () => {
       </ContactHeader>
       <ContactSection>
           <Form>
-             {contactStatus === true && <Alert variant="success">Submitted. Check your email for updates!</Alert>}
-             {contactStatus === false && <Alert variant="danger">Submission Failed. Please try again.</Alert>}
+             {contactStatus === true && <Alert style={{ display:"block", fontSize: "0.85rem", fontWeight: "700", textAlign: "center", color: "#000", border: "1px solid green", padding: "0.5rem 1rem", borderRadius: "4px"}} variant="success">Submitted. Check your email for updates!</Alert>}
+             {contactStatus === false && <Alert style={{ display:"block", fontSize: "0.85rem", fontWeight: "700", textAlign: "center", color: "#000", border: "1px solid red", padding: "0.5rem 1rem", borderRadius: "4px"}} variant="danger">Submission Failed. Please try again.</Alert>}
             <FormContent>
               <FormLabel htmlFor='fullName'>Full Name</FormLabel>
               <FormInput id='fullName' type='text' required autoComplete='on' autoFocus />          

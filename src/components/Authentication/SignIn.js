@@ -68,7 +68,7 @@ const SignIn = () => {
         <Logo src={alternateLogo} width={132} height={125} alt="Pax Logo" />
       </LogoContainer>
       <SectionHeader>
-        {error && <Alert variant='danger'>{error}</Alert>}
+        {error && <Alert style={{ display:"block", textAlign: "center", fontSize: "0.85rem", fontWeight: "700", color: "000", border: "1px solid red", padding: "0.5rem 1rem", borderRadius: "4px"}} variant='danger'>{error}</Alert>}
         <SectionTitle>Sign In to PAX</SectionTitle>
         <Tagline>Restore Balance, Renew Your Life</Tagline>
       </SectionHeader>

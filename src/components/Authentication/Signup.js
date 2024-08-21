@@ -61,12 +61,12 @@ const Signup = () => {
         <Logo src={alternateLogo} width={132} height={125} alt="Pax Logo" />
       </LogoContainer>
       <SectionHeader>
-        {error && <Alert variant='danger'>{error}</Alert>}
-        {infoMessage && <Alert variant='info'>{infoMessage}</Alert>}
         <SectionTitle>Create New Account</SectionTitle>
         <Tagline>Restore Balance, Renew Your Life</Tagline>
       </SectionHeader>
       <Form onSubmit={handleSignup}>
+        {error && <Alert style={{ display:"block", textAlign: "center", fontSize: "0.85rem", fontWeight: "700", color: "#000", border: "1px solid red", padding: "0.5rem 1rem", borderRadius: "4px"}} variant='danger'>{error}</Alert>}
+        {infoMessage && <Alert style={{ display:"block", textAlign: "center",  fontSize: "0.85rem", fontWeight: "700", color: "#000", border: "1px solid green", padding: "0.5rem 1rem", borderRadius: "4px"}} variant='info'>{infoMessage}</Alert>}
         <FormContent>
           <FormLabel htmlFor='email'>Email</FormLabel>
           <FormInput 

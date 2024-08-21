@@ -51,8 +51,8 @@ const Footer = () => {
     <MainContainer>
       <FooterSection>
         <NewsletterContainer>
-          {subscriptionStatus === true && <Alert style={{ display:"block", margin:"0 auto", color: "#fff", border: "1px solid green", padding: "0.5rem 1rem", borderRadius: "4px"}} variant="success">Subscribed!</Alert>}
-          {subscriptionStatus === false && <Alert style={{ display:"block", margin:"0 auto", color: "#fff", border: "1px solid red", padding: "0.5rem 1rem", borderRadius: "4px"}} variant="danger">Subscription Failed. Please try again.</Alert>}
+          {subscriptionStatus === true && <Alert style={{ display:"block", textAlign: "center", fontSize: "0.85rem", fontWeight: "700", color: "#fff", border: "1px solid green", padding: "0.5rem 1rem", borderRadius: "4px"}} variant="success">Subscribed!</Alert>}
+          {subscriptionStatus === false && <Alert style={{ display:"block", textAlign: "center", fontSize: "0.85rem", fontWeight: "700", color: "#fff", border: "1px solid red", padding: "0.5rem 1rem", borderRadius: "4px"}} variant="danger">Subscription Failed. Please try again.</Alert>}
           <NewsletterTitle>Subscribe to Our Weekly Newsletter</NewsletterTitle>
           <NewsletterDescription>Get Exclusive Health Content Curated by Industry Experts.</NewsletterDescription> 
           <SubscriptionContainer>
