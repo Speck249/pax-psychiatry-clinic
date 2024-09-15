@@ -1,6 +1,5 @@
-import './App.css';
-import { GlobalStyle } from './GlobalStyling';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import AboutPage from './pages/about';
 import DoctorsPage from './pages/doctors';
 import SignInPage from './pages/signin';
@@ -8,6 +7,18 @@ import SignUpPage from './pages/signup';
 import ProfilePage from './pages/profile';
 import ProtectedRoute from './components/Authentication/ProtectedRoute';
 import { UserAuthContextProvider } from './context/userAuthContext';
+import './App.css';
+import { GlobalStyle } from './GlobalStyling';
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 
 function App() {
@@ -15,6 +26,7 @@ function App() {
     <>
       <GlobalStyle />
       <Router>
+        <ScrollToTop />
         <UserAuthContextProvider>
           <Routes>
             <Route
