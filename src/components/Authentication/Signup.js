@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link as LinkRouter } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import { useUserAuth } from "../../context/userAuthContext";
 import { Alert } from "react-bootstrap";
 import {
@@ -58,7 +58,9 @@ const Signup = () => {
   return (
     <AuthenticationSection>
       <LogoContainer>
-        <Logo src={alternateLogo} width={132} height={125} alt="Pax Logo" />
+        <RouterLink to="/">
+          <Logo src={alternateLogo} width={132} height={125} alt="Pax Logo" />
+        </RouterLink>
       </LogoContainer>
       <SectionHeader>
         <SectionTitle>Create New Account</SectionTitle>
@@ -87,10 +89,10 @@ const Signup = () => {
             onChange={(e) => setPassword(e.target.value)}
             required />
           <ButtonContainer>
-            <p style={{ fontSize: "0.85rem", padding: "1rem"}}>By signing up, you agree to our <LinkRouter to="" style={{ color: "#09798C"}}>Terms of Use</LinkRouter></p>
+            <p style={{ fontSize: "0.85rem", padding: "1rem"}}>By signing up, you agree to our <RouterLink to="" style={{ color: "#09798C"}}>Terms of Use</RouterLink></p>
             <Authenticate type="submit">Sign Up</Authenticate>
           </ButtonContainer>
-          <LinkRouter to="/signin" style={{ color: "#000", fontSize: "0.85rem", fontWeight: "700", textAlign: "right", textDecoration: "none", padding: "0.6rem 0.2rem"}}>Or Sign in to existing account</LinkRouter>
+          <RouterLink to="/signin" style={{ color: "#000", fontSize: "0.85rem", fontWeight: "700", textAlign: "right", textDecoration: "none", padding: "0.6rem 0.2rem"}}>Or Sign in to existing account</RouterLink>
         </FormContent>
       </Form>
     </AuthenticationSection>

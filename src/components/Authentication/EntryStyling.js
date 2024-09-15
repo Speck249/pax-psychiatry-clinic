@@ -1,6 +1,5 @@
 import { styled, css } from 'styled-components';
 
-
 export const DisplayLayout = css`
   display: flex;
   flex-direction: column;

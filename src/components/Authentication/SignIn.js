@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link as LinkRouter, useNavigate } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { useUserAuth } from "../../context/userAuthContext";
 import { Alert } from "react-bootstrap";
 import {
@@ -62,10 +62,13 @@ const SignIn = () => {
     }
   };
 
+
   return (
     <AuthenticationSection>
       <LogoContainer>
-        <Logo src={alternateLogo} width={132} height={125} alt="Pax Logo" />
+        <RouterLink to="/">
+          <Logo src={alternateLogo} width={132} height={125} alt="Pax Logo" />
+        </RouterLink>
       </LogoContainer>
       <SectionHeader>
         {error && <Alert style={{ display:"block", textAlign: "center", fontSize: "0.85rem", fontWeight: "700", color: "000", border: "1px solid red", padding: "0.5rem 1rem", borderRadius: "4px"}} variant='danger'>{error}</Alert>}
@@ -103,7 +106,7 @@ const SignIn = () => {
                 <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
               </svg> Sign In with Google </GoogleSignIn>
           </ButtonContainer>
-          <LinkRouter to="/signup" style={{ color: "#000", fontSize: "0.85rem", fontWeight: "700", textAlign: "right", textDecoration: "none", padding: "0.6rem 0.2rem"}}>Or Sign up for new account</LinkRouter>
+          <RouterLink to="/signup" style={{ color: "#000", fontSize: "0.85rem", fontWeight: "700", textAlign: "right", textDecoration: "none", padding: "0.6rem 0.2rem"}}>Or Sign up for new account</RouterLink>
         </FormContent>
       </Form>
     </AuthenticationSection>
