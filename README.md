@@ -22,7 +22,7 @@ A ReactJS-based website developed for a conceptual Mental Health Clinic geared t
 
 ## Getting Started
 
-To view the website, head on over to <https://pax-therapy-clinic.web.app/> and take a look around. To run in development mode:
+To view the website, head on over to <https://pax-psychiatric-care.web.app/> and take a look around. To run in development mode:
 
 1. Install *node.js* >>> Latest LTS,
 2. Install *git* & *Clone* this Repository,
