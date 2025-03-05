@@ -1,5 +1,11 @@
 import { styled, css } from 'styled-components';
 
+/** 
+ * SignUp / SignIn Pages styling definition. 
+ * Changes reflected in all authentication components.
+ */
+
+
 export const DisplayLayout = css`
   display: flex;
   flex-direction: column;
@@ -17,7 +23,6 @@ export const AuthenticationSection = styled.section`
 
 export const LogoContainer = styled.div`
   padding: 0;
-  margin-top: 1rem;
   cursor: pointer;
 `;
 
@@ -30,27 +35,26 @@ export const Logo = styled.img`
 `;
 
 export const SectionHeader = styled.header`
-  ${ DisplayLayout };
-  width: 500px;
+  width: 400px;
   max-width: 100%;
-  padding: 0.5rem 1rem;
+  line-height: 2;
 `;
 
 export const SectionTitle = styled.h2`
+  text-align: center;
   font-size: 2rem;
-  line-height: 2;
 `;
 
 export const Tagline = styled.p`
   font-size: 0.8rem;
   font-weight: 700;
   color: #09798c;
+  text-align: center;
   text-transform: uppercase;
-  margin: 0;
 `;
 
 export const Form = styled.form`
-  width: 500px;
+  width: 400px;
   max-width: 100%;
   padding: 1rem 0.25rem;
   margin: 0.5rem;
@@ -62,13 +66,11 @@ export const FormContent = styled.div`
   justify-content: center;
   width: 100%;
   padding: 1rem 0.5rem 0 0.5rem;
-  margin: 0;
 `;
 
 export const FormLabel = styled.label`
   font-size: 13px;
   font-weight: 700;
-  padding: 0;
   margin: 0.25rem 0;
 `;
 
@@ -87,14 +89,20 @@ export const FormInput = styled.input`
   }
 `;
 
+export const ButtonContainer = styled.div`
+  ${DisplayLayout};
+`;
+
 export const SharedButtonStyle = css`
-  font-size: 14px;
+  display: flex;
+  justify-content: center;
   color: #fff;
+  font-size: 15px;
   width: 100%;
   max-width: 100%;
-  padding: 0.8rem 0;
-  margin: 0.8rem 0;
-  border: 0;
+  margin: 0.25rem 0;
+  outline: none;
+  border: none;
   border-radius: 4px;
 
   &:hover {
@@ -102,18 +110,29 @@ export const SharedButtonStyle = css`
   }
 `;
 
-export const ButtonContainer = styled.div`
-  ${DisplayLayout};
-`;
 export const Authenticate = styled.button`
-  ${SharedButtonStyle}
-  background-color: #09798C;
+  ${SharedButtonStyle};
+  padding: 1.2rem 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #09798c;
 `;
 
-export const GoogleSignIn = styled.button`
+export const SharedGoogleButtonStyle = css` 
   display: flex;
   justify-content: center;
   gap: 10px;
-  ${SharedButtonStyle}
+  padding: 1rem 0;
+  border: 0.5px black solid;
   background-color: #000;
+`
+
+export const GoogleSignIn = styled.button`
+ ${SharedButtonStyle};
+ ${SharedGoogleButtonStyle};
+`;
+
+export const GoogleSignUp = styled.button`
+ ${SharedButtonStyle};
+ ${SharedGoogleButtonStyle};
 `;
