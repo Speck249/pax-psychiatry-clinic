@@ -87,7 +87,7 @@ export const Mission = styled.p`
 `;
 
 export const MissionDescription = styled.p`
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   text-align: justify;
   line-height: 2;
 `;
