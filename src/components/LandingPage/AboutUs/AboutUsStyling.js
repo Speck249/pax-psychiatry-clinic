@@ -18,10 +18,11 @@ export const MainContainer = styled.main`
 
 export const SectionHeader = styled.header`
   ${ DisplayLayout };
-  width: 1350px;
+  width: 1300px;
   max-width: 100%;
-  padding: 2rem 1rem;
+  padding: 1rem;
   margin-top: 3rem;
+  gap: 15px;
 `;
 
 export const SectionTitle = styled.h1`
@@ -31,12 +32,11 @@ export const SectionTitle = styled.h1`
 `;
 
 export const SectionDescription = styled.p`
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   text-align: center;
   line-height: 2.2;
-  max-width: 75%;
-  padding: 1rem 0;
-  margin: 0;
+  max-width: 85%;
+  padding: 0.5rem 0;
 `;
 
 export const AboutUsSection = styled.section`
@@ -45,8 +45,7 @@ export const AboutUsSection = styled.section`
   width: 1300px;
   max-width: 100%;
   padding: 0 0.75rem;
-  margin: 0;
-  gap: 20px;
+  gap: 15px;
   overflow: hidden;
 
   @media screen and (max-width: 1020px) {
@@ -55,8 +54,7 @@ export const AboutUsSection = styled.section`
 `;
 
 export const ImageContainer = styled.div`
-  flex: 1.1;
-  margin: 0;
+  flex: 1;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 
   @media screen and (max-width: 1020px) {
@@ -65,15 +63,12 @@ export const ImageContainer = styled.div`
 `;
 
 export const Image = styled.img`
-  display: block;
   height: 420px;
 `;
 
 export const CompanyMission = styled.div`
-  display: flex;
+  ${DisplayLayout};
   flex: 1;
-  flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
   padding: 2rem;
   gap: 20px;
@@ -84,20 +79,17 @@ export const MissionHighlight = styled.h2`
   font-weight: 700;
   color: #09798c;
   text-transform: uppercase;
-  margin: 0;
 `;
 
 export const Mission = styled.p`
   font-size: 2.5rem;
   font-weight: 700;
-  margin: 0;
 `;
 
 export const MissionDescription = styled.p`
   font-size: 0.9rem;
   text-align: justify;
-  line-height: 1.9;
-  margin: 0;
+  line-height: 2;
 `;
 
 export const ButtonContainer = styled.div`
@@ -110,6 +102,7 @@ export const MeetOurDoctors = styled(LinkRouter)`
   color: #fff;
   text-decoration: none;
   padding: 0.75rem 1.5rem;
+  outline: none;
   border: none;
   border-radius: 4px;
   background-color: #09798C;
