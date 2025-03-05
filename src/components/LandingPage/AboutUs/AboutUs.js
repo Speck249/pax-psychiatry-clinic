@@ -22,10 +22,10 @@ const AboutUs = () => {
       <MainContainer>
         <SectionHeader id="about-section">
           <SectionTitle>Empowering Minds, Empowering Lives.</SectionTitle>
-          <SectionDescription>
-            PAX Psychiatric & Therapy Clinic is dedicated to providing accessible and affordable quality healthcare that addresses our patient's mental health needs. We offer a holistic approach 
+{          <SectionDescription>
+            PAX Psychiatric & Therapy Clinic is committed to providing accessible and affordable quality healthcare. We offer a holistic service 
             that combines evidence-based therapies with cutting-edge techniques that target a wide range of challenges. 
-          </SectionDescription>
+          </SectionDescription>}
         </SectionHeader>
 
         <AboutUsSection>
