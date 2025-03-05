@@ -3,24 +3,25 @@ import { styled, css } from "styled-components";
 
 export const DisplayLayout = css`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 `;
 
 export const MainContainer = styled.main`
   ${ DisplayLayout };
-  width: 100%;
+  max-width: 100%;
   background-color: #f5f3f4;
   overflow: hidden;
 `;
 
 export const SectionHeader = styled.header`
-  ${ DisplayLayout };
+  ${DisplayLayout};
   width: 1300px;
   max-width: 100%;
   padding: 1rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
+  gap: 15px;
 `;
 
 export const SectionTitle = styled.h1`
@@ -30,73 +31,69 @@ export const SectionTitle = styled.h1`
 `;
 
 export const SectionDescription = styled.p`
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   text-align: center;
   line-height: 2.2;
-  max-width: 75%;
   padding: 1rem 0;
-  margin: 0;
+  max-width: 90%;
 `;
 
 export const ServiceSection = styled.section`
-  ${ DisplayLayout };
+  display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  width: 1150px;
-  max-width: 100%;
+  width: 1300px;
   padding: 0 1rem;
-  margin: 0;
   overflow: hidden;
 `;
 
 export const ServiceContainer = styled.div`
   ${DisplayLayout};
-  align-items: flex-start;
-  flex: 1.2;
+  flex: 1;
   padding: 2rem;
 `;
 
 export const ServiceHighlight = styled.h2`
-  font-size: 1rem;
-  font-weight: 700;
-  color: #09798c;
+  align-self: flex-start;
+  font-size: 1.2rem;
   text-transform: uppercase;
-  padding: 1rem 0;
-  margin: 0;
+  color: #09798c;
 `;
 
 export const OurServices = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
+  gap: 10px;
+  width: 600px;
+  max-width: 100%;
+  padding: 0;
+  margin: 2rem 0;
   overflow: hidden;
 `;
 
-export const ContentContainer = styled.article`
-  ${ DisplayLayout };
-  position: relative;
-  width: 250px;
+export const ContentContainer = styled.div`
+  display: flex;
   height: 200px;
-  padding: 0.5rem;
-  margin: 0;
-  border: none;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   background-color: #000;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
-export const ServiceType = styled.div`
-  ${DisplayLayout};
-  padding: 0.5rem 1rem;
+export const ServiceType = styled.article`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
 `;
 
 export const Services = styled.h3`
   font-size: 1rem;
   font-weight: 400;
   color: #fff;
-  padding: 0;
-  margin: 0;
 `;
 
 export const AdditionalDescription = styled.div`
@@ -105,19 +102,25 @@ export const AdditionalDescription = styled.div`
 
 export const ButtonContainer = styled.div`
   ${ DisplayLayout };
+  align-self: flex-start;
   margin-top: 1rem;
 `;
 
 export const ImageContainer = styled.div`
+  display: flex;
   flex: 1;
-  margin: 0;
+  justify-content: flex-start;
+  align-items: center;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1024px) {
     display: none;  
   }
 `;
 
 export const Image = styled.img`
   display: block;
-  height: 490px;
+  margin-left: 1rem;
+  width: 80%;
+  height: 500px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 `;
