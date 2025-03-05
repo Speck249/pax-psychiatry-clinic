@@ -28,9 +28,11 @@ export const MedicalTeamSection = styled.section`
 
 export const MedicalTeamHeader = styled.header`
   ${ DisplayLayout };
-  width: 1280px;
-  max-width: 95%;
-  margin: 6rem 0;
+  width: 1300px;
+  max-width: 100%;
+  margin: 5rem 0;
+  padding: 1rem;
+  gap: 15px;
   overflow: hidden;
 `;
 
@@ -38,22 +40,18 @@ export const SectionTitle = styled.h1`
   font-size: 3.2rem;
   font-weight: 700;
   text-align: center;
-  width: 100%;
-  margin: 0;
 `;
 
 export const SectionDescription = styled.p`
   text-align: center;
-  line-height: 2.2;
-  padding: 1.5rem 1.2rem;
-  margin: 0;
+  line-height: 2;
+  max-width: 85%;
 `;
 
 export const Image = styled.img`
-  display: block;
   margin: 0 auto;
-  max-width: 140px;
-  max-height: 75px;
+  max-width: 120px;
+  max-height: 70px;
   margin-top: 1rem;
 `;
 
@@ -63,7 +61,6 @@ export const MedicalTeamContainer = styled.div`
   flex-wrap: wrap;
   width: 100%;
   padding: 1rem;
-  margin: 0;
   gap: 50px;
   overflow: hidden;
 `;
@@ -220,12 +217,10 @@ export const DoctorName = styled.p`
    text-align: center;
    line-height: 2;
    color: #fff;
-   margin: 0;
 `;
 
 export const MedicalTitle = styled.p`
    font-size: 0.8rem;
    text-align: center;
-   margin: 0;
    color: #fff;
 `;
