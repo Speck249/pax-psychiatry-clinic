@@ -33,7 +33,7 @@ const Service = () => {
       </SectionHeader>
       <ServiceSection>
         <ServiceContainer>
-          <ServiceHighlight>WHAT WE OFFER</ServiceHighlight>
+          <ServiceHighlight>What We Offer</ServiceHighlight>
           <OurServices> 
             <ContentContainer>
               <ServiceType>
