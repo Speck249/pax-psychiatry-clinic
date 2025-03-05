@@ -46,6 +46,6 @@ export const ExpertiseDescription = styled.p`
   font-size: 0.85rem;
   text-align: justify;
   color: #fff;
-  line-height: 1.8;
-  margin: 0;
+  line-height: 2;
+  margin-top: 1rem;
 `;
