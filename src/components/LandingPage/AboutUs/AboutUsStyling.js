@@ -33,7 +33,7 @@ export const SectionTitle = styled.h1`
 
 export const SectionDescription = styled.p`
   font-size: 0.95rem;
-  text-align: center;
+  text-align: justify;
   line-height: 2.2;
   max-width: 85%;
   padding: 0.5rem 0;

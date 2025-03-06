@@ -32,7 +32,7 @@ export const SectionTitle = styled.h1`
 
 export const SectionDescription = styled.p`
   font-size: 0.95rem;
-  text-align: center;
+  text-align: justify;
   line-height: 2.2;
   padding: 1rem 0;
   max-width: 90%;
@@ -42,6 +42,7 @@ export const ServiceSection = styled.section`
   display: flex;
   flex-wrap: wrap;
   width: 1300px;
+  max-width: 100%;
   padding: 0 1rem;
   overflow: hidden;
 `;
@@ -49,6 +50,7 @@ export const ServiceSection = styled.section`
 export const ServiceContainer = styled.div`
   ${DisplayLayout};
   flex: 1;
+  width: 100%;
   padding: 2rem;
 `;
 
