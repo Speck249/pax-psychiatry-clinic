@@ -22,29 +22,34 @@ export const HeroSection = styled.section`
 export const HeroContent = styled.div`
    ${ DisplayLayout };
    justify-content: center;
-   width: 750px;
+   width: 780px;
    max-width: 95%;
-   padding: 1rem 0;
-   margin: 0 0.5rem 2.5rem 0.5rem; 
+   padding: 1.5rem 1rem;
+   margin: 0 0.5rem 2.5rem 0.5rem;
+   gap: 15px; 
+   text-align: center;
+   color: #fff;
    background-color: rgb(255 255 255 0.3);
    backdrop-filter: blur(35px);
-   overflow: hidden;
+   overflow: hidden; 
 `;
 
 export const SectionTitle = styled.h2`
    font-size: 2rem;
    font-weight: 700;
-   text-align: center;
-   color: #fff;
-   letter-spacing: 0.3rem;
-   padding: 0.5rem 0;
-   margin: 0;
+   letter-spacing: 0.4rem;
+
+   @media screen and (max-width: 380px) {
+      font-size: 1.35rem;
+ }
 `
 
 export const HeroHighlight = styled.p`
-   font-size: 0.9rem;
-   text-align: center;
-   color: #fff;
-   letter-spacing: 0.2rem;
+   font-size: 1rem;
+   letter-spacing: 0.12rem;
    line-height: 2;
+
+   @media screen and (max-width: 380px) {
+      font-size: 0.75rem;
+   }
 `;

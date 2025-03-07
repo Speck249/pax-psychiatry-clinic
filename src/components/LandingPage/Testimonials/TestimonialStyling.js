@@ -12,20 +12,27 @@ export const MainContainer = styled.main`
   flex-direction: column;
   width: 100%;
   padding: 5rem 0;
-  background-color: #f5f3f4;
   overflow: hidden;
+  background-color: #f5f3f4; 
 `;
 
 export const TestimonialHeader = styled.header`
   max-width: 100%;
-  padding: 1rem;
   margin: 1rem 0;
+
+  @media screen and (max-width: 1024px) {
+    max-width: 90%;
+ } 
 `;
 
 export const SectionTitle = styled.h1`
   font-size: 3.5rem;
   font-weight: 700;
   text-align: center;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 2.3rem;
+ } 
 `;
 
 export const ImageContainer = styled.div`

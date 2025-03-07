@@ -100,7 +100,7 @@ const Contact = () => {
             <strong>Stop by our clinic</strong>
             <ContactBrief>Our health professionals are available Mon - Sat, 7am - 8pm.</ContactBrief>
             <ContactDetail>
-              <FontAwesomeIcon icon={faLocationDot} size="lg" style={{color: "#000", marginRight: "0.5rem"}} /> Tom Mboya St, City Centre, Nairobi, Kenya <br />
+              <FontAwesomeIcon icon={faLocationDot} size="lg" style={{color: "red", marginRight: "0.5rem"}} /> Tom Mboya St, City Centre, Nairobi, Kenya <br />
             </ContactDetail>
             </ContentContainer>
             <AddressContainer>

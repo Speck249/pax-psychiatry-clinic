@@ -11,20 +11,29 @@ export const MainContainer = styled.main`
   ${ DisplayLayout };
   flex-direction: column;
   width: 100%;
+  padding-top: 2rem;
   background-color: #f5f3f4;
-  overflow: hidden;
+  overflow: hidden; 
 `;
 
 export const ContactHeader = styled.header`
   display: block;
-  margin: 0 auto;
-  padding: 1rem;
+  margin: 1rem auto;
+  width: 100%;
+
+  @media screen and (max-width: 1024px) {
+    max-width: 90%;
+ } 
 `;
 
 export const SectionTitle = styled.h1`
   font-size: 3.5rem;
   font-weight: 700;
   text-align: center;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 2.3rem;
+ } 
 `;
 
 export const ContactSection = styled.section`
@@ -32,34 +41,35 @@ export const ContactSection = styled.section`
   flex-wrap: wrap;
   width: 1100px;
   max-width: 100%;
-  padding: 1rem 0;
+  padding-top: 1rem;
   margin-bottom: 5rem;
   overflow: hidden;
+
+  @media screen and (max-width: 1024px) {
+    max-width: 90%;
+ } 
 `;
 
 export const Form = styled.form`
   flex: 1;
   padding: 1rem 1.75rem;
-  margin: 0;
 `;
 
 export const FormContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-weight: 700;
   width: 100%;
 `;
 
 export const FormLabel = styled.label`
-  font-size: 13px;
-  font-weight: 700;
-  padding: 0;
-  margin: 0.5rem 0;
+  font-size: 14px;
+  margin: 0.75rem 0;
 `;
 
 export const FormInput = styled.input`
   font-size: 14px;
-  font-weight: 700;
   padding: 0.95rem 0 0 0.35rem;
   margin-bottom: 1.5rem;
   outline: none;
@@ -75,7 +85,6 @@ export const Textarea = styled.textarea`
   border: none;
   height: 170px;
   padding: 1.2rem 1rem 0.75rem 1rem;
-  margin: 0;
 `;
 
 export const Submit = styled.button`
@@ -83,7 +92,8 @@ export const Submit = styled.button`
   width: inherit;
   padding: 0.75rem 0;
   margin: 1rem 0;
-  border: 0;
+  outline: none;
+  border: none;
   border-radius: 4px;
   background-color: #09798C;
 
@@ -96,7 +106,6 @@ export const InformationContainer = styled.div`
   flex: 1;
   max-width: 100%;
   padding: 0.5rem;
-  margin: 0;
 `;
 
 export const ContentContainer = styled.div`
@@ -104,7 +113,6 @@ export const ContentContainer = styled.div`
   flex-direction: column;
   max-width: 100%;
   padding: 1rem;
-  margin: 0;
   font-size: 0.85rem;
 `;
 
@@ -113,7 +121,6 @@ export const ContactBrief = styled.p`
   text-align: justify;
   line-height: 1.8;
   padding: 0.5rem 0;
-  margin: 0;
 `
 
 export const ContactDetail = styled.p`
@@ -121,7 +128,6 @@ export const ContactDetail = styled.p`
   font-weight: 700;
   text-decoration: none;
   padding: 0.65rem;
-  margin: 0;
 
   &:hover { 
     cursor: pointer;
@@ -129,7 +135,7 @@ export const ContactDetail = styled.p`
 `;
 
 export const AddressContainer = styled.div`
-   width: 500px;
-   max-width: 100%;
-   height: 250px;
+   margin: 0 auto;
+   width: 450px;
+   height: 300px;
 `;

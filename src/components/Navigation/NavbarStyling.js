@@ -17,6 +17,7 @@ export const NavbarHeader = styled.header `
   background-color: #fff;
 
   @media screen and (max-width: 1024px) {
+    padding: 1rem 1.2rem;
     background-color: #09798C;
   }
 

@@ -64,7 +64,7 @@ const Service = () => {
             </ContentContainer>
             <ContentContainer>
               <ServiceType>
-                <Services>Corporate Package</Services>
+                <Services>Corporate</Services>
               </ServiceType>              
               <AdditionalDescription>
                 Navigating the challenges of adolescence can be overwhelming. Our therapists offer a safe and supportive environment

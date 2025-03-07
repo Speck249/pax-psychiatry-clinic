@@ -13,11 +13,10 @@ export const ExpertiseSection = styled.section`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 0.85rem;
-  margin-top: 5rem; 
-  margin-bottom: 6rem;
+  padding: 5rem 1rem;
   gap: 20px;
   width: 100%;
+  font-weight: 700;
   overflow: hidden;
 `;
 
@@ -29,7 +28,6 @@ export const CompanyExpertise = styled.article`
 
 export const ExpertiseHighlight = styled.h3`
   font-size: 1rem;
-  font-weight: 700;
   color: #09798c;
   line-height: 2;
   text-transform: uppercase;
@@ -37,15 +35,15 @@ export const ExpertiseHighlight = styled.h3`
 
 export const ExpertiseTitle = styled.h2`
   font-size: 2.5rem;
-  font-weight: 700;
   padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
   color: #efefef;
 `;
 
 export const ExpertiseDescription = styled.p`
   font-size: 0.85rem;
+  font-weight: 400;
   text-align: justify;
   color: #fff;
   line-height: 2;
-  margin-top: 1rem;
 `;
