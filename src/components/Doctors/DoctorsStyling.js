@@ -40,12 +40,22 @@ export const SectionTitle = styled.h1`
   font-size: 3.2rem;
   font-weight: 700;
   text-align: center;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 2rem;
+    line-height: 1.4;
+    max-width: 90%;
+ } 
 `;
 
 export const SectionDescription = styled.p`
   text-align: center;
   line-height: 2;
-  max-width: 85%;
+
+  @media screen and (max-width: 1024px) {
+    max-width: 90%;
+    text-align: justify;
+ } 
 `;
 
 export const Image = styled.img`
@@ -72,7 +82,7 @@ export const CommonStyle = css`
   align-items: center;
   position: relative;
   width: 380px;
-  height: 450px;
+  height: 470px;
   outline: none;
   border: none;
   border-radius: 5px;
