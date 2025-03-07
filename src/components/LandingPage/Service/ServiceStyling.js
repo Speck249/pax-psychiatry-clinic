@@ -9,7 +9,7 @@ export const DisplayLayout = css`
 `;
 
 export const MainContainer = styled.main`
-  ${ DisplayLayout };
+  ${DisplayLayout};
   max-width: 100%;
   background-color: #f5f3f4;
   overflow: hidden;
@@ -30,8 +30,9 @@ export const SectionTitle = styled.h1`
 
   @media screen and (max-width: 815px) {
     font-size: 2.3rem;
+    line-height: 1.4;
     max-width: 90%;
- } 
+  } 
 `;
 
 export const SectionDescription = styled.p`
@@ -40,7 +41,6 @@ export const SectionDescription = styled.p`
   line-height: 2;
   padding: 1rem 0;
   max-width: 90%;
-
 `;
 
 export const ServiceSection = styled.section`
@@ -62,7 +62,7 @@ export const ServiceContainer = styled.div`
     width: 100%;
     max-width: 100vw;
     padding: 3rem 1.5rem;
- } 
+  } 
 `;
 
 export const ServiceHighlight = styled.small`
@@ -71,9 +71,9 @@ export const ServiceHighlight = styled.small`
   text-transform: uppercase;
   color: #09798c;
 
-@media screen and (min-width: 650px) and (max-width: 1150px) {
-  align-self: center;
- }
+  @media screen and (min-width: 650px) and (max-width: 1150px) {
+    align-self: center;
+  }
 `;
 
 export const OurServices = styled.div`
@@ -88,19 +88,56 @@ export const OurServices = styled.div`
 `;
 
 export const ContentContainer = styled.div`
+  perspective: 1000px; /* Enable 3D space for flip effect */
+`;
+
+export const CardWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+
+  @media screen and (max-width: 550px) {
+    height: 150px;
+  }
+
+  ${ContentContainer}:hover & {
+    transform: rotateY(180deg); /* Flip card on hover */
+  }
+`;
+
+export const CardFront = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   background-color: #000;
-
-  :hover {
-    cursor: pointer;
-  }
+  font-size: 1rem;
 
   @media screen and (max-width: 550px) {
-    height: 150px; 
+    font-size: 0.8rem;
+  }
+`;
+
+export const CardBack = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #000;
+  transform: rotateY(180deg); /* Hide back of card initially */
+  font-size: 1rem; 
+
+  @media screen and (max-width: 550px) {
+    font-size: 0.8rem;
   }
 `;
 
@@ -117,14 +154,28 @@ export const Services = styled.h3`
   font-size: 1rem;
   font-weight: 400;
   color: #fff;
+
+  @media screen and (max-width: 550px) {
+    font-size: 0.9rem;
+  }
 `;
 
 export const AdditionalDescription = styled.div`
-   display: none;
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 2;
+  padding: 20px;
+
+
+  @media screen and (max-width: 550px) {
+    font-size: 0.65rem;
+    line-height: 1.7;
+  }
 `;
 
 export const ButtonContainer = styled.div`
-  ${ DisplayLayout };
+  ${DisplayLayout};
   margin-top: 1rem;
 `;
 
@@ -138,7 +189,6 @@ export const ImageContainer = styled.div`
   @media screen and (max-width: 1150px) {
     display: none; 
   }
-
 `;
 
 export const Image = styled.img`
@@ -146,4 +196,3 @@ export const Image = styled.img`
   height: auto; 
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 `;
-
