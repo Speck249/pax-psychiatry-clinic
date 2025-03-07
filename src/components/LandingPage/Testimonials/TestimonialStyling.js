@@ -32,6 +32,7 @@ export const SectionTitle = styled.h1`
 
   @media screen and (max-width: 1024px) {
     font-size: 2.3rem;
+    line-height: 1.4;
  } 
 `;
 
