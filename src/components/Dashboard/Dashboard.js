@@ -15,7 +15,7 @@ import {
 
 const { Meta } = Card;
 
-/* Creates private dashboard for logged in users to access. */
+
 const Dashboard = () => {
   const patientData = [
     {
@@ -70,8 +70,7 @@ const Dashboard = () => {
           <Col span={8} key={item.id}>
             <DashboardCard
               hoverable
-              cover={<img alt={item.title} src={item.image} />}
-            >
+              cover={<img alt={item.title} src={item.image} />}>
               <Meta title={item.title} description={item.description} />
             </DashboardCard>
           </Col>
