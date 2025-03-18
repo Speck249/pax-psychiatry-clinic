@@ -19,7 +19,8 @@ export const SectionHeader = styled.header`
   ${DisplayLayout};
   width: 1300px;
   max-width: 100%;
-  padding: 1rem 0;
+  padding-top: 5rem;
+  margin-bottom: 3rem;
   gap: 15px;
 `;
 
@@ -27,20 +28,24 @@ export const SectionTitle = styled.h1`
   font-size: 3.5rem;
   font-weight: 700;
   text-align: center;
+  max-width: 90%;
 
   @media screen and (max-width: 815px) {
     font-size: 2.3rem;
     line-height: 1.4;
-    max-width: 90%;
   } 
 `;
 
 export const SectionDescription = styled.p`
   font-size: 0.95rem;
-  text-align: justify;
+  text-align: center;
   line-height: 2;
-  padding: 1rem 0;
   max-width: 90%;
+  padding: 0.5rem 0;
+
+  @media screen and (max-width: 1024px) {
+    text-align: justify;
+  } 
 `;
 
 export const ServiceSection = styled.section`
@@ -67,7 +72,7 @@ export const ServiceContainer = styled.div`
 
 export const ServiceHighlight = styled.small`
   align-self: flex-start;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-transform: uppercase;
   color: #09798c;
 
@@ -192,7 +197,7 @@ export const ImageContainer = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 85%;
+  width: 80%;
   height: auto; 
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 `;

@@ -21,10 +21,10 @@ export const SectionHeader = styled.header`
   width: 1300px;
   max-width: 100%;
   padding-top: 5rem;
-  padding-bottom: 3rem;
   gap: 15px;
 
   @media screen and (max-width: 1024px) {
+    text-align: justify;
     width: 100vw;
     max-width: 100%;
  } 
@@ -44,10 +44,14 @@ export const SectionTitle = styled.h1`
 
 export const SectionDescription = styled.p`
   font-size: 0.95rem;
-  text-align: justify;
+  text-align: center;
   line-height: 2;
   max-width: 90%;
   padding: 0.5rem 0;
+
+  @media screen and (max-width: 1024px) {
+    text-align: justify;
+  } 
 `;
 
 export const AboutUsSection = styled.section`
