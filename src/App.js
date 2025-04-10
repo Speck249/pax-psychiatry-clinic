@@ -30,17 +30,17 @@ function App() {
         <UserAuthContextProvider>
           <Routes>
             <Route
-              path='/profile'
+              path='/profile' 
               element={
                 <ProtectedRoute>
                   <ProfilePage />
                 </ProtectedRoute>
               }
             />
-            <Route path="/" element={<AboutPage />} />
-            <Route path="/doctors" element={<DoctorsPage />} />
-            <Route path="/signin" element={<SignInPage />} />
-            <Route path='/signup' element={<SignUpPage />} />
+            <Route exact path="/" element={<AboutPage />} />
+            <Route exact path="/doctors" element={<DoctorsPage />} />
+            <Route exact path="/signin" element={<SignInPage />} />
+            <Route exact path='/signup' element={<SignUpPage />} />
            </Routes>
         </UserAuthContextProvider>
       </BrowserRouter>
