@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import AboutPage from './pages/about';
 import DoctorsPage from './pages/doctors';
@@ -25,7 +25,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Router>
+      <BrowserRouter>
         <ScrollToTop />
         <UserAuthContextProvider>
           <Routes>
@@ -43,7 +43,7 @@ function App() {
             <Route path='/signup' element={<SignUpPage />} />
            </Routes>
         </UserAuthContextProvider>
-      </Router>
+      </BrowserRouter>
     </>
   );
 };
